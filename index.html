@@ -23,7 +23,17 @@
             document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
         });
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var parentLink = document.querySelector(".parent-link");
+    var submenu = document.querySelector(".submenu");
 
+    parentLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      submenu.classList.toggle("show-submenu");
+    });
+  });
+</script>
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
@@ -64,16 +74,16 @@
                 </div>
 
                 <a href="#" class="parent-link">
-                      <button class="purchase-button" id="connect">INGLÊS</button>
-                <ul class="submenu">
-                <li>
-            <a href="verbos.html" target="_blank">Verbos</a>
-                </li>
-                    <li>
-            <a href="pronomes.html" target="_blank">Pronomes</a>
-                </li>
-        <!-- Adicione mais itens de submenu conforme necessário -->
-                  </ul>
+  <button class="purchase-button" id="connect">INGLÊS</button>
+  <ul class="submenu">
+    <li>
+      <a href="verbos.html" target="_blank">Verbos</a>
+    </li>
+    <li>
+      <a href="pronomes.html" target="_blank">Pronomes</a>
+    </li>
+    <!-- Adicione mais itens de submenu conforme necessário -->
+  </ul>
 </a>
                 <a href="php.html" target="_blank">
                     <button class="purchase-button" id="connect">PHP</button>
