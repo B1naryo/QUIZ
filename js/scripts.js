@@ -153,11 +153,12 @@ const restartBtn = document.querySelector('#restart');
 restartBtn.addEventListener('click', function () {
   actualQuestion = 0;
   points = 0;
+  questions = [...incorrectQuestions]; // Copia as perguntas incorretas para o array de perguntas
+  incorrectQuestions = [];
   toggleQuizzVisibility();
   init();
 });
 
-// Inicialização do quizz
-init();
+
 
 
