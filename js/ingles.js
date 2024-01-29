@@ -338,7 +338,6 @@ const questions = [
  
 
 ];
-
 // substituição do quizz para a primeira pergunta
 function init() {
   // criar primeira pergunta
@@ -360,8 +359,10 @@ function createQuestion(i) {
   questionText.textContent = questions[i].question;
   questionNumber.textContent = i + 1;
 
-  // inserir alternativas
-  questions[i].answers.forEach((answer, i) => {
+  // Embaralhar as respostas
+  const shuffledAnswers = shuffleArray(questions[i].answers);
+
+  shuffledAnswers.forEach((answer, i) => {
     // cria template botão quizz
     const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
 
@@ -467,3 +468,8 @@ restartBtn.addEventListener('click', function () {
 
 // inicialização do quizz
 init();
+
+// Função para embaralhar um array
+function shuffleArray(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
