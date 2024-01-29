@@ -47,7 +47,7 @@ const customStrings = {
     title: " {name}", // Title prefix (ex "Buy your {name}") - You can use {name} to insert the collection name
     connectButton: "HOME",
     transferButton: "MINT NOW",
-    dateString: "Melhor é o fim das coisas do que o princípio delas.", // Date string (ex "Pre sale available {date}") - You can use {date} to insert the collection date
+    dateString: "Desafie Seu Conhecimento em Diversos Assuntos", // Date string (ex "Pre sale available {date}") - You can use {date} to insert the collection date
 }
 
 /*
