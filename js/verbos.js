@@ -65,15 +65,7 @@ const questions = [
       { answer: 'Sing', correct: false },
     ],
   },
-  {
-    question: 'Traduza o verbo: "Trabalhar"',
-    answers: [
-      { answer: 'Work', correct: true },
-      { answer: 'Play', correct: false },
-      { answer: 'Study', correct: false },
-      { answer: 'Relax', correct: false },
-    ],
-  },
+ 
   {
     question: 'Qual é a tradução correta do verbo? "Viajar"',
     answers: [
@@ -119,15 +111,7 @@ const questions = [
       { answer: 'Write', correct: false },
     ],
   },
-  {
-    question: 'Traduza o verbo: "Pular"',
-    answers: [
-      { answer: 'Jump', correct: true },
-      { answer: 'Run', correct: false },
-      { answer: 'Climb', correct: false },
-      { answer: 'Dance', correct: false },
-    ],
-  },
+  
   {
     question: 'Qual é a tradução correta do verbo? "Dormir"',
     answers: [
