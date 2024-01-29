@@ -108,6 +108,7 @@ function checkAnswer(btn) {
 // Exibe próxima pergunta no quizz
 function nextQuestion() {
   setTimeout(function () {
+    actualQuestion++;
     if (actualQuestion >= questions.length) {
       if (incorrectQuestions.length > 0) {
         // Se houver perguntas incorretas, refazer apenas essas
@@ -124,6 +125,7 @@ function nextQuestion() {
     createQuestion(actualQuestion);
   }, 1200);
 }
+
 
 // Exibe a tela final
 function showSuccessMessage() {
