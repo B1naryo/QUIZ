@@ -160,5 +160,8 @@ restartBtn.addEventListener('click', function () {
 });
 
 
+// Inicialização do quizz
+init();
+
 
 
