@@ -3,6 +3,7 @@ const questionElement = document.querySelector('#question');
 const answerBox = document.querySelector('#answers-box');
 const quizzContainer = document.querySelector('#quizz-container');
 const scoreContainer = document.querySelector('#score-container');
+const restartBtn = document.querySelector('#restart');
 const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
@@ -39,8 +40,18 @@ let questions = [
 // Lista para armazenar perguntas incorretas
 let incorrectQuestions = [];
 
+// Variável para controlar a reinicialização
+let isRestarting = false;
+
 // Inicialização do quizz
 function init() {
+  if (isRestarting) {
+    isRestarting = false;
+    actualQuestion = 0;
+    points = 0;
+    questions = JSON.parse(JSON.stringify(incorrectQuestions));
+    incorrectQuestions = [];
+  }
   createQuestion(actualQuestion);
 }
 
@@ -126,7 +137,6 @@ function nextQuestion() {
   }, 1200);
 }
 
-
 // Exibe a tela final
 function showSuccessMessage() {
   toggleQuizzVisibility();
@@ -149,16 +159,11 @@ function toggleQuizzVisibility() {
 }
 
 // Reiniciar quizz
-const restartBtn = document.querySelector('#restart');
 restartBtn.addEventListener('click', function () {
-  actualQuestion = 0;
-  points = 0;
-  questions = [...incorrectQuestions]; // Copia as perguntas incorretas para o array de perguntas
-  incorrectQuestions = [];
+  isRestarting = true;
   toggleQuizzVisibility();
   init();
 });
-
 
 // Inicialização do quizz
 init();
