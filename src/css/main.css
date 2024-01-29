@@ -226,9 +226,6 @@ html {
     --webkit-box-shadow: unset;
     box-shadow: unset;
 }
-.submenu {
-    display: none;
-  }
 
 .content {
     position: relative;
