@@ -37,70 +37,72 @@ let questions = [
   },
 ];
 
-// Lista para armazenar perguntas incorretas
-let incorrectQuestions = [];
-
-// Variável para controlar a reinicialização
-let isRestarting = false;
-
-// Inicialização do quizz
+// substituição do quizz para a primeira pergunta
 function init() {
-  if (isRestarting) {
-    isRestarting = false;
-    actualQuestion = 0;
-    points = 0;
-    questions = JSON.parse(JSON.stringify(incorrectQuestions));
-    incorrectQuestions = [];
-  }
-  createQuestion(actualQuestion);
+  // criar primeira pergunta
+  createQuestion(0);
 }
 
-// Criação de pergunta
-function createQuestion(index) {
-  clearPreviousQuestion();
-  const question = questions[index];
-  const questionText = questionElement.querySelector('#question-text');
-  const questionNumber = questionElement.querySelector('#question-number');
-
-  questionText.textContent = question.question;
-  questionNumber.textContent = index + 1;
-
-  question.answers.forEach((answer, i) => {
-    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
-    const letterBtn = answerTemplate.querySelector('.btn-letter');
-    const answerText = answerTemplate.querySelector('.question-answer');
-
-    letterBtn.textContent = letters[i];
-    answerText.textContent = answer.answer;
-
-    answerTemplate.setAttribute('correct-answer', answer.correct);
-
-    answerTemplate.classList.remove('hide');
-    answerTemplate.classList.remove('answer-template');
-
-    answerBox.appendChild(answerTemplate);
-
-    answerTemplate.addEventListener('click', function () {
-      checkAnswer(this);
-    });
-  });
-}
-
-// Limpar pergunta anterior
-function clearPreviousQuestion() {
+// cria uma pergunta
+function createQuestion(i) {
+  // limpar questão anterior
   const oldButtons = answerBox.querySelectorAll('button');
   oldButtons.forEach((btn) => {
     btn.remove();
   });
+
+  // alterar texto da pergunta
+  const questionText = question.querySelector('#question-text');
+  const questionNumber = question.querySelector('#question-number');
+
+  questionText.textContent = questions[i].question;
+  questionNumber.textContent = i + 1;
+
+  // Embaralhar as respostas
+  const shuffledAnswers = shuffleArray(questions[i].answers);
+
+  shuffledAnswers.forEach((answer, i) => {
+    // cria template botão quizz
+    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
+
+    const letterBtn = answerTemplate.querySelector('.btn-letter');
+    const answerText = answerTemplate.querySelector('.question-answer');
+
+    letterBtn.textContent = letters[i];
+    answerText.textContent = answer['answer'];
+
+    answerTemplate.setAttribute('correct-answer', answer['correct']);
+
+    // remover hide e template class
+    answerTemplate.classList.remove('hide');
+    answerTemplate.classList.remove('answer-template');
+
+    // inserir alternativa na tela
+    answerBox.appendChild(answerTemplate);
+
+    // inserir evento click no botão
+    answerTemplate.addEventListener('click', function () {
+      checkAnswer(this);
+    });
+  });
+
+  // incrementar o número da questão
+  actualQuestion++;
 }
 
-// Verificar resposta do usuário
+// verificar resposta do usuário
 function checkAnswer(btn) {
+  // seleciona todos os botões
   const buttons = answerBox.querySelectorAll('button');
+
+  // verifica se resposta correta e add classe
   buttons.forEach((button) => {
     if (button.getAttribute('correct-answer') == 'true') {
       button.classList.add('correct-answer');
+
+      // checa se usuário acertou a pergunta
       if (btn === button) {
+        // incremento dos pontos
         points++;
       }
     } else {
@@ -108,65 +110,65 @@ function checkAnswer(btn) {
     }
   });
 
-  if (btn.getAttribute('correct-answer') !== 'true') {
-    // Adicionar pergunta incorreta à lista
-    incorrectQuestions.push(questions[actualQuestion]);
-  }
-
+  // exibir próxima pergunta
   nextQuestion();
 }
 
-// Exibe próxima pergunta no quizz
+// exibe a pŕoxima pergunta no quizz
 function nextQuestion() {
+  // timer para usuário ver as respostas
   setTimeout(function () {
-    actualQuestion++;
+    // verifica se ainda há perguntas
     if (actualQuestion >= questions.length) {
-      if (incorrectQuestions.length > 0) {
-        // Se houver perguntas incorretas, refazer apenas essas
-        actualQuestion = 0;
-        points = 0;
-        questions = incorrectQuestions;
-        incorrectQuestions = [];
-        createQuestion(actualQuestion);
-      } else {
-        showSuccessMessage();
-      }
+      // apresenta mensagem de sucesso
+      showSuccessMessage();
       return;
     }
+
     createQuestion(actualQuestion);
   }, 1200);
 }
 
-// Exibe a tela final
+// exibe a tela final
 function showSuccessMessage() {
-  toggleQuizzVisibility();
+  hideOrShowQuizz();
 
+  // trocar dados tela de sucesso
+  // calcular score
   const score = ((points / questions.length) * 100).toFixed(2);
+
   const displayScore = document.querySelector('#display-score span');
   displayScore.textContent = score.toString();
 
+  //alterar o número de perguntas corretas
   const correctAnswers = document.querySelector('#correct-answers');
   correctAnswers.textContent = points;
 
+  // alterar o total de perguntas
   const totalQuestions = document.querySelector('#questions-qty');
   totalQuestions.textContent = questions.length;
 }
 
-// Mostra ou esconde o score
-function toggleQuizzVisibility() {
+// mostra ou esonde o score
+function hideOrShowQuizz() {
   quizzContainer.classList.toggle('hide');
   scoreContainer.classList.toggle('hide');
 }
 
-// Reiniciar quizz
+// reiniciar quizz
+const restartBtn = document.querySelector('#restart');
 restartBtn.addEventListener('click', function () {
-  isRestarting = true;
-  toggleQuizzVisibility();
+  //zerar jogo
+  actualQuestion = 0;
+  points = 0;
+  hideOrShowQuizz();
   init();
 });
 
-// Inicialização do quizz
+// inicialização do quizz
 init();
 
-
-
+// Função para embaralhar um array
+function shuffleArray(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
