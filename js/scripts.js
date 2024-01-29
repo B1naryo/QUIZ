@@ -1,9 +1,8 @@
-// Declaração de variáveis
-const questionElement = document.querySelector('#question');
+// declaração de variáveis
+const question = document.querySelector('#question');
 const answerBox = document.querySelector('#answers-box');
 const quizzContainer = document.querySelector('#quizz-container');
 const scoreContainer = document.querySelector('#score-container');
-const restartBtn = document.querySelector('#restart');
 const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
