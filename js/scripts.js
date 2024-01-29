@@ -70,7 +70,7 @@ let questions = [
       { answer: 'Infraestrutura', correct: false },
     ],
   },
-  let questions = [
+  
   {
     question: 'Qual é o acrônimo PHP?',
     answers: [
