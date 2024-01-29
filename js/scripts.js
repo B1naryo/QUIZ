@@ -6,9 +6,7 @@ const scoreContainer = document.querySelector('#score-container');
 const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
-
-// Perguntas
-const questions = [
+let questions = [
   {
     question: 'PHP foi desenvolvido para qual fim?',
     answers: [
@@ -37,6 +35,9 @@ const questions = [
     ],
   },
 ];
+
+// Lista para armazenar perguntas incorretas
+let incorrectQuestions = [];
 
 // Inicialização do quizz
 function init() {
@@ -72,8 +73,6 @@ function createQuestion(index) {
       checkAnswer(this);
     });
   });
-
-  actualQuestion++;
 }
 
 // Limpar pergunta anterior
@@ -98,6 +97,11 @@ function checkAnswer(btn) {
     }
   });
 
+  if (btn.getAttribute('correct-answer') !== 'true') {
+    // Adicionar pergunta incorreta à lista
+    incorrectQuestions.push(questions[actualQuestion]);
+  }
+
   nextQuestion();
 }
 
@@ -105,7 +109,16 @@ function checkAnswer(btn) {
 function nextQuestion() {
   setTimeout(function () {
     if (actualQuestion >= questions.length) {
-      showSuccessMessage();
+      if (incorrectQuestions.length > 0) {
+        // Se houver perguntas incorretas, refazer apenas essas
+        actualQuestion = 0;
+        points = 0;
+        questions = incorrectQuestions;
+        incorrectQuestions = [];
+        createQuestion(actualQuestion);
+      } else {
+        showSuccessMessage();
+      }
       return;
     }
     createQuestion(actualQuestion);
@@ -144,4 +157,5 @@ restartBtn.addEventListener('click', function () {
 
 // Inicialização do quizz
 init();
+
 
