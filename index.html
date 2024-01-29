@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,20 +23,29 @@
         });
     </script>
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var parentLink = document.querySelector(".parent-link");
-    var submenu = document.querySelector(".submenu");
+        document.addEventListener("DOMContentLoaded", function () {
+            var parentLink = document.querySelector(".parent-link");
+            var submenu = document.querySelector(".submenu");
 
-    parentLink.addEventListener("click", function (event) {
-      event.preventDefault();
-      submenu.classList.toggle("show-submenu");
-    });
-  });
-</script>
+            parentLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                submenu.classList.toggle("show-submenu");
+            });
+        });
+    </script>
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
+    <style>
+        .submenu {
+            display: none;
+        }
+
+        .show-submenu {
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -55,7 +63,7 @@
                     target="_blank"><img src="./assets/svg/Twitter_Icon.svg" draggable="false"
                         alt="Twitter Icon"></a>
             </div>
-            
+
             <div id="payment-modal">
                 <div id="payment-header">
                     <div id="payment-header-text">
@@ -64,7 +72,7 @@
                     </div>
                 </div>
                 <div id="payment-info">
-                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
+                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
                         class="image" height="200px" id="price-img">
                     <div id="payment-info-text">
                         <p></p>
@@ -73,18 +81,21 @@
                     </div>
                 </div>
 
-                <a href="#" class="parent-link">
-  <button class="purchase-button" id="connect">INGLÊS</button>
-  <ul class="submenu">
-    <li>
-      <a href="verbos.html" target="_blank">Verbos</a>
-    </li>
-    <li>
-      <a href="pronomes.html" target="_blank">Pronomes</a>
-    </li>
-    <!-- Adicione mais itens de submenu conforme necessário -->
-  </ul>
-</a>
+                <div id="submenu-container">
+                    <a href="#" class="parent-link">
+                        <button class="purchase-button" id="connect">INGLÊS</button>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="verbos.html" target="_blank">Verbos</a>
+                        </li>
+                        <li>
+                            <a href="pronomes.html" target="_blank">Pronomes</a>
+                        </li>
+                        <!-- Adicione mais itens de submenu conforme necessário -->
+                    </ul>
+                </div>
+
                 <a href="php.html" target="_blank">
                     <button class="purchase-button" id="connect">PHP</button>
                 </a>
@@ -96,4 +107,5 @@
 </body>
 
 </html>
+
 
