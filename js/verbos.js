@@ -950,8 +950,6 @@ function createQuestion(index) {
       checkAnswer(this);
     });
   });
-
-  actualQuestion++;
 }
 
 // Limpar pergunta anterior
@@ -983,22 +981,21 @@ function checkAnswer(btn) {
     // Se a resposta estiver incorreta, não avançar para a próxima pergunta
     setTimeout(function () {
       clearPreviousQuestion();
-      createQuestion(actualQuestion - 1); // Volta para a mesma pergunta
+      createQuestion(actualQuestion); // Apresenta a mesma pergunta novamente
     }, 1200);
   } else {
-    nextQuestion();
-  }
-}
-
-// Exibe próxima pergunta no quizz
-function nextQuestion() {
-  setTimeout(function () {
+    // Se a resposta estiver correta, avançar para a próxima pergunta
+    actualQuestion++;
     if (actualQuestion >= questions.length) {
+      // Se todas as perguntas foram respondidas corretamente, exibir mensagem de sucesso
       showSuccessMessage();
-      return;
+    } else {
+      // Caso contrário, apresentar a próxima pergunta
+      setTimeout(function () {
+        createQuestion(actualQuestion);
+      }, 1200);
     }
-    createQuestion(actualQuestion);
-  }, 1200);
+  }
 }
 
 // Exibe a tela final
