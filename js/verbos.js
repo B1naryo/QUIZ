@@ -22,10 +22,10 @@ const questions = [
   {
     question: 'Qual é a tradução correta do verbo? "Esquecer"',
     answers: [
-      { answer: 'Forget', correct: true },
+      { answer: 'Do', correct: false },
       { answer: 'Remember', correct: false },
       { answer: 'Leave', correct: false },
-      { answer: 'Do', correct: false },
+      { answer: 'Forget', correct: true },
     ],
   },
   // Adicione mais perguntas conforme necessário
@@ -41,9 +41,9 @@ const questions = [
   {
     question: 'Qual é a tradução correta do verbo? "Comer"',
     answers: [
-      { answer: 'Eat', correct: true },
-      { answer: 'Cook', correct: false },
       { answer: 'Drink', correct: false },
+      { answer: 'Cook', correct: false },
+      { answer: 'Eat', correct: true },
       { answer: 'Sleep', correct: false },
     ],
   },
@@ -59,10 +59,10 @@ const questions = [
   {
     question: 'Qual é a tradução correta do verbo? "Ouvir"',
     answers: [
-      { answer: 'Listen', correct: true },
+      { answer: 'Sing', correct: false },
       { answer: 'Speak', correct: false },
       { answer: 'Watch', correct: false },
-      { answer: 'Sing', correct: false },
+      { answer: 'Listen', correct: true },
     ],
   },
  
@@ -78,8 +78,8 @@ const questions = [
   {
     question: 'Traduza o verbo: "Entender"',
     answers: [
-      { answer: 'Understand', correct: true },
       { answer: 'Confuse', correct: false },
+      { answer: 'Understand', correct: true },
       { answer: 'Explain', correct: false },
       { answer: 'Forget', correct: false },
     ],
@@ -96,9 +96,9 @@ const questions = [
   {
     question: 'Traduza o verbo: "Ler"',
     answers: [
-      { answer: 'Read', correct: true },
+      { answer: 'Srudy', correct: false },
       { answer: 'Write', correct: false },
-      { answer: 'Study', correct: false },
+      { answer: 'Read', correct: true },
       { answer: 'Listen', correct: false },
     ],
   },
@@ -882,10 +882,10 @@ answers: [
 {
 question: 'Traduza o verbo: "Dormir"',
 answers: [
-{ answer: 'Sleep', correct: true },
+{ answer: 'Dream', correct: false },
 { answer: 'Eat', correct: false },
 { answer: 'Wake up', correct: false },
-{ answer: 'Dream', correct: false },
+{ answer: 'Sleep', correct: true },
 ],
 },
 {
@@ -900,19 +900,19 @@ answers: [
 {
 question: 'Traduza o verbo: "Embrulhar"',
 answers: [
-{ answer: 'Wrap', correct: true },
+{ answer: 'Tear', correct: false },
 { answer: 'Unwrap', correct: false },
 { answer: 'Fold', correct: false },
-{ answer: 'Tear', correct: false },
+{ answer: 'Wrap', correct: true },
 ],
 },
 {
 question: 'Qual é a tradução correta do verbo? "Encontrar"',
 answers: [
-{ answer: 'Find', correct: true },
+{ answer: 'Hide', correct: false },
 { answer: 'Lose', correct: false },
 { answer: 'Search', correct: false },
-{ answer: 'Hide', correct: false },
+{ answer: 'Find', correct: true },
 ],
 },
 ];
