@@ -8,7 +8,7 @@ let points = 0;
 let actualQuestion = 0;
 
 // Array de perguntas e respostas
-   const questions = [
+   let questions = [
   {
     question: "O que é um 'imóvel' em inglês?",
     answers: [
