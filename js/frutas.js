@@ -9,12 +9,15 @@ let actualQuestion = 0;
 
 
  // Array de perguntas e respostas
-    const questions = [
+let questions = [
   {
     question: "Qual é o significado de 'maçã' em inglês?",
     answers: [
       { answer: "Apple", correct: true },
       { answer: "Banana", correct: false },
+      { answer: "Orange", correct: false },
+      { answer: "Grape", correct: false },
+      { answer: "Strawberry", correct: false },
     ],
   },
   {
@@ -22,6 +25,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Apple", correct: false },
       { answer: "Banana", correct: true },
+      { answer: "Orange", correct: false },
+      { answer: "Grape", correct: false },
+      { answer: "Strawberry", correct: false },
     ],
   },
   {
@@ -29,6 +35,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Orange", correct: true },
       { answer: "Grape", correct: false },
+      { answer: "Strawberry", correct: false },
+      { answer: "Watermelon", correct: false },
+      { answer: "Pineapple", correct: false },
     ],
   },
   {
@@ -36,6 +45,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Orange", correct: false },
       { answer: "Grape", correct: true },
+      { answer: "Strawberry", correct: false },
+      { answer: "Watermelon", correct: false },
+      { answer: "Pineapple", correct: false },
     ],
   },
   {
@@ -43,6 +55,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Strawberry", correct: true },
       { answer: "Watermelon", correct: false },
+      { answer: "Pineapple", correct: false },
+      { answer: "Mango", correct: false },
+      { answer: "Lemon", correct: false },
     ],
   },
   {
@@ -50,6 +65,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Strawberry", correct: false },
       { answer: "Watermelon", correct: true },
+      { answer: "Pineapple", correct: false },
+      { answer: "Mango", correct: false },
+      { answer: "Lemon", correct: false },
     ],
   },
   {
@@ -57,6 +75,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Pineapple", correct: true },
       { answer: "Mango", correct: false },
+      { answer: "Lemon", correct: false },
+      { answer: "Cherry", correct: false },
+      { answer: "Kiwi", correct: false },
     ],
   },
   {
@@ -64,6 +85,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Pineapple", correct: false },
       { answer: "Mango", correct: true },
+      { answer: "Lemon", correct: false },
+      { answer: "Cherry", correct: false },
+      { answer: "Kiwi", correct: false },
     ],
   },
   {
@@ -71,6 +95,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Lemon", correct: true },
       { answer: "Cherry", correct: false },
+      { answer: "Kiwi", correct: false },
+      { answer: "Peach", correct: false },
+      { answer: "Apple", correct: false },
     ],
   },
   {
@@ -78,6 +105,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Lemon", correct: false },
       { answer: "Cherry", correct: true },
+      { answer: "Kiwi", correct: false },
+      { answer: "Peach", correct: false },
+      { answer: "Apple", correct: false },
     ],
   },
   {
@@ -85,6 +115,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Kiwi", correct: true },
       { answer: "Peach", correct: false },
+      { answer: "Apple", correct: false },
+      { answer: "Banana", correct: false },
+      { answer: "Orange", correct: false },
     ],
   },
   {
@@ -92,10 +125,14 @@ let actualQuestion = 0;
     answers: [
       { answer: "Kiwi", correct: false },
       { answer: "Peach", correct: true },
+      { answer: "Apple", correct: false },
+      { answer: "Banana", correct: false },
+      { answer: "Orange", correct: false },
     ],
   },
   // Adicione mais perguntas aqui
 ];
+
 
 
 
