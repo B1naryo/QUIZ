@@ -1,5 +1,5 @@
-// declaração de variáveis
-const question = document.querySelector('#question');
+// Declaração de variáveis
+const questionElement = document.querySelector('#question');
 const answerBox = document.querySelector('#answers-box');
 const quizzContainer = document.querySelector('#quizz-container');
 const scoreContainer = document.querySelector('#score-container');
@@ -916,49 +916,109 @@ answers: [
 ],
 },
 ];
- var perguntaAtual = 0; // Pergunta atual
+// Inicialização do quizz
+function init() {
+  createQuestion(actualQuestion);
+}
 
-    function carregarPergunta() {
-      var elementoPergunta = document.getElementById("question");
-      elementoPergunta.textContent = perguntas[perguntaAtual].pergunta;
+// Criação de pergunta
+function createQuestion(index) {
+  clearPreviousQuestion();
+  const question = questions[index];
+  const questionText = questionElement.querySelector('#question-text');
+  const questionNumber = questionElement.querySelector('#question-number');
 
-      var elementoOpcoes = document.getElementById("options");
-      var opcoes = perguntas[perguntaAtual].opcoes;
-      var botoes = elementoOpcoes.getElementsByTagName("button");
-      for (var i = 0; i < opcoes.length; i++) {
-        botoes[i].textContent = opcoes[i];
-        botoes[i].style.display = "inline-block";
+  questionText.textContent = question.question;
+  questionNumber.textContent = index + 1;
+
+  question.answers.forEach((answer, i) => {
+    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
+    const letterBtn = answerTemplate.querySelector('.btn-letter');
+    const answerText = answerTemplate.querySelector('.question-answer');
+
+    letterBtn.textContent = letters[i];
+    answerText.textContent = answer.answer;
+
+    answerTemplate.setAttribute('correct-answer', answer.correct);
+
+    answerTemplate.classList.remove('hide');
+    answerTemplate.classList.remove('answer-template');
+
+    answerBox.appendChild(answerTemplate);
+
+    answerTemplate.addEventListener('click', function () {
+      checkAnswer(this);
+    });
+  });
+
+  actualQuestion++;
+}
+
+// Limpar pergunta anterior
+function clearPreviousQuestion() {
+  const oldButtons = answerBox.querySelectorAll('button');
+  oldButtons.forEach((btn) => {
+    btn.remove();
+  });
+}
+
+// Verificar resposta do usuário
+function checkAnswer(btn) {
+  const buttons = answerBox.querySelectorAll('button');
+  buttons.forEach((button) => {
+    if (button.getAttribute('correct-answer') == 'true') {
+      button.classList.add('correct-answer');
+      if (btn === button) {
+        points++;
       }
-    }
-
-    function checkAnswer(opcaoSelecionada) {
-  if (opcaoSelecionada === perguntas[perguntaAtual].resposta) {
-    alert("Resposta correta!");
-    perguntaAtual++;
-    if (perguntaAtual < perguntas.length) {
-      carregarPergunta();
     } else {
-      alert("Parabéns! Você concluiu a etapa de cores do jogo.");
-      limparOpcoes();
-      exibirMensagemVitoria();
+      button.classList.add('wrong-answer');
     }
-  } else {
-    alert("Resposta incorreta. Tente novamente.");
-  }
+  });
+
+  nextQuestion();
 }
 
-function exibirMensagemVitoria() {
-  var elementoPergunta = document.getElementById("question");
-  elementoPergunta.textContent = "Parabéns! Você concluiu a etapa de cores do jogo.";
+// Exibe próxima pergunta no quizz
+function nextQuestion() {
+  setTimeout(function () {
+    if (actualQuestion >= questions.length) {
+      showSuccessMessage();
+      return;
+    }
+    createQuestion(actualQuestion);
+  }, 1200);
 }
 
-    function limparOpcoes() {
-      var elementoOpcoes = document.getElementById("options");
-      var botoes = elementoOpcoes.getElementsByTagName("button");
-      for (var i = 0; i < botoes.length; i++) {
-        botoes[i].style.display = "none";
-      }
-    }
+// Exibe a tela final
+function showSuccessMessage() {
+  toggleQuizzVisibility();
 
-    // Carrega a primeira pergunta quando a página é carregada
-    carregarPergunta();
+  const score = ((points / questions.length) * 100).toFixed(2);
+  const displayScore = document.querySelector('#display-score span');
+  displayScore.textContent = score.toString();
+
+  const correctAnswers = document.querySelector('#correct-answers');
+  correctAnswers.textContent = points;
+
+  const totalQuestions = document.querySelector('#questions-qty');
+  totalQuestions.textContent = questions.length;
+}
+
+// Mostra ou esconde o score
+function toggleQuizzVisibility() {
+  quizzContainer.classList.toggle('hide');
+  scoreContainer.classList.toggle('hide');
+}
+
+// Reiniciar quizz
+const restartBtn = document.querySelector('#restart');
+restartBtn.addEventListener('click', function () {
+  actualQuestion = 0;
+  points = 0;
+  toggleQuizzVisibility();
+  init();
+});
+
+// Inicialização do quizz
+init();
