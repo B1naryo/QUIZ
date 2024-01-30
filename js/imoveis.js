@@ -8,100 +8,136 @@ let points = 0;
 let actualQuestion = 0;
 
 // Array de perguntas e respostas
-    var perguntas = [
-      {
-    pergunta: "O que é um 'imóvel' em inglês?",
-    opcoes: ["Property", "Building"],
-    resposta: 0
+   const questions = [
+  {
+    question: "O que é um 'imóvel' em inglês?",
+    answers: [
+      { answer: "Property", correct: true },
+      { answer: "Building", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'casa' em inglês?",
-    opcoes: ["House", "Apartment"],
-    resposta: 0
+    question: "Qual é o significado de 'casa' em inglês?",
+    answers: [
+      { answer: "House", correct: true },
+      { answer: "Apartment", correct: false },
+    ],
   },
   {
-    pergunta: "O que é um 'apartamento' em inglês?",
-    opcoes: ["Apartment", "House"],
-    resposta: 0
+    question: "O que é um 'apartamento' em inglês?",
+    answers: [
+      { answer: "Apartment", correct: true },
+      { answer: "House", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'condomínio' em inglês?",
-    opcoes: ["Condominium", "Complex"],
-    resposta: 0
+    question: "Qual é o significado de 'condomínio' em inglês?",
+    answers: [
+      { answer: "Condominium", correct: true },
+      { answer: "Complex", correct: false },
+    ],
   },
   {
-    pergunta: "O que é uma 'sala de estar' em inglês?",
-    opcoes: ["Living room", "Bedroom"],
-    resposta: 0
+    question: "O que é uma 'sala de estar' em inglês?",
+    answers: [
+      { answer: "Living room", correct: true },
+      { answer: "Bedroom", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'cozinha' em inglês?",
-    opcoes: ["Kitchen", "Bathroom"],
-    resposta: 0
+    question: "Qual é o significado de 'cozinha' em inglês?",
+    answers: [
+      { answer: "Kitchen", correct: true },
+      { answer: "Bathroom", correct: false },
+    ],
   },
   {
-    pergunta: "O que é um 'quarto' em inglês?",
-    opcoes: ["Bedroom", "Living room"],
-    resposta: 0
+    question: "O que é um 'quarto' em inglês?",
+    answers: [
+      { answer: "Bedroom", correct: true },
+      { answer: "Living room", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'banheiro' em inglês?",
-    opcoes: ["Bathroom", "Kitchen"],
-    resposta: 0
+    question: "Qual é o significado de 'banheiro' em inglês?",
+    answers: [
+      { answer: "Bathroom", correct: true },
+      { answer: "Kitchen", correct: false },
+    ],
   },
   {
-    pergunta: "O que é uma 'varanda' em inglês?",
-    opcoes: ["Balcony", "Garden"],
-    resposta: 0
+    question: "O que é uma 'varanda' em inglês?",
+    answers: [
+      { answer: "Balcony", correct: true },
+      { answer: "Garden", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'jardim' em inglês?",
-    opcoes: ["Garden", "Balcony"],
-    resposta: 0
+    question: "Qual é o significado de 'jardim' em inglês?",
+    answers: [
+      { answer: "Garden", correct: true },
+      { answer: "Balcony", correct: false },
+    ],
   },
   {
-    pergunta: "O que é um 'sótão' em inglês?",
-    opcoes: ["Attic", "Basement"],
-    resposta: 0
+    question: "O que é um 'sótão' em inglês?",
+    answers: [
+      { answer: "Attic", correct: true },
+      { answer: "Basement", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'porão' em inglês?",
-    opcoes: ["Basement", "Attic"],
-    resposta: 0
+    question: "Qual é o significado de 'porão' em inglês?",
+    answers: [
+      { answer: "Basement", correct: true },
+      { answer: "Attic", correct: false },
+    ],
   },
   {
-    pergunta: "O que é um 'escritório' em inglês?",
-    opcoes: ["Office", "Garage"],
-    resposta: 0
+    question: "O que é um 'escritório' em inglês?",
+    answers: [
+      { answer: "Office", correct: true },
+      { answer: "Garage", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'garagem' em inglês?",
-    opcoes: ["Garage", "Office"],
-    resposta: 0
+    question: "Qual é o significado de 'garagem' em inglês?",
+    answers: [
+      { answer: "Garage", correct: true },
+      { answer: "Office", correct: false },
+    ],
   },
   {
-    pergunta: "O que é um 'elevador' em inglês?",
-    opcoes: ["Elevator", "Stairs"],
-    resposta: 0
+    question: "O que é um 'elevador' em inglês?",
+    answers: [
+      { answer: "Elevator", correct: true },
+      { answer: "Stairs", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'escadas' em inglês?",
-    opcoes: ["Stairs", "Elevator"],
-    resposta: 0
+    question: "Qual é o significado de 'escadas' em inglês?",
+    answers: [
+      { answer: "Stairs", correct: true },
+      { answer: "Elevator", correct: false },
+    ],
   },
   {
-    pergunta: "O que é uma 'área de lazer' em inglês?",
-    opcoes: ["Recreational area", "Laundry room"],
-    resposta: 0
+    question: "O que é uma 'área de lazer' em inglês?",
+    answers: [
+      { answer: "Recreational area", correct: true },
+      { answer: "Laundry room", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'lavanderia' em inglês?",
-    opcoes: ["Laundry room", "Recreational area"],
-    resposta: 0
-  }
- 
-      // Adicione mais perguntas aqui
-    ];
+    question: "Qual é o significado de 'lavanderia' em inglês?",
+    answers: [
+      { answer: "Laundry room", correct: true },
+      { answer: "Recreational area", correct: false },
+    ],
+  },
+  // Adicione mais perguntas aqui
+];
+
 
 // Inicialização do quizz
 function init() {
