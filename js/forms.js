@@ -126,7 +126,7 @@ let questions = [
       { answer: 'Um tipo de validação automática para formulários', correct: false },
     ],
   },
-  let questions = [
+ 
   {
     question: 'Qual é a tag HTML usada para criar um formulário?',
     answers: [
