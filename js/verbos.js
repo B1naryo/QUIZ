@@ -268,9 +268,9 @@ const questions = [
   {
     question: 'Traduza o verbo: "Correr"',
     answers: [
-      { answer: 'Run', correct: true },
-      { answer: 'Walk', correct: false },
       { answer: 'Jump', correct: false },
+      { answer: 'Walk', correct: false },
+      { answer: 'Run', correct: true },
       { answer: 'Swim', correct: false },
     ],
   },
