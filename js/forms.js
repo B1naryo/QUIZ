@@ -19,7 +19,7 @@ let questions = [
           <input type="submit" value="Enviar">
         </form>', 
         correct: false,
-       
+       code: ''
       },
       {
         answer: `<form action="/processar_formulario.php" method="post">
@@ -28,6 +28,7 @@ let questions = [
           <input type="submit" value="Enviar">
         </form>`,
         correct: true,
+        code: ''
         
       },
       { 
@@ -37,6 +38,7 @@ let questions = [
           <input type="submit" value="Enviar">
         </form', 
         correct: false,
+        code: ''
        
       },
       { 
@@ -46,6 +48,7 @@ let questions = [
           <input type="submit" value="Enviar">
         </form>', 
         correct: false,
+        code: ''
        
       },
     ],
