@@ -916,148 +916,49 @@ answers: [
 ],
 },
 ];
-// substituição do quizz para a primeira pergunta
-function init() {
-  // criar primeira pergunta
-  createQuestion(0);
-}
+ var perguntaAtual = 0; // Pergunta atual
 
-// cria uma pergunta
-function createQuestion(i) {
-  // limpar questão anterior
-  const oldButtons = answerBox.querySelectorAll('button');
-  oldButtons.forEach((btn) => {
-    btn.remove();
-  });
+    function carregarPergunta() {
+      var elementoPergunta = document.getElementById("question");
+      elementoPergunta.textContent = perguntas[perguntaAtual].pergunta;
 
-  // alterar texto da pergunta
-  const questionText = question.querySelector('#question-text');
-  const questionNumber = question.querySelector('#question-number');
-
-  questionText.textContent = questions[i].question;
-  questionNumber.textContent = i + 1;
-
-  // Embaralhar as respostas
-  const shuffledAnswers = shuffleArray(questions[i].answers);
-
-  shuffledAnswers.forEach((answer, i) => {
-    // cria template botão quizz
-    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
-
-    const letterBtn = answerTemplate.querySelector('.btn-letter');
-    const answerText = answerTemplate.querySelector('.question-answer');
-
-    letterBtn.textContent = letters[i];
-    answerText.textContent = answer['answer'];
-
-    answerTemplate.setAttribute('correct-answer', answer['correct']);
-
-    // remover hide e template class
-    answerTemplate.classList.remove('hide');
-    answerTemplate.classList.remove('answer-template');
-
-    // inserir alternativa na tela
-    answerBox.appendChild(answerTemplate);
-
-    // inserir evento click no botão
-    answerTemplate.addEventListener('click', function () {
-      checkAnswerQuizz(this);
-    });
-  });
-
-  // incrementar o número da questão
-  actualQuestion++;
-}
-
-// verificar resposta do usuário
-function checkAnswerQuizz(btn) {
-  // seleciona todos os botões
-  const buttons = answerBox.querySelectorAll('button');
-
-  // verifica se resposta correta e add classe
-  buttons.forEach((button) => {
-    if (button.getAttribute('correct-answer') == 'true') {
-      button.classList.add('correct-answer');
-
-      // checa se usuário acertou a pergunta
-      if (btn === button) {
-        // incremento dos pontos
-        points++;
-        // chama a função para verificar se todas as perguntas foram respondidas
-        checkAllAnswersQuizz();
+      var elementoOpcoes = document.getElementById("options");
+      var opcoes = perguntas[perguntaAtual].opcoes;
+      var botoes = elementoOpcoes.getElementsByTagName("button");
+      for (var i = 0; i < opcoes.length; i++) {
+        botoes[i].textContent = opcoes[i];
+        botoes[i].style.display = "inline-block";
       }
-    } else {
-      button.classList.add('wrong-answer');
     }
-  });
 
-  // exibir próxima pergunta
-  nextQuestion();
-}
-
-// verifica se todas as perguntas foram respondidas corretamente
-function checkAllAnswersQuizz() {
-  if (points === questions.length) {
-    alert("Parabéns! Você acertou todas as perguntas.");
-    // Adicione aqui o código adicional que desejar para quando todas as perguntas forem respondidas corretamente.
+    function checkAnswer(opcaoSelecionada) {
+  if (opcaoSelecionada === perguntas[perguntaAtual].resposta) {
+    alert("Resposta correta!");
+    perguntaAtual++;
+    if (perguntaAtual < perguntas.length) {
+      carregarPergunta();
+    } else {
+      alert("Parabéns! Você concluiu a etapa de cores do jogo.");
+      limparOpcoes();
+      exibirMensagemVitoria();
+    }
+  } else {
+    alert("Resposta incorreta. Tente novamente.");
   }
 }
 
-// exibe a pŕoxima pergunta no quizz
-function nextQuestion() {
-  // timer para usuário ver as respostas
-  setTimeout(function () {
-    // verifica se ainda há perguntas
-    if (actualQuestion >= questions.length) {
-      // apresenta mensagem de sucesso
-      showSuccessMessage();
-      return;
+function exibirMensagemVitoria() {
+  var elementoPergunta = document.getElementById("question");
+  elementoPergunta.textContent = "Parabéns! Você concluiu a etapa de cores do jogo.";
+}
+
+    function limparOpcoes() {
+      var elementoOpcoes = document.getElementById("options");
+      var botoes = elementoOpcoes.getElementsByTagName("button");
+      for (var i = 0; i < botoes.length; i++) {
+        botoes[i].style.display = "none";
+      }
     }
 
-    createQuestion(actualQuestion);
-  }, 1200);
-}
-
-// exibe a tela final
-function showSuccessMessage() {
-  hideOrShowQuizz();
-
-  // trocar dados tela de sucesso
-  // calcular score
-  const score = ((points / questions.length) * 100).toFixed(2);
-
-  const displayScore = document.querySelector('#display-score span');
-  displayScore.textContent = score.toString();
-
-  //alterar o número de perguntas corretas
-  const correctAnswers = document.querySelector('#correct-answers');
-  correctAnswers.textContent = points;
-
-  // alterar o total de perguntas
-  const totalQuestions = document.querySelector('#questions-qty');
-  totalQuestions.textContent = questions.length;
-}
-
-// mostra ou esonde o score
-function hideOrShowQuizz() {
-  quizzContainer.classList.toggle('hide');
-  scoreContainer.classList.toggle('hide');
-}
-
-// reiniciar quizz
-const restartBtn = document.querySelector('#restart');
-restartBtn.addEventListener('click', function () {
-  //zerar jogo
-  actualQuestion = 0;
-  points = 0;
-  hideOrShowQuizz();
-  init();
-});
-
-// inicialização do quizz
-init();
-
-// Função para embaralhar um array
-function shuffleArray(array) {
-  return array.sort(() => Math.random() - 0.5);
-}
+    // Carrega a primeira pergunta quando a página é carregada
+    carregarPergunta();
