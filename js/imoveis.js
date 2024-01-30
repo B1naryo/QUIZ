@@ -8,12 +8,15 @@ let points = 0;
 let actualQuestion = 0;
 
 // Array de perguntas e respostas
-   let questions = [
+  let questions = [
   {
     question: "O que é um 'imóvel' em inglês?",
     answers: [
       { answer: "Property", correct: true },
       { answer: "Building", correct: false },
+      { answer: "Real estate", correct: false },
+      { answer: "House", correct: false },
+      { answer: "Apartment", correct: false },
     ],
   },
   {
@@ -21,13 +24,19 @@ let actualQuestion = 0;
     answers: [
       { answer: "House", correct: true },
       { answer: "Apartment", correct: false },
+      { answer: "Home", correct: false },
+      { answer: "Residence", correct: false },
+      { answer: "Dwelling", correct: false },
     ],
   },
   {
     question: "O que é um 'apartamento' em inglês?",
     answers: [
       { answer: "Apartment", correct: true },
-      { answer: "House", correct: false },
+      { answer: "Flat", correct: false },
+      { answer: "Condo", correct: false },
+      { answer: "Unit", correct: false },
+      { answer: "Suite", correct: false },
     ],
   },
   {
@@ -35,104 +44,149 @@ let actualQuestion = 0;
     answers: [
       { answer: "Condominium", correct: true },
       { answer: "Complex", correct: false },
+      { answer: "Housing association", correct: false },
+      { answer: "Community", correct: false },
+      { answer: "Residential area", correct: false },
     ],
   },
   {
     question: "O que é uma 'sala de estar' em inglês?",
     answers: [
       { answer: "Living room", correct: true },
-      { answer: "Bedroom", correct: false },
+      { answer: "Lounge", correct: false },
+      { answer: "Den", correct: false },
+      { answer: "Parlor", correct: false },
+      { answer: "Sitting room", correct: false },
     ],
   },
   {
     question: "Qual é o significado de 'cozinha' em inglês?",
     answers: [
       { answer: "Kitchen", correct: true },
-      { answer: "Bathroom", correct: false },
+      { answer: "Cookroom", correct: false },
+      { answer: "Culinary space", correct: false },
+      { answer: "Galley", correct: false },
+      { answer: "Cookhouse", correct: false },
     ],
   },
   {
     question: "O que é um 'quarto' em inglês?",
     answers: [
       { answer: "Bedroom", correct: true },
-      { answer: "Living room", correct: false },
+      { answer: "Chamber", correct: false },
+      { answer: "Sleeping room", correct: false },
+      { answer: "Master bedroom", correct: false },
+      { answer: "Guest room", correct: false },
     ],
   },
   {
     question: "Qual é o significado de 'banheiro' em inglês?",
     answers: [
       { answer: "Bathroom", correct: true },
-      { answer: "Kitchen", correct: false },
+      { answer: "Restroom", correct: false },
+      { answer: "Lavatory", correct: false },
+      { answer: "Powder room", correct: false },
+      { answer: "Washroom", correct: false },
     ],
   },
   {
     question: "O que é uma 'varanda' em inglês?",
     answers: [
       { answer: "Balcony", correct: true },
-      { answer: "Garden", correct: false },
+      { answer: "Terrace", correct: false },
+      { answer: "Veranda", correct: false },
+      { answer: "Porch", correct: false },
+      { answer: "Deck", correct: false },
     ],
   },
   {
     question: "Qual é o significado de 'jardim' em inglês?",
     answers: [
       { answer: "Garden", correct: true },
-      { answer: "Balcony", correct: false },
+      { answer: "Yard", correct: false },
+      { answer: "Lawn", correct: false },
+      { answer: "Botanical space", correct: false },
+      { answer: "Green space", correct: false },
     ],
   },
   {
     question: "O que é um 'sótão' em inglês?",
     answers: [
       { answer: "Attic", correct: true },
-      { answer: "Basement", correct: false },
+      { answer: "Loft", correct: false },
+      { answer: "Upper room", correct: false },
+      { answer: "Roof space", correct: false },
+      { answer: "Garret", correct: false },
     ],
   },
   {
     question: "Qual é o significado de 'porão' em inglês?",
     answers: [
       { answer: "Basement", correct: true },
-      { answer: "Attic", correct: false },
+      { answer: "Cellar", correct: false },
+      { answer: "Underground room", correct: false },
+      { answer: "Sublevel", correct: false },
+      { answer: "Undercroft", correct: false },
     ],
   },
   {
     question: "O que é um 'escritório' em inglês?",
     answers: [
       { answer: "Office", correct: true },
-      { answer: "Garage", correct: false },
+      { answer: "Workspace", correct: false },
+      { answer: "Study", correct: false },
+      { answer: "Workplace", correct: false },
+      { answer: "Business room", correct: false },
     ],
   },
   {
     question: "Qual é o significado de 'garagem' em inglês?",
     answers: [
       { answer: "Garage", correct: true },
-      { answer: "Office", correct: false },
+      { answer: "Carport", correct: false },
+      { answer: "Auto bay", correct: false },
+      { answer: "Parking space", correct: false },
+      { answer: "Vehicle shelter", correct: false },
     ],
   },
   {
     question: "O que é um 'elevador' em inglês?",
     answers: [
       { answer: "Elevator", correct: true },
-      { answer: "Stairs", correct: false },
+      { answer: "Lift", correct: false },
+      { answer: "Rise device", correct: false },
+      { answer: "Hoist", correct: false },
+      { answer: "Ascending apparatus", correct: false },
     ],
   },
   {
     question: "Qual é o significado de 'escadas' em inglês?",
     answers: [
       { answer: "Stairs", correct: true },
-      { answer: "Elevator", correct: false },
+      { answer: "Steps", correct: false },
+      { answer: "Staircase", correct: false },
+      { answer: "Flight of stairs", correct: false },
+      { answer: "Clambering structure", correct: false },
     ],
   },
   {
     question: "O que é uma 'área de lazer' em inglês?",
     answers: [
       { answer: "Recreational area", correct: true },
-      { answer: "Laundry room", correct: false },
+      { answer: "Play zone", correct: false },
+      { answer: "Amusement space", correct: false },
+      { answer: "Leisure zone", correct: false },
+      { answer: "Entertainment area", correct: false },
     ],
   },
   {
     question: "Qual é o significado de 'lavanderia' em inglês?",
     answers: [
       { answer: "Laundry room", correct: true },
-      { answer: "Recreational area", correct: false },
+      { answer: "Washroom", correct: false },
+      { answer: "Laundromat", correct: false },
+      { answer: "Cleaning space", correct: false },
+      { answer: "Washing facility", correct: false },
     ],
   },
   // Adicione mais perguntas aqui
