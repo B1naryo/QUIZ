@@ -245,7 +245,7 @@ const questions = [
     question: 'Qual é o pronome possessivo correspondente? "Its"',
     answers: [
       { answer: 'Meu/Minha', correct: false },
-      { answer: 'Seu/Sua', correct: false },
+      { answer: 'Seu/Sua', correct: true },
       { answer: 'Dele', correct: false },
       { answer: 'Dela', correct: false },
     ],
