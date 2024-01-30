@@ -157,9 +157,9 @@ function createQuestion(index) {
     const answerText = answerTemplate.querySelector('.question-answer');
 
     letterBtn.textContent = letters[i];
-    answerText.textContent = answer;
+    answerText.textContent = answer.answer;
 
-    answerTemplate.setAttribute('correct-answer', i === question.correct ? 'true' : 'false');
+    answerTemplate.setAttribute('correct-answer', answer.correct);
 
     answerTemplate.classList.remove('hide');
     answerTemplate.classList.remove('answer-template');
