@@ -8,12 +8,15 @@ let points = 0;
 let actualQuestion = 0;
 
 // Array de perguntas e respostas
-    let questions = [
+  let questions = [
   {
     question: "O que significa 'azul' em inglês?",
     answers: [
       { answer: "Red", correct: false },
       { answer: "Blue", correct: true },
+      { answer: "Green", correct: false },
+      { answer: "Yellow", correct: false },
+      { answer: "Purple", correct: false },
     ],
   },
   {
@@ -21,6 +24,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Red", correct: true },
       { answer: "Black", correct: false },
+      { answer: "Blue", correct: false },
+      { answer: "Green", correct: false },
+      { answer: "Yellow", correct: false },
     ],
   },
   {
@@ -28,6 +34,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Black", correct: true },
       { answer: "White", correct: false },
+      { answer: "Blue", correct: false },
+      { answer: "Yellow", correct: false },
+      { answer: "Red", correct: false },
     ],
   },
   {
@@ -35,6 +44,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Yellow", correct: true },
       { answer: "Green", correct: false },
+      { answer: "Blue", correct: false },
+      { answer: "Red", correct: false },
+      { answer: "Purple", correct: false },
     ],
   },
   {
@@ -42,6 +54,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Red", correct: false },
       { answer: "Brown", correct: true },
+      { answer: "Blue", correct: false },
+      { answer: "Green", correct: false },
+      { answer: "Yellow", correct: false },
     ],
   },
   {
@@ -49,6 +64,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Purple", correct: true },
       { answer: "Yellow", correct: false },
+      { answer: "Blue", correct: false },
+      { answer: "Green", correct: false },
+      { answer: "Red", correct: false },
     ],
   },
   {
@@ -56,6 +74,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Purple", correct: false },
       { answer: "Gray", correct: true },
+      { answer: "Blue", correct: false },
+      { answer: "Green", correct: false },
+      { answer: "Yellow", correct: false },
     ],
   },
   {
@@ -63,6 +84,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Purple", correct: false },
       { answer: "Orange", correct: true },
+      { answer: "Blue", correct: false },
+      { answer: "Green", correct: false },
+      { answer: "Yellow", correct: false },
     ],
   },
   {
@@ -70,6 +94,9 @@ let actualQuestion = 0;
     answers: [
       { answer: "Pink", correct: true },
       { answer: "Yellow", correct: false },
+      { answer: "Blue", correct: false },
+      { answer: "Green", correct: false },
+      { answer: "Red", correct: false },
     ],
   },
   {
@@ -77,12 +104,14 @@ let actualQuestion = 0;
     answers: [
       { answer: "Green", correct: true },
       { answer: "Purple", correct: false },
+      { answer: "Blue", correct: false },
+      { answer: "Red", correct: false },
+      { answer: "Yellow", correct: false },
     ],
   },
   // Adicione mais perguntas aqui
 ];
 
-// Inicialização do quizz
 function init() {
   createQuestion(actualQuestion);
 }
