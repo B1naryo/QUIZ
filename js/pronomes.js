@@ -797,8 +797,6 @@ function createQuestion(index) {
       checkAnswer(this);
     });
   });
-
-  actualQuestion++;
 }
 
 // Limpar pergunta anterior
@@ -812,29 +810,39 @@ function clearPreviousQuestion() {
 // Verificar resposta do usuário
 function checkAnswer(btn) {
   const buttons = answerBox.querySelectorAll('button');
+  let answeredCorrectly = false;
+
   buttons.forEach((button) => {
     if (button.getAttribute('correct-answer') == 'true') {
       button.classList.add('correct-answer');
       if (btn === button) {
         points++;
+        answeredCorrectly = true;
       }
     } else {
       button.classList.add('wrong-answer');
     }
   });
 
-  nextQuestion();
-}
-
-// Exibe próxima pergunta no quizz
-function nextQuestion() {
-  setTimeout(function () {
+  if (!answeredCorrectly) {
+    // Se a resposta estiver incorreta, não avançar para a próxima pergunta
+    setTimeout(function () {
+      clearPreviousQuestion();
+      createQuestion(actualQuestion); // Apresenta a mesma pergunta novamente
+    }, 1200);
+  } else {
+    // Se a resposta estiver correta, avançar para a próxima pergunta
+    actualQuestion++;
     if (actualQuestion >= questions.length) {
+      // Se todas as perguntas foram respondidas corretamente, exibir mensagem de sucesso
       showSuccessMessage();
-      return;
+    } else {
+      // Caso contrário, apresentar a próxima pergunta
+      setTimeout(function () {
+        createQuestion(actualQuestion);
+      }, 1200);
     }
-    createQuestion(actualQuestion);
-  }, 1600);
+  }
 }
 
 // Exibe a tela final
@@ -869,3 +877,4 @@ restartBtn.addEventListener('click', function () {
 
 // Inicialização do quizz
 init();
+
