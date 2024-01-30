@@ -9,179 +9,94 @@ let actualQuestion = 0;
 
 
  // Array de perguntas e respostas
-    var perguntas = [
-       {
-    pergunta: "Qual é o significado de 'maçã' em inglês?",
-    opcoes: ["Apple", "Banana"],
-    resposta: 0
+    const questions = [
+  {
+    question: "Qual é o significado de 'maçã' em inglês?",
+    answers: [
+      { answer: "Apple", correct: true },
+      { answer: "Banana", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'banana' em inglês?",
-    opcoes: ["Apple", "Banana"],
-    resposta: 1
+    question: "Qual é o significado de 'banana' em inglês?",
+    answers: [
+      { answer: "Apple", correct: false },
+      { answer: "Banana", correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'laranja' em inglês?",
-    opcoes: ["Orange", "Grape"],
-    resposta: 0
+    question: "Qual é o significado de 'laranja' em inglês?",
+    answers: [
+      { answer: "Orange", correct: true },
+      { answer: "Grape", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'uva' em inglês?",
-    opcoes: ["Orange", "Grape"],
-    resposta: 1
+    question: "Qual é o significado de 'uva' em inglês?",
+    answers: [
+      { answer: "Orange", correct: false },
+      { answer: "Grape", correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'morango' em inglês?",
-    opcoes: ["Strawberry", "Watermelon"],
-    resposta: 0
+    question: "Qual é o significado de 'morango' em inglês?",
+    answers: [
+      { answer: "Strawberry", correct: true },
+      { answer: "Watermelon", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'melancia' em inglês?",
-    opcoes: ["Strawberry", "Watermelon"],
-    resposta: 1
+    question: "Qual é o significado de 'melancia' em inglês?",
+    answers: [
+      { answer: "Strawberry", correct: false },
+      { answer: "Watermelon", correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'abacaxi' em inglês?",
-    opcoes: ["Pineapple", "Mango"],
-    resposta: 0
+    question: "Qual é o significado de 'abacaxi' em inglês?",
+    answers: [
+      { answer: "Pineapple", correct: true },
+      { answer: "Mango", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'manga' em inglês?",
-    opcoes: ["Pineapple", "Mango"],
-    resposta: 1
+    question: "Qual é o significado de 'manga' em inglês?",
+    answers: [
+      { answer: "Pineapple", correct: false },
+      { answer: "Mango", correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'limão' em inglês?",
-    opcoes: ["Lemon", "Cherry"],
-    resposta: 0
+    question: "Qual é o significado de 'limão' em inglês?",
+    answers: [
+      { answer: "Lemon", correct: true },
+      { answer: "Cherry", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'cereja' em inglês?",
-    opcoes: ["Lemon", "Cherry"],
-    resposta: 1
+    question: "Qual é o significado de 'cereja' em inglês?",
+    answers: [
+      { answer: "Lemon", correct: false },
+      { answer: "Cherry", correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'kiwi' em inglês?",
-    opcoes: ["Kiwi", "Peach"],
-    resposta: 0
+    question: "Qual é o significado de 'kiwi' em inglês?",
+    answers: [
+      { answer: "Kiwi", correct: true },
+      { answer: "Peach", correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado de 'pêssego' em inglês?",
-    opcoes: ["Kiwi", "Peach"],
-    resposta: 1
+    question: "Qual é o significado de 'pêssego' em inglês?",
+    answers: [
+      { answer: "Kiwi", correct: false },
+      { answer: "Peach", correct: true },
+    ],
   },
-  {
-    pergunta: "Qual é o significado de 'pera' em inglês?",
-    opcoes: ["Pear", "Pineapple"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'amora' em inglês?",
-    opcoes: ["Blackberry", "Raspberry"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'framboesa' em inglês?",
-    opcoes: ["Blackberry", "Raspberry"],
-    resposta: 1
-  },
-  {
-    pergunta: "Qual é o significado de 'amêndoa' em inglês?",
-    opcoes: ["Almond", "Peanut"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'castanha' em inglês?",
-    opcoes: ["Almond", "Peanut"],
-    resposta: 1
-  },
-  {
-    pergunta: "Qual é o significado de 'figo' em inglês?",
-    opcoes: ["Fig", "Papaya"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'papaia' em inglês?",
-    opcoes: ["Fig", "Papaya"],
-    resposta: 1
-  },
-  {
-    pergunta: "Qual é o significado de 'melão' em inglês?",
-    opcoes: ["Melon", "Grapefruit"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'toranja' em inglês?",
-    opcoes: ["Melon", "Grapefruit"],
-    resposta: 1
-  },
-  {
-    pergunta: "Qual é o significado de 'coco' em inglês?",
-    opcoes: ["Coconut", "Avocado"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'abacate' em inglês?",
-    opcoes: ["Coconut", "Avocado"],
-    resposta: 1
-  },
-  {
-    pergunta: "Qual é o significado de 'goiaba' em inglês?",
-    opcoes: ["Guava", "Passionfruit"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'maracujá' em inglês?",
-    opcoes: ["Guava", "Passionfruit"],
-    resposta: 1
-  },
-  {
-    pergunta: "Qual é o significado de 'mirtilo' em inglês?",
-    opcoes: ["Blueberry", "Raspberry"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'amora-preta' em inglês?",
-    opcoes: ["Blackberry", "Blueberry"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'damasco' em inglês?",
-    opcoes: ["Apricot", "Plum"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'ameixa' em inglês?",
-    opcoes: ["Apricot", "Plum"],
-    resposta: 1
-  },
-  {
-    pergunta: "Qual é o significado de 'tangerina' em inglês?",
-    opcoes: ["Mandarin", "Lime"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'lima' em inglês?",
-    opcoes: ["Mandarin", "Lime"],
-    resposta: 1
-  },
-  {
-    pergunta: "Qual é o significado de 'nectarina' em inglês?",
-    opcoes: ["Nectarine", "Cherry"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'caqui' em inglês?",
-    opcoes: ["Persimmon", "Peach"],
-    resposta: 0
-  },
-  {
-    pergunta: "Qual é o significado de 'ameixa seca' em inglês?",
-    opcoes: ["Prune", "Date"],
-    resposta: 0
-  }
-      // Adicione mais perguntas aqui
-    ];
+  // Adicione mais perguntas aqui
+];
+
 
 
 // Inicialização do quizz
