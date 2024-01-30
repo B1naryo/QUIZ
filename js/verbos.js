@@ -965,18 +965,29 @@ function clearPreviousQuestion() {
 // Verificar resposta do usuário
 function checkAnswer(btn) {
   const buttons = answerBox.querySelectorAll('button');
+  let answeredCorrectly = false;
+
   buttons.forEach((button) => {
     if (button.getAttribute('correct-answer') == 'true') {
       button.classList.add('correct-answer');
       if (btn === button) {
         points++;
+        answeredCorrectly = true;
       }
     } else {
       button.classList.add('wrong-answer');
     }
   });
 
-  nextQuestion();
+  if (!answeredCorrectly) {
+    // Se a resposta estiver incorreta, não avançar para a próxima pergunta
+    setTimeout(function () {
+      clearPreviousQuestion();
+      createQuestion(actualQuestion - 1); // Volta para a mesma pergunta
+    }, 1200);
+  } else {
+    nextQuestion();
+  }
 }
 
 // Exibe próxima pergunta no quizz
