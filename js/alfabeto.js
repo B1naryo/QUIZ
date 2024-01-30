@@ -8,13 +8,15 @@ let points = 0;
 let actualQuestion = 0;
 
 
-// Perguntas
 let questions = [
   {
     question: 'Qual é o significado da letra "A" em inglês?',
     answers: [
       { answer: 'Ei', correct: true },
       { answer: 'Bi', correct: false },
+      { answer: 'Éi', correct: false },
+      { answer: 'Ei-ai', correct: false },
+      { answer: 'É', correct: false },
     ],
   },
   {
@@ -22,13 +24,19 @@ let questions = [
     answers: [
       { answer: 'Si', correct: false },
       { answer: 'Bi', correct: true },
+      { answer: 'Bái', correct: false },
+      { answer: 'Bí', correct: false },
+      { answer: 'Béi', correct: false },
     ],
   },
   {
     question: 'Qual é o significado da letra "C" em inglês?',
     answers: [
       { answer: 'Si', correct: true },
-      { answer: 'D', correct: false },
+      { answer: 'Dji', correct: false },
+      { answer: 'Cí', correct: false },
+      { answer: 'Céi', correct: false },
+      { answer: 'Cê', correct: false },
     ],
   },
   {
@@ -36,6 +44,9 @@ let questions = [
     answers: [
       { answer: 'Di', correct: true },
       { answer: 'Ai', correct: false },
+      { answer: 'Dí', correct: false },
+      { answer: 'Déi', correct: false },
+      { answer: 'Dí-ai', correct: false },
     ],
   },
   {
@@ -43,13 +54,19 @@ let questions = [
     answers: [
       { answer: 'Pi', correct: false },
       { answer: 'I', correct: true },
+      { answer: 'Í', correct: false },
+      { answer: 'Ei', correct: false },
+      { answer: 'Ai', correct: false },
     ],
   },
   {
     question: 'Qual é o significado da letra "F" em inglês?',
     answers: [
       { answer: 'Éf', correct: true },
-      { answer: 'dji', correct: false },
+      { answer: 'Dji', correct: false },
+      { answer: 'Éfi', correct: false },
+      { answer: 'É', correct: false },
+      { answer: 'Éféi', correct: false },
     ],
   },
   {
@@ -57,6 +74,9 @@ let questions = [
     answers: [
       { answer: 'Dji', correct: true },
       { answer: 'Ái', correct: false },
+      { answer: 'Dji-ai', correct: false },
+      { answer: 'Dji-i', correct: false },
+      { answer: 'Djiuái', correct: false },
     ],
   },
   {
@@ -64,6 +84,9 @@ let questions = [
     answers: [
       { answer: 'Eit', correct: true },
       { answer: 'Kei', correct: false },
+      { answer: 'Eitchi', correct: false },
+      { answer: 'Éi', correct: false },
+      { answer: 'Hêi', correct: false },
     ],
   },
   {
@@ -71,6 +94,9 @@ let questions = [
     answers: [
       { answer: 'Ái', correct: true },
       { answer: 'Ár', correct: false },
+      { answer: 'Ái-ai', correct: false },
+      { answer: 'Ái-í', correct: false },
+      { answer: 'A', correct: false },
     ],
   },
   {
@@ -78,6 +104,9 @@ let questions = [
     answers: [
       { answer: 'Uai', correct: false },
       { answer: 'Djei', correct: true },
+      { answer: 'Djêi', correct: false },
+      { answer: 'Jótchi', correct: false },
+      { answer: 'Dji', correct: false },
     ],
   },
   {
@@ -85,6 +114,9 @@ let questions = [
     answers: [
       { answer: 'Kei', correct: true },
       { answer: 'Zed', correct: false },
+      { answer: 'Kê', correct: false },
+      { answer: 'Kêi', correct: false },
+      { answer: 'Kai', correct: false },
     ],
   },
   {
@@ -92,6 +124,9 @@ let questions = [
     answers: [
       { answer: 'Él', correct: true },
       { answer: 'Ti', correct: false },
+      { answer: 'Éli', correct: false },
+      { answer: 'Él-ai', correct: false },
+      { answer: 'Elí', correct: false },
     ],
   },
   {
@@ -99,6 +134,9 @@ let questions = [
     answers: [
       { answer: 'Em', correct: true },
       { answer: 'En', correct: false },
+      { answer: 'Ém', correct: false },
+      { answer: 'Én', correct: false },
+      { answer: 'Émi', correct: false },
     ],
   },
   {
@@ -106,6 +144,9 @@ let questions = [
     answers: [
       { answer: 'Ên', correct: true },
       { answer: 'Dâbliu', correct: false },
+      { answer: 'Êni', correct: false },
+      { answer: 'Ên-ai', correct: false },
+      { answer: 'Ên-i', correct: false },
     ],
   },
   {
@@ -113,6 +154,9 @@ let questions = [
     answers: [
       { answer: 'Pi', correct: false },
       { answer: 'Ôu', correct: true },
+      { answer: 'Óu', correct: false },
+      { answer: 'Ói', correct: false },
+      { answer: 'Ó', correct: false },
     ],
   },
   {
@@ -120,6 +164,9 @@ let questions = [
     answers: [
       { answer: 'Quiu', correct: false },
       { answer: 'Pi', correct: true },
+      { answer: 'Pí', correct: false },
+      { answer: 'Pai', correct: false },
+      { answer: 'Péi', correct: false },
     ],
   },
   {
@@ -127,6 +174,9 @@ let questions = [
     answers: [
       { answer: 'Quiu', correct: true },
       { answer: 'Uai', correct: false },
+      { answer: 'Qui', correct: false },
+      { answer: 'Kiu', correct: false },
+      { answer: 'Kiu-iu', correct: false },
     ],
   },
   {
@@ -134,6 +184,9 @@ let questions = [
     answers: [
       { answer: 'Ti', correct: false },
       { answer: 'Ár', correct: true },
+      { answer: 'Ar-i', correct: false },
+      { answer: 'Ér', correct: false },
+      { answer: 'Ér-i', correct: false },
     ],
   },
   {
@@ -141,6 +194,9 @@ let questions = [
     answers: [
       { answer: 'És', correct: true },
       { answer: 'Iu', correct: false },
+      { answer: 'Ési', correct: false },
+      { answer: 'És-ai', correct: false },
+      { answer: 'És-i', correct: false },
     ],
   },
   {
@@ -148,6 +204,9 @@ let questions = [
     answers: [
       { answer: 'Ti', correct: true },
       { answer: 'Iu', correct: false },
+      { answer: 'Tí', correct: false },
+      { answer: 'Téi', correct: false },
+      { answer: 'Tê', correct: false },
     ],
   },
   {
@@ -155,6 +214,9 @@ let questions = [
     answers: [
       { answer: 'Ti', correct: false },
       { answer: 'Iu', correct: true },
+      { answer: 'U', correct: false },
+      { answer: 'Iu-i', correct: false },
+      { answer: 'Iu-í', correct: false },
     ],
   },
   {
@@ -162,6 +224,9 @@ let questions = [
     answers: [
       { answer: 'Ei', correct: false },
       { answer: 'Vi', correct: true },
+      { answer: 'Ví', correct: false },
+      { answer: 'Vái', correct: false },
+      { answer: 'Véi', correct: false },
     ],
   },
   {
@@ -169,6 +234,9 @@ let questions = [
     answers: [
       { answer: 'Éks', correct: true },
       { answer: 'Zi', correct: false },
+      { answer: 'Xis', correct: false },
+      { answer: 'Xí', correct: false },
+      { answer: 'Éksi', correct: false },
     ],
   },
   {
@@ -176,6 +244,9 @@ let questions = [
     answers: [
       { answer: 'Uai', correct: true },
       { answer: 'Bi', correct: false },
+      { answer: 'Wai', correct: false },
+      { answer: 'Wái', correct: false },
+      { answer: 'Why', correct: false },
     ],
   },
   {
@@ -183,9 +254,13 @@ let questions = [
     answers: [
       { answer: 'Ei', correct: false },
       { answer: 'Zi', correct: true },
+      { answer: 'Zê', correct: false },
+      { answer: 'Zi-i', correct: false },
+      { answer: 'Zí', correct: false },
     ],
   },
 ];
+
 
 // Inicialização do quizz
 function init() {
