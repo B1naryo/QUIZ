@@ -961,7 +961,7 @@ function createQuestion(i) {
 
     // inserir evento click no botão
     answerTemplate.addEventListener('click', function () {
-      checkAnswer(this);
+      checkAnswerQuizz(this);
     });
   });
 
@@ -970,7 +970,7 @@ function createQuestion(i) {
 }
 
 // verificar resposta do usuário
-function checkAnswer(btn) {
+function checkAnswerQuizz(btn) {
   // seleciona todos os botões
   const buttons = answerBox.querySelectorAll('button');
 
@@ -983,6 +983,8 @@ function checkAnswer(btn) {
       if (btn === button) {
         // incremento dos pontos
         points++;
+        // chama a função para verificar se todas as perguntas foram respondidas
+        checkAllAnswersQuizz();
       }
     } else {
       button.classList.add('wrong-answer');
@@ -991,6 +993,14 @@ function checkAnswer(btn) {
 
   // exibir próxima pergunta
   nextQuestion();
+}
+
+// verifica se todas as perguntas foram respondidas corretamente
+function checkAllAnswersQuizz() {
+  if (points === questions.length) {
+    alert("Parabéns! Você acertou todas as perguntas.");
+    // Adicione aqui o código adicional que desejar para quando todas as perguntas forem respondidas corretamente.
+  }
 }
 
 // exibe a pŕoxima pergunta no quizz
