@@ -763,6 +763,79 @@ const questions = [
 
 
 ];
+// Inicialização do quizz
+function init() {
+  createQuestion(actualQuestion);
+}
+
+// Criação de pergunta
+function createQuestion(index) {
+  clearPreviousQuestion();
+  const question = questions[index];
+  const questionText = questionElement.querySelector('#question-text');
+  const questionNumber = questionElement.querySelector('#question-number');
+
+  questionText.textContent = question.question;
+  questionNumber.textContent = index + 1;
+
+  question.answers.forEach((answer, i) => {
+    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
+    const letterBtn = answerTemplate.querySelector('.btn-letter');
+    const answerText = answerTemplate.querySelector('.question-answer');
+
+    letterBtn.textContent = letters[i];
+    answerText.textContent = answer.answer;
+
+    answerTemplate.setAttribute('correct-answer', answer.correct);
+
+    answerTemplate.classList.remove('hide');
+    answerTemplate.classList.remove('answer-template');
+
+    answerBox.appendChild(answerTemplate);
+
+    answerTemplate.addEventListener('click', function () {
+      checkAnswer(this);
+    });
+  });
+
+  actualQuestion++;
+}
+
+// Limpar pergunta anterior
+function clearPreviousQuestion() {
+  const oldButtons = answerBox.querySelectorAll('button');
+  oldButtons.forEach((btn) => {
+    btn.remove();
+  });
+}
+
+// Verificar resposta do usuário
+function checkAnswer(btn) {
+  const buttons = answerBox.querySelectorAll('button');
+  buttons.forEach((button) => {
+    if (button.getAttribute('correct-answer') == 'true') {
+      button.classList.add('correct-answer');
+      if (btn === button) {
+        points++;
+      }
+    } else {
+      button.classList.add('wrong-answer');
+    }
+  });
+
+  nextQuestion();
+}
+
+// Exibe próxima pergunta no quizz
+function nextQuestion() {
+  setTimeout(function () {
+    if (actualQuestion >= questions.length) {
+      showSuccessMessage();
+      return;
+    }
+    createQuestion(actualQuestion);
+  }, 1600);
+}
 
 // Exibe a tela final
 function showSuccessMessage() {
