@@ -9,133 +9,184 @@ let actualQuestion = 0;
 
 
 // Perguntas
-const questions = [
-      {
-    pergunta: "Qual é o significado da letra 'A' em inglês?",
-    opcoes: ["Ei", "Bi"],
-    resposta: 0
+let questions = [
+  {
+    question: 'Qual é o significado da letra "A" em inglês?',
+    answers: [
+      { answer: 'Ei', correct: true },
+      { answer: 'Bi', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'B' em inglês?",
-    opcoes: ["Si", "bi"],
-    resposta: 1
+    question: 'Qual é o significado da letra "B" em inglês?',
+    answers: [
+      { answer: 'Si', correct: false },
+      { answer: 'Bi', correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'C' em inglês?",
-    opcoes: ["si", "D"],
-    resposta: 0
+    question: 'Qual é o significado da letra "C" em inglês?',
+    answers: [
+      { answer: 'Si', correct: true },
+      { answer: 'D', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'D' em inglês?",
-    opcoes: ["Di", "Ai"],
-    resposta: 0
+    question: 'Qual é o significado da letra "D" em inglês?',
+    answers: [
+      { answer: 'Di', correct: true },
+      { answer: 'Ai', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'E' em inglês?",
-    opcoes: ["Pi", "I"],
-    resposta: 1
+    question: 'Qual é o significado da letra "E" em inglês?',
+    answers: [
+      { answer: 'Pi', correct: false },
+      { answer: 'I', correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'F' em inglês?",
-    opcoes: ["Éf", "dji"],
-    resposta: 0
+    question: 'Qual é o significado da letra "F" em inglês?',
+    answers: [
+      { answer: 'Éf', correct: true },
+      { answer: 'dji', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'G' em inglês?",
-    opcoes: ["Dji", "Ái"],
-    resposta: 0
+    question: 'Qual é o significado da letra "G" em inglês?',
+    answers: [
+      { answer: 'Dji', correct: true },
+      { answer: 'Ái', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'H' em inglês?",
-    opcoes: ["Eit", "Kei"],
-    resposta: 0
+    question: 'Qual é o significado da letra "H" em inglês?',
+    answers: [
+      { answer: 'Eit', correct: true },
+      { answer: 'Kei', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'I' em inglês?",
-    opcoes: ["Ái", "Ár"],
-    resposta: 0
+    question: 'Qual é o significado da letra "I" em inglês?',
+    answers: [
+      { answer: 'Ái', correct: true },
+      { answer: 'Ár', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'J' em inglês?",
-    opcoes: ["Uai", "Djei"],
-    resposta: 1
+    question: 'Qual é o significado da letra "J" em inglês?',
+    answers: [
+      { answer: 'Uai', correct: false },
+      { answer: 'Djei', correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'K' em inglês?",
-    opcoes: ["Kei", "Zed"],
-    resposta: 0
+    question: 'Qual é o significado da letra "K" em inglês?',
+    answers: [
+      { answer: 'Kei', correct: true },
+      { answer: 'Zed', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'L' em inglês?",
-    opcoes: ["Él", "Ti"],
-    resposta: 0
+    question: 'Qual é o significado da letra "L" em inglês?',
+    answers: [
+      { answer: 'Él', correct: true },
+      { answer: 'Ti', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'M' em inglês?",
-    opcoes: ["Em", "En"],
-    resposta: 0
+    question: 'Qual é o significado da letra "M" em inglês?',
+    answers: [
+      { answer: 'Em', correct: true },
+      { answer: 'En', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'N' em inglês?",
-    opcoes: ["Ên", "Dâbliu"],
-    resposta: 0
+    question: 'Qual é o significado da letra "N" em inglês?',
+    answers: [
+      { answer: 'Ên', correct: true },
+      { answer: 'Dâbliu', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'O' em inglês?",
-    opcoes: ["Pi", "Ôu"],
-    resposta: 1
+    question: 'Qual é o significado da letra "O" em inglês?',
+    answers: [
+      { answer: 'Pi', correct: false },
+      { answer: 'Ôu', correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'P' em inglês?",
-    opcoes: ["Quiu", "Pi"],
-    resposta: 1
+    question: 'Qual é o significado da letra "P" em inglês?',
+    answers: [
+      { answer: 'Quiu', correct: false },
+      { answer: 'Pi', correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'Q' em inglês?",
-    opcoes: ["Quiu", "Uai"],
-    resposta: 0
+    question: 'Qual é o significado da letra "Q" em inglês?',
+    answers: [
+      { answer: 'Quiu', correct: true },
+      { answer: 'Uai', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'R' em inglês?",
-    opcoes: ["Ti", "Ár"],
-    resposta: 1
+    question: 'Qual é o significado da letra "R" em inglês?',
+    answers: [
+      { answer: 'Ti', correct: false },
+      { answer: 'Ár', correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'S' em inglês?",
-    opcoes: ["És", "Iu"],
-    resposta: 0
+    question: 'Qual é o significado da letra "S" em inglês?',
+    answers: [
+      { answer: 'És', correct: true },
+      { answer: 'Iu', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'T' em inglês?",
-    opcoes: ["Ti", "Iu"],
-    resposta: 0
+    question: 'Qual é o significado da letra "T" em inglês?',
+    answers: [
+      { answer: 'Ti', correct: true },
+      { answer: 'Iu', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'U' em inglês?",
-    opcoes: ["Ti", "Iu"],
-    resposta: 1
+    question: 'Qual é o significado da letra "U" em inglês?',
+    answers: [
+      { answer: 'Ti', correct: false },
+      { answer: 'Iu', correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'V' em inglês?",
-    opcoes: ["Ei", "Vi"],
-    resposta: 1
+    question: 'Qual é o significado da letra "V" em inglês?',
+    answers: [
+      { answer: 'Ei', correct: false },
+      { answer: 'Vi', correct: true },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'X' em inglês?",
-    opcoes: ["Éks", "Zi"],
-    resposta: 0
+    question: 'Qual é o significado da letra "X" em inglês?',
+    answers: [
+      { answer: 'Éks', correct: true },
+      { answer: 'Zi', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'Y' em inglês?",
-    opcoes: ["Uai", "Bi"],
-    resposta: 0
+    question: 'Qual é o significado da letra "Y" em inglês?',
+    answers: [
+      { answer: 'Uai', correct: true },
+      { answer: 'Bi', correct: false },
+    ],
   },
   {
-    pergunta: "Qual é o significado da letra 'Z' em inglês?",
-    opcoes: ["Ei", "Zi"],
-    resposta: 1
-  }
+    question: 'Qual é o significado da letra "Z" em inglês?',
+    answers: [
+      { answer: 'Ei', correct: false },
+      { answer: 'Zi', correct: true },
+    ],
+  },
 ];
+
 // Inicialização do quizz
 function init() {
   createQuestion(actualQuestion);
