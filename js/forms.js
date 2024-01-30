@@ -8,51 +8,56 @@ let points = 0;
 let actualQuestion = 0;
 
 let questions = [
-  
-  {
+   {
     question: 'Qual formulário está correto?',
     answers: [
       { 
-        answer: '<form>
-          <label for="texto">Texto:</label>
-          <input type="text" id="texto" name="texto">
-          <input type="submit" value="Enviar">
-        </form>', 
+        answer: `
+          <form>
+            <label for="texto">Texto:</label>
+            <input type="text" id="texto" name="texto">
+            <input type="submit" value="Enviar">
+          </form>
+        `, 
         correct: false,
-       code: ''
+        code: ''
       },
       {
-        answer: `<form action="/processar_formulario.php" method="post">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome">
-          <input type="submit" value="Enviar">
-        </form>`,
+        answer: `
+          <form action="/processar_formulario.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <input type="submit" value="Enviar">
+          </form>
+        `,
         correct: true,
         code: ''
-        
       },
       { 
-        answer: '<form>
-          <label for="areaTexto">Área de Texto:</label>
-          <textarea id="areaTexto" name="areaTexto"></textarea>
-          <input type="submit" value="Enviar">
-        </form', 
+        answer: `
+          <form>
+            <label for="areaTexto">Área de Texto:</label>
+            <textarea id="areaTexto" name="areaTexto"></textarea>
+            <input type="submit" value="Enviar">
+          </form>
+        `, 
         correct: false,
         code: ''
-       
       },
       { 
-        answer: '<form>
-          <label for="textoLabel">Texto Label:</label>
-          <input type="text" id="textoLabel" name="textoLabel">
-          <input type="submit" value="Enviar">
-        </form>', 
+        answer: `
+          <form>
+            <label for="textoLabel">Texto Label:</label>
+            <input type="text" id="textoLabel" name="textoLabel">
+            <input type="submit" value="Enviar">
+          </form>
+        `, 
         correct: false,
         code: ''
-       
       },
     ],
   },
+  
 
   {
     question: 'Qual foi o objetivo principal no desenvolvimento do PHP?',
