@@ -8,35 +8,109 @@ let points = 0;
 let actualQuestion = 0;
 
 // Perguntas
-const questions = [
+let questions = [
   {
-    question: 'PHP foi desenvolvido para qual fim?',
+    question: 'Como realizar a conexão com um banco de dados MySQL usando PHP?',
     answers: [
-      { answer: 'Back-End', correct: true },
-      { answer: 'Front-End', correct: false },
-      { answer: 'Sistema operacional', correct: false },
-      { answer: 'Banco de dados', correct: false },
+      { 
+        answer: 'mysqli_connect("localhost", "usuario", "senha", "nome_do_banco")', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'connect_database("localhost", "usuario", "senha", "nome_do_banco")',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'mysql_open("localhost", "usuario", "senha", "nome_do_banco")',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'pdo_connect("localhost", "usuario", "senha", "nome_do_banco")',
+        correct: false,
+        code: ''
+      },
     ],
   },
   {
-    question: 'Uma forma de declarar variável em JavaScript:',
+    question: 'Qual função PHP é comumente usada para executar consultas SQL em um banco de dados?',
     answers: [
-      { answer: '$var', correct: false },
-      { answer: 'var', correct: true },
-      { answer: '@var', correct: false },
-      { answer: '#let', correct: false },
+      { 
+        answer: 'mysql_query()', 
+        correct: false,
+        code: ''
+      },
+      {
+        answer: 'mysqli_query()',
+        correct: true,
+        code: ''
+      },
+      { 
+        answer: 'pdo_execute()',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'execute_sql()',
+        correct: false,
+        code: ''
+      },
     ],
   },
   {
-    question: 'Qual o seletor de id no CSS?',
+    question: 'Como evitar ataques de SQL Injection ao executar consultas SQL em PHP?',
     answers: [
-      { answer: '#', correct: true },
-      { answer: '.', correct: false },
-      { answer: '@', correct: false },
-      { answer: '/', correct: false },
+      { 
+        answer: 'Validar os dados de entrada apenas no lado do cliente',
+        correct: false,
+        code: ''
+      },
+      {
+        answer: 'Utilizar consultas preparadas (prepared statements) com parâmetros',
+        correct: true,
+        code: ''
+      },
+      { 
+        answer: 'Escapar manualmente os caracteres especiais nos dados de entrada',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Desativar completamente a execução de consultas SQL no PHP',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Como realizar a remoção de registros de uma tabela no MySQL usando PHP?',
+    answers: [
+      { 
+        answer: 'DELETE FROM tabela WHERE condição', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'REMOVE FROM tabela WHERE condição',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'REMOVE registro FROM tabela WHERE condição',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'DELETE registro FROM tabela WHERE condição',
+        correct: false,
+        code: ''
+      },
     ],
   },
 ];
+
 
 // Inicialização do quizz
 function init() {
