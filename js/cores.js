@@ -8,59 +8,79 @@ let points = 0;
 let actualQuestion = 0;
 
 // Array de perguntas e respostas
-    var perguntas = [
-      {
-        pergunta: "O que significa 'azul' em inglês?",
-        opcoes: ["Red", "Blue"],
-        resposta: 1
-      },
-      {
-        pergunta: "O que significa 'vermelho' em inglês?",
-        opcoes: ["Red", "Black"],
-        resposta: 0
-      },
-      {
-        pergunta: "O que significa 'preto' em inglês",
-        opcoes: ["Black", "White"],
-        resposta: 0
-      },
-      {
-        pergunta: "O que significa 'amarelo' em inglês",
-        opcoes: ["Yellow", "Green"],
-        resposta: 0
-      },
-      {
-        pergunta: "O que significa 'marrom' em inglês",
-        opcoes: ["Red", "Brown"],
-        resposta: 1
-      },
-      {
-        pergunta: "O que significa 'rocho' em inglês",
-        opcoes: ["Purple", "Yellow"],
-        resposta: 0
-      },
-       {
-        pergunta: "O que significa 'cinza' em inglês",
-        opcoes: ["Purple", "Gray"],
-        resposta: 1
-      },
-      {
-        pergunta: "O que significa 'laranja' em inglês",
-        opcoes: ["Purple", "Orange"],
-        resposta: 1
-      },
-      {
-        pergunta: "O que significa 'rosa' em inglês",
-        opcoes: ["Pink", "Yellow"],
-        resposta: 0
-      },
-      {
-        pergunta: "O que significa 'verde' em inglês",
-        opcoes: ["Green", "Purple"],
-        resposta: 0
-      }
-      // Adicione mais perguntas aqui
-    ];
+    let questions = [
+  {
+    question: "O que significa 'azul' em inglês?",
+    answers: [
+      { answer: "Red", correct: false },
+      { answer: "Blue", correct: true },
+    ],
+  },
+  {
+    question: "O que significa 'vermelho' em inglês?",
+    answers: [
+      { answer: "Red", correct: true },
+      { answer: "Black", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'preto' em inglês?",
+    answers: [
+      { answer: "Black", correct: true },
+      { answer: "White", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'amarelo' em inglês?",
+    answers: [
+      { answer: "Yellow", correct: true },
+      { answer: "Green", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'marrom' em inglês?",
+    answers: [
+      { answer: "Red", correct: false },
+      { answer: "Brown", correct: true },
+    ],
+  },
+  {
+    question: "O que significa 'roxo' em inglês?",
+    answers: [
+      { answer: "Purple", correct: true },
+      { answer: "Yellow", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'cinza' em inglês?",
+    answers: [
+      { answer: "Purple", correct: false },
+      { answer: "Gray", correct: true },
+    ],
+  },
+  {
+    question: "O que significa 'laranja' em inglês?",
+    answers: [
+      { answer: "Purple", correct: false },
+      { answer: "Orange", correct: true },
+    ],
+  },
+  {
+    question: "O que significa 'rosa' em inglês?",
+    answers: [
+      { answer: "Pink", correct: true },
+      { answer: "Yellow", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'verde' em inglês?",
+    answers: [
+      { answer: "Green", correct: true },
+      { answer: "Purple", correct: false },
+    ],
+  },
+  // Adicione mais perguntas aqui
+];
 
 // Inicialização do quizz
 function init() {
