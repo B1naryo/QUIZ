@@ -7,7 +7,8 @@ const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
 
-// Array de perguntas e respostas
+
+// Perguntas
 const questions = [
       {
     pergunta: "Qual é o significado da letra 'A' em inglês?",
