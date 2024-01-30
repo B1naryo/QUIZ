@@ -8,7 +8,7 @@ let points = 0;
 let actualQuestion = 0;
 
 let questions = [
-  let questions = [
+  
   {
     question: 'Qual formulário está correto?',
     answers: [
