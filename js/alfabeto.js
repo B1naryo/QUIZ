@@ -6,8 +6,9 @@ const scoreContainer = document.querySelector('#score-container');
 const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
+
 // Array de perguntas e respostas
-    let questions = [
+const questions = [
       {
     pergunta: "Qual é o significado da letra 'A' em inglês?",
     opcoes: ["Ei", "Bi"],
@@ -134,7 +135,6 @@ let actualQuestion = 0;
     resposta: 1
   }
 ];
-
 // Inicialização do quizz
 function init() {
   createQuestion(actualQuestion);
@@ -156,9 +156,9 @@ function createQuestion(index) {
     const answerText = answerTemplate.querySelector('.question-answer');
 
     letterBtn.textContent = letters[i];
-    answerText.textContent = answer.answer;
+    answerText.textContent = answer;
 
-    answerTemplate.setAttribute('correct-answer', answer.correct);
+    answerTemplate.setAttribute('correct-answer', i === question.correct ? 'true' : 'false');
 
     answerTemplate.classList.remove('hide');
     answerTemplate.classList.remove('answer-template');
@@ -249,4 +249,3 @@ restartBtn.addEventListener('click', function () {
 
 // Inicialização do quizz
 init();
-
