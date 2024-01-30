@@ -24,12 +24,22 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var parentLink = document.querySelector(".parent-link");
-            var submenu = document.querySelector(".submenu");
+            var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
+            var inglesSubmenu = document.querySelector("#submenu-container .submenu");
 
-            parentLink.addEventListener("click", function (event) {
+            var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
+            var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
+
+            inglesParentLink.addEventListener("click", function (event) {
                 event.preventDefault();
-                submenu.classList.toggle("show-submenu");
+                inglesSubmenu.classList.toggle("show-submenu");
+                phpSubmenu.classList.remove("show-submenu");
+            });
+
+            phpParentLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                phpSubmenu.classList.toggle("show-submenu");
+                inglesSubmenu.classList.remove("show-submenu");
             });
         });
     </script>
@@ -72,7 +82,7 @@
                     </div>
                 </div>
                 <div id="payment-info">
-                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
+                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
                         class="image" height="200px" id="price-img">
                     <div id="payment-info-text">
                         <p></p>
@@ -82,40 +92,43 @@
                 </div>
 
                 <div id="submenu-container">
-    <a href="#" class="parent-link">
-        <button class="purchase-button" id="connect_ingles">INGLÊS</button>
-    </a>
-    <ul class="submenu">
-        <li>
-            <a href="verbos.html" target="_blank"><button class="purchase-button" id="connect_verbos">Verbos</button></a>
-        </li>
-        <li>
-            <a href="pronomes.html" target="_blank"><button class="purchase-button" id="connect_pronomes">Pronomes</button></a>
-        </li>
-        <!-- Adicione mais itens de submenu conforme necessário -->
-    </ul>
-</div>
+                    <a href="#" class="parent-link">
+                        <button class="purchase-button" id="connect_ingles">INGLÊS</button>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="verbos.html" target="_blank"><button class="purchase-button"
+                                    id="connect_verbos">Verbos</button></a>
+                        </li>
+                        <li>
+                            <a href="pronomes.html" target="_blank"><button class="purchase-button"
+                                    id="connect_pronomes">Pronomes</button></a>
+                        </li>
+                        <!-- Adicione mais itens de submenu conforme necessário -->
+                    </ul>
+                </div>
 
-<div id="submenu-container_php">
-    <a href="#" class="parent-link">
-        <button class="purchase-button" id="connect_php">PHP</button>
-    </a>
-    <ul class="submenu">
-        <li>
-            <a href="forms.html" target="_blank"><button class="purchase-button" id="connect_forms">Formulários</button></a>
-        </li>
-        <li>
-            <a href="pesquisa.html" target="_blank"><button class="purchase-button" id="connect_pesquisa">Pesquisa</button></a>
-        </li>
-        <!-- Adicione mais itens de submenu conforme necessário -->
-    </ul>
-</div>
+                <div id="submenu-container_php">
+                    <a href="#" class="parent-link">
+                        <button class="purchase-button" id="connect_php">PHP</button>
+                    </a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="forms.html" target="_blank"><button class="purchase-button"
+                                    id="connect_forms">Formulários</button></a>
+                        </li>
+                        <li>
+                            <a href="pesquisa.html" target="_blank"><button class="purchase-button"
+                                    id="connect_pesquisa">Pesquisa</button></a>
+                        </li>
+                        <!-- Adicione mais itens de submenu conforme necessário -->
+                    </ul>
+                </div>
 
-            <script src="./src/js/loader.js"></script>
+                <script src="./src/js/loader.js"></script>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>
-
 
