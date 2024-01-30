@@ -109,6 +109,311 @@ let questions = [
       },
     ],
   },
+ 
+  {
+    question: 'Como realizar uma consulta SQL para selecionar todos os registros de uma tabela chamada "usuarios"?',
+    answers: [
+      { 
+        answer: 'SELECT * FROM usuarios', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'FETCH * FROM usuarios',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'GET * FROM usuarios',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'RETRIEVE * FROM usuarios',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Qual função PHP é utilizada para obter o último ID inserido em uma tabela autoincrementável após uma inserção?',
+    answers: [
+      { 
+        answer: 'mysql_last_id()', 
+        correct: false,
+        code: ''
+      },
+      {
+        answer: 'mysqli_insert_id()',
+        correct: true,
+        code: ''
+      },
+      { 
+        answer: 'pdo_last_insert_id()',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'get_last_id()',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Como realizar a atualização de registros em uma tabela chamada "produtos" no MySQL usando PHP?',
+    answers: [
+      { 
+        answer: 'UPDATE produtos SET coluna1 = valor1, coluna2 = valor2 WHERE condição', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'MODIFY produtos SET coluna1 = valor1, coluna2 = valor2 WHERE condição',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'ALTER produtos SET coluna1 = valor1, coluna2 = valor2 WHERE condição',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'CHANGE produtos SET coluna1 = valor1, coluna2 = valor2 WHERE condição',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Qual função PHP é utilizada para fechar a conexão com o banco de dados MySQL?',
+    answers: [
+      { 
+        answer: 'mysql_close()', 
+        correct: false,
+        code: ''
+      },
+      {
+        answer: 'mysqli_close()',
+        correct: true,
+        code: ''
+      },
+      { 
+        answer: 'pdo_close()',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'close_database()',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  
+  {
+    question: 'O que é SQL Injection e por que é uma ameaça para aplicativos PHP?',
+    answers: [
+      { 
+        answer: 'SQL Injection é uma técnica que permite injetar código SQL malicioso em consultas, comprometendo a segurança do banco de dados.', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'SQL Injection é uma forma segura de executar consultas SQL em um banco de dados MySQL.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'SQL Injection é um método para executar consultas SQL em um servidor web sem permissão.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'SQL Injection é uma ferramenta incorporada ao PHP para executar consultas SQL de maneira mais eficiente.',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Como um atacante pode realizar SQL Injection em um formulário PHP?',
+    answers: [
+      { 
+        answer: 'Inserindo código SQL malicioso nos campos do formulário para manipular consultas no backend.', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'Alterando o método do formulário para "SQL" e inserindo as consultas diretamente.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Usando JavaScript para executar ataques SQL no frontend.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Apenas enviando muitos dados ao mesmo tempo no formulário.',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Quais são as práticas recomendadas para prevenir SQL Injection em consultas PHP?',
+    answers: [
+      { 
+        answer: 'Usar consultas preparadas (prepared statements) e parâmetros para separar dados do código SQL.', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'Desativar completamente a execução de consultas SQL em formulários PHP.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Escapar manualmente os caracteres especiais nos dados de entrada.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Validar apenas os dados do lado do cliente para impedir a injeção de SQL.',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Como um atacante pode realizar SQL Injection por meio da URL em uma aplicação PHP?',
+    answers: [
+      { 
+        answer: 'Adicionando parâmetros manipulados com código SQL diretamente na URL.', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'Enviando um e-mail com um link para o usuário clicar e executar código SQL.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Realizando um ataque de força bruta na URL da aplicação.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Inserindo scripts maliciosos no código-fonte PHP da aplicação.',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+
+  {
+    question: 'O que é SQL Injection e como ela difere de Blind SQL Injection?',
+    answers: [
+      { 
+        answer: 'SQL Injection é uma técnica que permite injetar código SQL malicioso em consultas, enquanto Blind SQL Injection ocorre quando o atacante não recebe diretamente os resultados da injeção, mas pode inferir informações com base no comportamento da aplicação.', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'SQL Injection é apenas uma ameaça teórica, enquanto Blind SQL Injection é uma técnica real de ataque.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Blind SQL Injection ocorre apenas em servidores Windows, enquanto SQL Injection é específico para servidores Linux.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'SQL Injection é um sinônimo de Blind SQL Injection.',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Como um atacante pode explorar uma vulnerabilidade de SQL Injection baseada em erro de tipo de dado?',
+    answers: [
+      { 
+        answer: 'Inserindo valores que causem erros de tipo de dado no código SQL, revelando informações sensíveis.', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'Enviando consultas SQL excessivamente longas para sobrecarregar o servidor e obter informações.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Utilizando ferramentas automatizadas para forçar a injeção de SQL sem a necessidade de explorar erros de tipo de dado.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Realizando um ataque de força bruta para descobrir credenciais de banco de dados.',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Explique como um atacante pode realizar Time-Based Blind SQL Injection para inferir informações do banco de dados.',
+    answers: [
+      { 
+        answer: 'Inserindo instruções SQL que causem atrasos de tempo e observando a resposta do servidor para inferir informações.', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'Enviando consultas SQL que exibam informações diretamente na resposta da aplicação.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Utilizando técnicas de injeção de SQL apenas em campos de senha para obter credenciais do banco de dados.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Atacando exclusivamente formulários de login para obter acesso não autorizado.',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+  {
+    question: 'Quais são algumas práticas recomendadas para prevenir SQL Injection em aplicações PHP?',
+    answers: [
+      { 
+        answer: 'Usar consultas preparadas (prepared statements) e parâmetros para separar dados do código SQL.', 
+        correct: true,
+        code: ''
+      },
+      {
+        answer: 'Desativar completamente a execução de consultas SQL em formulários PHP.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Escapar manualmente os caracteres especiais nos dados de entrada.',
+        correct: false,
+        code: ''
+      },
+      { 
+        answer: 'Validar apenas os dados do lado do cliente para impedir a injeção de SQL.',
+        correct: false,
+        code: ''
+      },
+    ],
+  },
+
+
 ];
 
 
