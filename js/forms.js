@@ -13,13 +13,13 @@ let questions = [
     question: 'Qual formulário está correto?',
     answers: [
       { 
-        answer: '<text>', 
-        correct: false,
-        code: `<form>
+        answer: '<form>
           <label for="texto">Texto:</label>
           <input type="text" id="texto" name="texto">
           <input type="submit" value="Enviar">
-        </form>`
+        </form>', 
+        correct: false,
+       
       },
       {
         answer: `<form action="/processar_formulario.php" method="post">
@@ -28,25 +28,25 @@ let questions = [
           <input type="submit" value="Enviar">
         </form>`,
         correct: true,
-        code: ''
+        
       },
       { 
-        answer: '<textarea>', 
-        correct: false,
-        code: `<form>
+        answer: '<form>
           <label for="areaTexto">Área de Texto:</label>
           <textarea id="areaTexto" name="areaTexto"></textarea>
           <input type="submit" value="Enviar">
-        </form>`
+        </form', 
+        correct: false,
+       
       },
       { 
-        answer: '<label for="text">', 
-        correct: false,
-        code: `<form>
+        answer: '<form>
           <label for="textoLabel">Texto Label:</label>
           <input type="text" id="textoLabel" name="textoLabel">
           <input type="submit" value="Enviar">
-        </form>`
+        </form>', 
+        correct: false,
+       
       },
     ],
   },
