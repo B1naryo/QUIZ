@@ -53,12 +53,17 @@
         }
 
         .submenu {
-            display: none;
-        }
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Adiciona uma transição suave para a animação */
+}
 
-        .show-submenu {
-            display: block;
-        }
+.show-submenu {
+    display: block;
+    max-height: 200px; /* Ajuste isso conforme necessário para a altura máxima do submenu */
+}
+
     </style>
 </head>
 
