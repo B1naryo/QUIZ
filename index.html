@@ -87,14 +87,14 @@
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
     <style>
-    body {
+        body {
     overflow-y: auto;
 }
 
 .submenu {
     display: none;
     height: 0;
-    overflow: hidden;
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
     transition: height 0.3s ease; /* Adiciona uma transição suave para a animação */
 }
 
@@ -102,6 +102,8 @@
     display: block;
     height: auto; /* Alterado de max-height para height */
 }
+
+    
 
     </style>
 </head>
