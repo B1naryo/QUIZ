@@ -238,7 +238,6 @@ html {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    overflow-y: auto;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
@@ -306,11 +305,4 @@ html {
         height: 100vh;
         height: calc(var(--vh, 1vh) * 110);
     }
-}
-
-/* Adicione o código fornecido abaixo deste ponto */
-
-#container {
-    height: 100vh;
-    overflow-y: auto;
 }
