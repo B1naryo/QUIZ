@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div id="submenu-container">
+                 <div id="submenu-container">
                     <a href="#" class="parent-link">
                         <button class="purchase-button" id="connect_ingles">INGLÊS</button>
                     </a>
@@ -72,9 +72,42 @@
                             <a href="pronomes.html" target="_blank"><button class="purchase-button"
                                     id="connect_pronomes">Pronomes</button></a>
                         </li>
+                        <li>
+                            <a href="alfabeto.html" target="_blank"><button class="purchase-button"
+                                    id="connect_alfabetos">Alfabeto</button></a>
+                        </li>
+                        <li>
+                            <a href="frutas.html" target="_blank"><button class="purchase-button"
+                                    id="connect_frutas">Frutas</button></a>
+                        </li>
+                        <li>
+                            <a href="imoveis.html" target="_blank"><button class="purchase-button"
+                                    id="connect_imoveis">Imoveis</button></a>
+                        </li>
+                        <li>
+                            <a href="cores.html" target="_blank"><button class="purchase-button"
+                                    id="connect_cores">Cores</button></a>
+                        </li>
+                        <li>
+                            <a href="animais.html" target="_blank"><button class="purchase-button"
+                                    id="connect_animais">Animais</button></a>
+                        </li>
+                        <li>
+                            <a href="casa.html" target="_blank"><button class="purchase-button"
+                                    id="connect_casa">Casa</button></a>
+                        </li>
+                        <li>
+                            <a href="meses.html" target="_blank"><button class="purchase-button"
+                                    id="connect_meses">Meses</button></a>
+                        </li>
+                        <li>
+                            <a href="semanas.html" target="_blank"><button class="purchase-button"
+                                    id="connect_semanas">Semanas</button></a>
+                        </li>
                         <!-- Adicione mais itens de submenu conforme necessário -->
                     </ul>
                 </div>
+
 
                 <div id="submenu-container_php">
                     <a href="#" class="parent-link">
@@ -89,105 +122,48 @@
                             <a href="forms.html" target="_blank"><button class="purchase-button"
                                     id="connect_forms">Formulários</button></a>
                         </li>
+                        <li>
+                            <a href="bd.html" target="_blank"><button class="purchase-button"
+                                    id="connect_pesquisa">Banco de Dados</button></a>
+                        </li>
                         <!-- Adicione mais itens de submenu conforme necessário -->
                     </ul>
                 </div>
 
+
                 <script src="./src/js/loader.js"></script>
-               <script>
-        (function () {
-            'use strict';
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Obtenha todos os elementos de botão com a classe "purchase-button"
+                        var buttons = document.querySelectorAll('.purchase-button');
 
-            const ClickyMenus = function (menu) {
-                // Código do ClickyMenus fornecido
-                // ...
+                        // Adicione um ouvinte de clique a cada botão
+                        buttons.forEach(function (button) {
+                            button.addEventListener('click', function (event) {
+                                event.preventDefault();
 
-                /*===========================================================
-                =            Modify Menu Markup & Bind Listeners            =
-                =============================================================*/
-                function menuSetup() {
-                    menu.classList.remove('no-js');
-                    const submenuSelector = 'clickySubmenuSelector' in menu.dataset ? menu.dataset.clickySubmenuSelector : 'ul';
+                                // Encontre o submenu correspondente ao botão clicado
+                                var submenu = button.parentElement.nextElementSibling;
 
-                    menu.querySelectorAll(submenuSelector).forEach((submenu) => {
-                        const menuItem = submenu.parentElement;
+                                // Oculte todos os submenus
+                                hideAllSubmenus();
 
-                        if ('undefined' !== typeof submenu) {
-                            const button = convertLinkToButton(menuItem);
+                                // Exiba o submenu correspondente
+                                if (submenu) {
+                                    submenu.style.display = 'block';
+                                }
+                            });
+                        });
 
-                            setUpAria(submenu, button);
-
-                            // bind event listener to button
-                            button.addEventListener('click', toggleOnMenuClick);
-                            menu.addEventListener('keyup', closeOnEscKey);
+                        function hideAllSubmenus() {
+                            // Oculte todos os submenus
+                            var submenus = document.querySelectorAll('.submenu');
+                            submenus.forEach(function (submenu) {
+                                submenu.style.display = 'none';
+                            });
                         }
                     });
-                }
-
-                /**
-                 * Why do this? See https://justmarkup.com/articles/2019-01-21-the-link-to-button-enhancement/
-                 *
-                 * @param {HTMLElement} menuItem An element representing a link to be converted to a button
-                 */
-                function convertLinkToButton(menuItem) {
-                    const link = menuItem.getElementsByTagName('a')[0],
-                        linkHTML = link.innerHTML,
-                        linkAtts = link.attributes,
-                        button = document.createElement('button');
-
-                    if (null !== link) {
-                        // copy button attributes and content from link
-                        button.innerHTML = linkHTML.trim();
-                        for (i = 0, len = linkAtts.length; i < len; i++) {
-                            const attr = linkAtts[i];
-                            if ('href' !== attr.name) {
-                                button.setAttribute(attr.name, attr.value);
-                            }
-                        }
-
-                        menuItem.replaceChild(button, link);
-                    }
-
-                    return button;
-                }
-
-                function setUpAria(submenu, button) {
-                    const submenuId = submenu.getAttribute('id');
-
-                    let id;
-                    if (null === submenuId) {
-                        id = button.textContent.trim().replace(/\s+/g, '-').toLowerCase() + '-submenu';
-                    } else {
-                        id = submenuId + '-submenu';
-                    }
-
-                    // set button ARIA
-                    button.setAttribute('aria-controls', id);
-                    button.setAttribute('aria-expanded', false);
-
-                    // set submenu ARIA
-                    submenu.setAttribute('id', id);
-                    submenu.setAttribute('aria-hidden', true);
-                }
-
-                // Inicializar o menu
-                this.init = function () {
-                    menuSetup();
-                    document.addEventListener('click', closeOpenMenu);
-                };
-            };
-
-            /* Create a ClickMenus object and initiate menu for any menu with .clicky-menu class */
-            document.addEventListener('DOMContentLoaded', function () {
-                const menus = document.querySelectorAll('.clicky-menu');
-
-                menus.forEach((menu) => {
-                    const clickyMenu = new ClickyMenus(menu);
-                    clickyMenu.init();
-                });
-            });
-        })();
-    </script>
+                </script>
             </div>
         </div>
     </body>
