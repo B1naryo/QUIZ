@@ -21,37 +21,38 @@
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
     <style>
-       .submenu {
-    display: none; /* Inicialmente, oculte o submenu */
-}
+        .submenu {
+            display: none; /* Inicialmente, oculte o submenu */
+        }
 
-.submenu.show-submenu {
-    display: block; /* Exiba o submenu quando a classe show-submenu está presente */
-}
-
+        .submenu.show-submenu {
+            display: block; /* Exiba o submenu quando a classe show-submenu está presente */
+        }
     </style>
 </head>
+    
+</head>
 <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
-            var inglesSubmenu = document.querySelector("#submenu-container .submenu");
+            document.addEventListener("DOMContentLoaded", function () {
+                var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
+                var inglesSubmenu = document.querySelector("#submenu-container .submenu");
 
-            var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
-            var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
+                var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
+                var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
 
-            inglesParentLink.addEventListener("click", function (event) {
-                event.preventDefault();
-                inglesSubmenu.classList.toggle("show-submenu");
-                phpSubmenu.classList.remove("show-submenu");
+                inglesParentLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    inglesSubmenu.classList.toggle("show-submenu");
+                    phpSubmenu.classList.remove("show-submenu");
+                });
+
+                phpParentLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    phpSubmenu.classList.toggle("show-submenu");
+                    inglesSubmenu.classList.remove("show-submenu");
+                });
             });
-
-            phpParentLink.addEventListener("click", function (event) {
-                event.preventDefault();
-                phpSubmenu.classList.toggle("show-submenu");
-                inglesSubmenu.classList.remove("show-submenu");
-            });
-        });
-    </script>
+        </script>
     <script>
    document.addEventListener("DOMContentLoaded", function () {
     var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
