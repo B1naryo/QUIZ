@@ -14,8 +14,6 @@
     <script src="./settings.js"></script>
     <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
 
-
-
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
@@ -27,38 +25,7 @@
         }
     </style>
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Obtenha todos os elementos de botão com a classe "purchase-button"
-        var buttons = document.querySelectorAll('.purchase-button');
 
-        // Adicione um ouvinte de clique a cada botão
-        buttons.forEach(function (button) {
-            button.addEventListener('click', function (event) {
-                event.preventDefault();
-
-                // Encontre o submenu correspondente ao botão clicado
-                var submenu = button.parentElement.nextElementSibling;
-
-                // Oculte todos os submenus
-                hideAllSubmenus();
-
-                // Exiba o submenu correspondente
-                if (submenu) {
-                    submenu.style.display = 'block';
-                }
-            });
-        });
-
-        function hideAllSubmenus() {
-            // Oculte todos os submenus
-            var submenus = document.querySelectorAll('.submenu');
-            submenus.forEach(function (submenu) {
-                submenu.style.display = 'none';
-            });
-        }
-    });
-</script>
 <body class="body">
     <div class="content">
         <video id="background-video" autoplay loop muted>
@@ -83,7 +50,7 @@
                     </div>
                 </div>
                 <div id="payment-info">
-                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
+                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
                         class="image" height="200px" id="price-img">
                     <div id="payment-info-text">
                         <p></p>
@@ -92,7 +59,7 @@
                     </div>
                 </div>
 
-             <div id="submenu-container">
+                <div id="submenu-container">
                     <a href="#" class="parent-link">
                         <button class="purchase-button" id="connect_ingles">INGLÊS</button>
                     </a>
@@ -105,42 +72,9 @@
                             <a href="pronomes.html" target="_blank"><button class="purchase-button"
                                     id="connect_pronomes">Pronomes</button></a>
                         </li>
-                        <li>
-                            <a href="alfabeto.html" target="_blank"><button class="purchase-button"
-                                    id="connect_alfabetos">Alfabeto</button></a>
-                        </li>
-                        <li>
-                            <a href="frutas.html" target="_blank"><button class="purchase-button"
-                                    id="connect_frutas">Frutas</button></a>
-                        </li>
-                        <li>
-                            <a href="imoveis.html" target="_blank"><button class="purchase-button"
-                                    id="connect_imoveis">Imoveis</button></a>
-                        </li>
-                        <li>
-                            <a href="cores.html" target="_blank"><button class="purchase-button"
-                                    id="connect_cores">Cores</button></a>
-                        </li>
-                        <li>
-                            <a href="animais.html" target="_blank"><button class="purchase-button"
-                                    id="connect_animais">Animais</button></a>
-                        </li>
-                        <li>
-                            <a href="casa.html" target="_blank"><button class="purchase-button"
-                                    id="connect_casa">Casa</button></a>
-                        </li>
-                        <li>
-                            <a href="meses.html" target="_blank"><button class="purchase-button"
-                                    id="connect_meses">Meses</button></a>
-                        </li>
-                        <li>
-                            <a href="semanas.html" target="_blank"><button class="purchase-button"
-                                    id="connect_semanas">Semanas</button></a>
-                        </li>
                         <!-- Adicione mais itens de submenu conforme necessário -->
                     </ul>
                 </div>
-
 
                 <div id="submenu-container_php">
                     <a href="#" class="parent-link">
@@ -155,17 +89,46 @@
                             <a href="forms.html" target="_blank"><button class="purchase-button"
                                     id="connect_forms">Formulários</button></a>
                         </li>
-                        <li>
-                            <a href="bd.html" target="_blank"><button class="purchase-button"
-                                    id="connect_pesquisa">Banco de Dados</button></a>
-                        </li>
                         <!-- Adicione mais itens de submenu conforme necessário -->
                     </ul>
                 </div>
 
                 <script src="./src/js/loader.js"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        // Obtenha todos os elementos de botão com a classe "purchase-button"
+                        var buttons = document.querySelectorAll('.purchase-button');
+
+                        // Adicione um ouvinte de clique a cada botão
+                        buttons.forEach(function (button) {
+                            button.addEventListener('click', function (event) {
+                                event.preventDefault();
+
+                                // Encontre o submenu correspondente ao botão clicado
+                                var submenu = button.parentElement.nextElementSibling;
+
+                                // Oculte todos os submenus
+                                hideAllSubmenus();
+
+                                // Exiba o submenu correspondente
+                                if (submenu) {
+                                    submenu.style.display = 'block';
+                                }
+                            });
+                        });
+
+                        function hideAllSubmenus() {
+                            // Oculte todos os submenus
+                            var submenus = document.querySelectorAll('.submenu');
+                            submenus.forEach(function (submenu) {
+                                submenu.style.display = 'none';
+                            });
+                        }
+                    });
+                </script>
             </div>
         </div>
     </body>
 
 </html>
+
