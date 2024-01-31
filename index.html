@@ -22,27 +22,26 @@
             document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
         });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
-            var inglesSubmenu = document.querySelector("#submenu-container .submenu");
+   document.addEventListener("DOMContentLoaded", function () {
+    var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
+    var inglesSubmenu = document.querySelector("#submenu-container .submenu");
 
-            var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
-            var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
+    var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
+    var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
 
-            inglesParentLink.addEventListener("click", function (event) {
-                event.preventDefault();
-                inglesSubmenu.classList.toggle("show-submenu");
-                phpSubmenu.classList.remove("show-submenu");
-            });
+    inglesParentLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        inglesSubmenu.classList.toggle("show-submenu");
+        phpSubmenu.classList.remove("show-submenu");
+    });
 
-            phpParentLink.addEventListener("click", function (event) {
-                event.preventDefault();
-                phpSubmenu.classList.toggle("show-submenu");
-                inglesSubmenu.classList.remove("show-submenu");
-            });
-        });
-    </script>
+    phpParentLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        phpSubmenu.classList.toggle("show-submenu");
+        inglesSubmenu.classList.remove("show-submenu");
+    });
+});
+
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
