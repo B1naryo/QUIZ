@@ -62,6 +62,12 @@
             });
         });
 
+        // Adicione um ouvinte de clique ao menu principal para ocultar todos os submenus
+        var mainMenu = document.querySelector('.main-menu');
+        mainMenu.addEventListener('click', function() {
+            hideAllSubmenus();
+        });
+
         function hideAllSubmenus() {
             // Oculte todos os submenus
             var submenus = document.querySelectorAll('.submenu');
