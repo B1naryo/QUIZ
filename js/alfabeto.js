@@ -268,6 +268,7 @@ function init() {
 }
 
 // Criação de pergunta
+// Criação de pergunta
 function createQuestion(index) {
   clearPreviousQuestion();
   const question = questions[index];
@@ -276,6 +277,9 @@ function createQuestion(index) {
 
   questionText.textContent = question.question;
   questionNumber.textContent = index + 1;
+
+  // Embaralha as respostas antes de exibi-las
+  shuffle(question.answers);
 
   question.answers.forEach((answer, i) => {
     const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
@@ -297,6 +301,7 @@ function createQuestion(index) {
     });
   });
 }
+
 
 // Limpar pergunta anterior
 function clearPreviousQuestion() {
