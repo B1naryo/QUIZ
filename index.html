@@ -140,18 +140,32 @@
             // Encontre o submenu correspondente ao botão clicado
             var submenu = button.parentElement.nextElementSibling;
 
-            // Verifique se o submenu já está visível
-            var isVisible = submenu.style.display === 'block';
-
             // Oculte todos os submenus
             hideAllSubmenus();
 
-            // Exiba ou oculte o submenu conforme necessário
-            if (!isVisible) {
+            // Exiba o submenu correspondente
+            if (submenu) {
                 submenu.style.display = 'block';
             }
         });
     });
+
+    function hideAllSubmenus() {
+        // Oculte todos os submenus
+        var submenus = document.querySelectorAll('.submenu');
+        submenus.forEach(function (submenu) {
+            submenu.style.display = 'none';
+        });
+    }
+
+    // Adicione um ouvinte de clique a cada item de submenu para fechar os submenus quando o menu pai é clicado novamente
+    var submenuItems = document.querySelectorAll('.submenu li');
+    submenuItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            hideAllSubmenus();
+        });
+    });
+});
 
     // Adicione um ouvinte de clique a cada item de submenu
     var submenuItems = document.querySelectorAll('.submenu li');
