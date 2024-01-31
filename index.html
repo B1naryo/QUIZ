@@ -167,27 +167,6 @@
     });
 });
 
-    // Adicione um ouvinte de clique a cada item de submenu
-    var submenuItems = document.querySelectorAll('.submenu li');
-    submenuItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            // Obtenha a URL associada ao item de submenu clicado
-            var url = item.querySelector('a').getAttribute('href');
-
-            // Redirecione para a URL
-            window.location.href = url;
-        });
-    });
-
-    function hideAllSubmenus() {
-        // Oculte todos os submenus
-        var submenus = document.querySelectorAll('.submenu');
-        submenus.forEach(function (submenu) {
-            submenu.style.display = 'none';
-        });
-    }
-});
-
                 </script>
             </div>
         </div>
