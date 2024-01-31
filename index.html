@@ -37,11 +37,11 @@
             button.addEventListener('click', function (event) {
                 event.preventDefault();
 
-                // Oculte todos os submenus
-                hideAllSubmenus();
-
                 // Encontre o submenu correspondente ao botão clicado
                 var submenu = button.parentElement.nextElementSibling;
+
+                // Oculte todos os submenus
+                hideAllSubmenus();
 
                 // Exiba o submenu correspondente
                 if (submenu) {
@@ -59,7 +59,6 @@
         }
     });
 </script>
-
 <body class="body">
     <div class="content">
         <video id="background-video" autoplay loop muted>
