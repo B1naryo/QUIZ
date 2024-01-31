@@ -56,21 +56,22 @@
         const phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
         const phpSubmenu = document.querySelector("#submenu-container_php .submenu");
 
-        inglesParentLink.addEventListener("click", function (event) {
+        function toggleSubmenu(event, submenu, otherSubmenu) {
             event.preventDefault();
-            inglesSubmenu.classList.toggle("show-submenu");
-            phpSubmenu.classList.remove("show-submenu");
-            adjustSubmenuHeight(inglesSubmenu, inglesSubmenu.classList.contains("show-submenu"));
+            submenu.classList.toggle("show-submenu");
+            otherSubmenu.classList.remove("show-submenu");
+            adjustSubmenuHeight(submenu, submenu.classList.contains("show-submenu"));
+        }
+
+        inglesParentLink.addEventListener("click", function (event) {
+            toggleSubmenu(event, inglesSubmenu, phpSubmenu);
         });
 
         phpParentLink.addEventListener("click", function (event) {
-            event.preventDefault();
-            phpSubmenu.classList.toggle("show-submenu");
-            inglesSubmenu.classList.remove("show-submenu");
-            adjustSubmenuHeight(phpSubmenu, phpSubmenu.classList.contains("show-submenu"));
+            toggleSubmenu(event, phpSubmenu, inglesSubmenu);
         });
 
-        // Adiciona um ouvinte de evento para fechar o submenu e atualizar a altura do wrapper
+        // Adiciona um ouvinte de evento para fechar os submenus e atualizar a altura do wrapper
         document.addEventListener("click", function (event) {
             if (!event.target.closest("#submenu-container") && !event.target.closest("#submenu-container_php")) {
                 inglesSubmenu.classList.remove("show-submenu");
@@ -81,6 +82,7 @@
         });
     });
 </script>
+
 
 
     <!-- Import CSS files -->
