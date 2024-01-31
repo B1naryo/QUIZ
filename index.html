@@ -13,7 +13,7 @@
     <!-- Import .JS files -->
     <script src="./settings.js"></script>
     <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
-    <script type="text/javascript">
+<script type="text/javascript">
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
         window.addEventListener('resize', () => {
@@ -90,16 +90,21 @@
         body {
             overflow-y: auto;
         }
-
+    
         .submenu {
-            display: none;
-            overflow: hidden;
-            transition: max-height 0.3s ease; /* Adiciona uma transição suave para a animação */
-        }
+            
+   
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Adiciona uma transição suave para a animação */
+}
 
-        .show-submenu {
-            max-height: 500px; /* Defina uma altura máxima maior ou remova completamente para permitir expansão completa */
-        }
+.show-submenu {
+    display: block;
+    max-height: 200px; /* Ajuste isso conforme necessário para a altura máxima do submenu */
+}
+
     </style>
 </head>
 
@@ -127,7 +132,7 @@
                     </div>
                 </div>
                 <div id="payment-info">
-                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
+                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
                         class="image" height="200px" id="price-img">
                     <div id="payment-info-text">
                         <p></p>
@@ -136,7 +141,7 @@
                     </div>
                 </div>
 
-                <div id="submenu-container">
+             <div id="submenu-container">
                     <a href="#" class="parent-link">
                         <button class="purchase-button" id="connect_ingles">INGLÊS</button>
                     </a>
