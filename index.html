@@ -56,24 +56,24 @@
         const phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
         const phpSubmenu = document.querySelector("#submenu-container_php .submenu");
 
-        function toggleSubmenu(event, submenu, otherSubmenu) {
+        function toggleSubmenu(event, submenu) {
             event.preventDefault();
             submenu.classList.toggle("show-submenu");
-            otherSubmenu.classList.remove("show-submenu");
             adjustSubmenuHeight(submenu, submenu.classList.contains("show-submenu"));
         }
 
         inglesParentLink.addEventListener("click", function (event) {
-            toggleSubmenu(event, inglesSubmenu, phpSubmenu);
+            toggleSubmenu(event, inglesSubmenu);
         });
 
         phpParentLink.addEventListener("click", function (event) {
-            toggleSubmenu(event, phpSubmenu, inglesSubmenu);
+            toggleSubmenu(event, phpSubmenu);
         });
 
         // Adiciona um ouvinte de evento para fechar os submenus e atualizar a altura do wrapper
         document.addEventListener("click", function (event) {
-            if (!event.target.closest("#submenu-container") && !event.target.closest("#submenu-container_php")) {
+            // Se o clique não estiver dentro do submenu ou do link do submenu, fecha todos os submenus
+            if (!event.target.closest(".submenu") && !event.target.closest(".parent-link")) {
                 inglesSubmenu.classList.remove("show-submenu");
                 phpSubmenu.classList.remove("show-submenu");
                 adjustSubmenuHeight(inglesSubmenu, false);
