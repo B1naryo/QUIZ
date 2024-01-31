@@ -18,12 +18,7 @@
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
-    <style>
-        /* Adicione estilos conforme necessário para esconder os submenus inicialmente */
-        .submenu {
-            display: none;
-        }
-    </style>
+    
 </head>
 
 <body class="body">
@@ -134,35 +129,51 @@
                 <script src="./src/js/loader.js"></script>
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
-                        // Obtenha todos os elementos de botão com a classe "purchase-button"
-                        var buttons = document.querySelectorAll('.purchase-button');
+    // Obtenha todos os elementos de botão com a classe "purchase-button"
+    var buttons = document.querySelectorAll('.purchase-button');
 
-                        // Adicione um ouvinte de clique a cada botão
-                        buttons.forEach(function (button) {
-                            button.addEventListener('click', function (event) {
-                                event.preventDefault();
+    // Adicione um ouvinte de clique a cada botão
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
 
-                                // Encontre o submenu correspondente ao botão clicado
-                                var submenu = button.parentElement.nextElementSibling;
+            // Encontre o submenu correspondente ao botão clicado
+            var submenu = button.parentElement.nextElementSibling;
 
-                                // Oculte todos os submenus
-                                hideAllSubmenus();
+            // Verifique se o submenu já está visível
+            var isVisible = submenu.style.display === 'block';
 
-                                // Exiba o submenu correspondente
-                                if (submenu) {
-                                    submenu.style.display = 'block';
-                                }
-                            });
-                        });
+            // Oculte todos os submenus
+            hideAllSubmenus();
 
-                        function hideAllSubmenus() {
-                            // Oculte todos os submenus
-                            var submenus = document.querySelectorAll('.submenu');
-                            submenus.forEach(function (submenu) {
-                                submenu.style.display = 'none';
-                            });
-                        }
-                    });
+            // Exiba ou oculte o submenu conforme necessário
+            if (!isVisible) {
+                submenu.style.display = 'block';
+            }
+        });
+    });
+
+    // Adicione um ouvinte de clique a cada item de submenu
+    var submenuItems = document.querySelectorAll('.submenu li');
+    submenuItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            // Obtenha a URL associada ao item de submenu clicado
+            var url = item.querySelector('a').getAttribute('href');
+
+            // Redirecione para a URL
+            window.location.href = url;
+        });
+    });
+
+    function hideAllSubmenus() {
+        // Oculte todos os submenus
+        var submenus = document.querySelectorAll('.submenu');
+        submenus.forEach(function (submenu) {
+            submenu.style.display = 'none';
+        });
+    }
+});
+
                 </script>
             </div>
         </div>
