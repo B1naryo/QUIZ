@@ -14,13 +14,51 @@
     <script src="./settings.js"></script>
     <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
 
+
+
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
-    
+    <style>
+        /* Adicione estilos conforme necessário para esconder os submenus inicialmente */
+        .submenu {
+            display: none;
+        }
+    </style>
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtenha todos os elementos de botão com a classe "purchase-button"
+        var buttons = document.querySelectorAll('.purchase-button');
 
+        // Adicione um ouvinte de clique a cada botão
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                // Encontre o submenu correspondente ao botão clicado
+                var submenu = button.parentElement.nextElementSibling;
+
+                // Oculte todos os submenus
+                hideAllSubmenus();
+
+                // Exiba o submenu correspondente
+                if (submenu) {
+                    submenu.style.display = 'block';
+                }
+            });
+        });
+
+        function hideAllSubmenus() {
+            // Oculte todos os submenus
+            var submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(function (submenu) {
+                submenu.style.display = 'none';
+            });
+        }
+    });
+</script>
 <body class="body">
     <div class="content">
         <video id="background-video" autoplay loop muted>
@@ -45,7 +83,7 @@
                     </div>
                 </div>
                 <div id="payment-info">
-                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
+                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
                         class="image" height="200px" id="price-img">
                     <div id="payment-info-text">
                         <p></p>
@@ -54,7 +92,7 @@
                     </div>
                 </div>
 
-                 <div id="submenu-container">
+             <div id="submenu-container">
                     <a href="#" class="parent-link">
                         <button class="purchase-button" id="connect_ingles">INGLÊS</button>
                     </a>
@@ -125,52 +163,9 @@
                     </ul>
                 </div>
 
-
                 <script src="./src/js/loader.js"></script>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-    // Obtenha todos os elementos de botão com a classe "purchase-button"
-    var buttons = document.querySelectorAll('.purchase-button');
-
-    // Adicione um ouvinte de clique a cada botão
-    buttons.forEach(function (button) {
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-
-            // Encontre o submenu correspondente ao botão clicado
-            var submenu = button.parentElement.nextElementSibling;
-
-            // Oculte todos os submenus
-            hideAllSubmenus();
-
-            // Exiba o submenu correspondente
-            if (submenu) {
-                submenu.style.display = 'block';
-            }
-        });
-    });
-
-    function hideAllSubmenus() {
-        // Oculte todos os submenus
-        var submenus = document.querySelectorAll('.submenu');
-        submenus.forEach(function (submenu) {
-            submenu.style.display = 'none';
-        });
-    }
-
-    // Adicione um ouvinte de clique a cada item de submenu para fechar os submenus quando o menu pai é clicado novamente
-    var submenuItems = document.querySelectorAll('.submenu li');
-    submenuItems.forEach(function (item) {
-        item.addEventListener('click', function () {
-            hideAllSubmenus();
-        });
-    });
-});
-
-                </script>
             </div>
         </div>
     </body>
 
 </html>
-
