@@ -28,37 +28,45 @@
     </style>
 </head>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Obtenha todos os elementos de botão com a classe "purchase-button"
-        var buttons = document.querySelectorAll('.purchase-button');
+        document.addEventListener("DOMContentLoaded", function () {
+            var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
+            var inglesSubmenu = document.querySelector("#submenu-container .submenu");
 
-        // Adicione um ouvinte de clique a cada botão
-        buttons.forEach(function (button) {
-            button.addEventListener('click', function (event) {
+            var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
+            var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
+
+            inglesParentLink.addEventListener("click", function (event) {
                 event.preventDefault();
+                inglesSubmenu.classList.toggle("show-submenu");
+                phpSubmenu.classList.remove("show-submenu");
+            });
 
-                // Encontre o submenu correspondente ao botão clicado
-                var submenu = button.parentElement.nextElementSibling;
-
-                // Oculte todos os submenus
-                hideAllSubmenus();
-
-                // Exiba o submenu correspondente
-                if (submenu) {
-                    submenu.style.display = 'block';
-                }
+            phpParentLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                phpSubmenu.classList.toggle("show-submenu");
+                inglesSubmenu.classList.remove("show-submenu");
             });
         });
+    </script>
+   document.addEventListener("DOMContentLoaded", function () {
+    var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
+    var inglesSubmenu = document.querySelector("#submenu-container .submenu");
 
-        function hideAllSubmenus() {
-            // Oculte todos os submenus
-            var submenus = document.querySelectorAll('.submenu');
-            submenus.forEach(function (submenu) {
-                submenu.style.display = 'none';
-            });
-        }
+    var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
+    var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
+
+    inglesParentLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        inglesSubmenu.classList.toggle("show-submenu");
+        phpSubmenu.classList.remove("show-submenu");
     });
-</script>
+
+    phpParentLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        phpSubmenu.classList.toggle("show-submenu");
+        inglesSubmenu.classList.remove("show-submenu");
+    });
+});
 <body class="body">
     <div class="content">
         <video id="background-video" autoplay loop muted>
