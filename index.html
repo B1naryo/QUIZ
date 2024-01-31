@@ -90,16 +90,21 @@
         body {
             overflow-y: auto;
         }
-
+    
         .submenu {
-            display: none;
-            overflow: hidden;
-            transition: max-height 0.3s ease; /* Adiciona uma transição suave para a animação */
-        }
+            
+   
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Adiciona uma transição suave para a animação */
+}
 
-        .show-submenu {
-            max-height: 500px; /* Defina uma altura máxima maior ou remova completamente para permitir expansão completa */
-        }
+.show-submenu {
+    display: block;
+    max-height: 500px; /* Ajuste isso conforme necessário para a altura máxima do submenu */
+}
+
     </style>
 </head>
 
