@@ -1,6 +1,8 @@
 // Declaração de variáveis
 const questionElement = document.querySelector('#question');
 const answerBox = document.querySelector('#answers-box');
+const quizzContainer = document.querySelector('#quizz-container');
+const scoreContainer = document.querySelector('#score-container');
 const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
@@ -368,13 +370,25 @@ function init() {
 function createQuestion(index) {
   clearPreviousQuestion();
   const question = questions[index];
-  const { questionText, questionNumber } = updateQuestionElements(question, index);
+  const questionText = questionElement.querySelector('#question-text');
+  const questionNumber = questionElement.querySelector('#question-number');
 
-  // Embaralha as respostas antes de exibi-las
-  shuffle(question.answers);
+  questionText.textContent = question.question;
+  questionNumber.textContent = index + 1;
 
   question.answers.forEach((answer, i) => {
-    const answerTemplate = createAnswerTemplate(letters[i], answer);
+    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
+    const letterBtn = answerTemplate.querySelector('.btn-letter');
+    const answerText = answerTemplate.querySelector('.question-answer');
+
+    letterBtn.textContent = letters[i];
+    answerText.textContent = answer.answer;
+
+    answerTemplate.setAttribute('correct-answer', answer.correct);
+
+    answerTemplate.classList.remove('hide');
+    answerTemplate.classList.remove('answer-template');
+
     answerBox.appendChild(answerTemplate);
 
     answerTemplate.addEventListener('click', function () {
@@ -383,61 +397,81 @@ function createQuestion(index) {
   });
 }
 
-// Atualiza os elementos da pergunta
-function updateQuestionElements(question, index) {
-  const questionText = questionElement.querySelector('#question-text');
-  const questionNumber = questionElement.querySelector('#question-number');
-
-  questionText.textContent = question.question;
-  questionNumber.textContent = index + 1;
-
-  return { questionText, questionNumber };
-}
-
-// Cria um template para a resposta
-function createAnswerTemplate(letter, answer) {
-  const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
-  const letterBtn = answerTemplate.querySelector('.btn-letter');
-  const answerText = answerTemplate.querySelector('.question-answer');
-
-  letterBtn.textContent = letter;
-  answerText.textContent = answer.answer;
-
-  answerTemplate.setAttribute('correct-answer', answer.correct);
-
-  answerTemplate.classList.remove('hide');
-  answerTemplate.classList.remove('answer-template');
-
-  return answerTemplate;
-}
-
 // Limpar pergunta anterior
 function clearPreviousQuestion() {
-  answerBox.innerHTML = '';
+  const oldButtons = answerBox.querySelectorAll('button');
+  oldButtons.forEach((btn) => {
+    btn.remove();
+  });
 }
 
 // Verificar resposta do usuário
 function checkAnswer(btn) {
-  const correctAnswer = btn.getAttribute('correct-answer') === 'true';
-  btn.classList.add(correctAnswer ? 'correct-answer' : 'wrong-answer');
+  const buttons = answerBox.querySelectorAll('button');
+  let answeredCorrectly = false;
 
-  if (correctAnswer) {
-    points++;
-    actualQuestion++;
-    if (actualQuestion < questions.length) {
-      setTimeout(() => createQuestion(actualQuestion), 1200);
+  buttons.forEach((button) => {
+    if (button.getAttribute('correct-answer') == 'true') {
+      button.classList.add('correct-answer');
+      if (btn === button) {
+        points++;
+        answeredCorrectly = true;
+      }
     } else {
-      showSuccessMessage();
+      button.classList.add('wrong-answer');
     }
+  });
+
+  if (!answeredCorrectly) {
+    // Se a resposta estiver incorreta, não avançar para a próxima pergunta
+    setTimeout(function () {
+      clearPreviousQuestion();
+      createQuestion(actualQuestion); // Apresenta a mesma pergunta novamente
+    }, 1200);
   } else {
-    setTimeout(() => createQuestion(actualQuestion), 1200);
+    // Se a resposta estiver correta, avançar para a próxima pergunta
+    actualQuestion++;
+    if (actualQuestion >= questions.length) {
+      // Se todas as perguntas foram respondidas corretamente, exibir mensagem de sucesso
+      showSuccessMessage();
+    } else {
+      // Caso contrário, apresentar a próxima pergunta
+      setTimeout(function () {
+        createQuestion(actualQuestion);
+      }, 1200);
+    }
   }
 }
 
-// Função para exibir mensagem de sucesso (você precisa implementar esta função)
+// Exibe a tela final
 function showSuccessMessage() {
-  // Implemente esta função conforme necessário
+  toggleQuizzVisibility();
+
+  const score = ((points / questions.length) * 100).toFixed(2);
+  const displayScore = document.querySelector('#display-score span');
+  displayScore.textContent = score.toString();
+
+  const correctAnswers = document.querySelector('#correct-answers');
+  correctAnswers.textContent = points;
+
+  const totalQuestions = document.querySelector('#questions-qty');
+  totalQuestions.textContent = questions.length;
 }
+
+// Mostra ou esconde o score
+function toggleQuizzVisibility() {
+  quizzContainer.classList.toggle('hide');
+  scoreContainer.classList.toggle('hide');
+}
+
+// Reiniciar quizz
+const restartBtn = document.querySelector('#restart');
+restartBtn.addEventListener('click', function () {
+  actualQuestion = 0;
+  points = 0;
+  toggleQuizzVisibility();
+  init();
+});
 
 // Inicialização do quizz
 init();
