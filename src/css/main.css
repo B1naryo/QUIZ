@@ -38,14 +38,6 @@ html {
     }
 }
 
-#claim-text-wrapper .social_medias {
-    position: absolute;
-    top: -50px;
-    left: 50%;
-    --webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
 /* ... (seu restante do CSS permanece inalterado) ... */
 
 .content {
