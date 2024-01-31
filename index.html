@@ -18,7 +18,7 @@
   function atualizarAlturaWrapper() {
     var wrapper = document.getElementById('claim-text-wrapper');
     var alturaConteudo = wrapper.scrollHeight;
-    wrapper.style.height = alturaConteudo + 'px';
+    wrapper.style.maxHeight = alturaConteudo + 'px';
   }
 
   // Chame a função quando a página carregar
@@ -28,6 +28,7 @@
   // Por exemplo, após adicionar menus ou submenus dinamicamente
   // atualizarAlturaWrapper();
 </script>
+
     <script type="text/javascript">
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
@@ -55,6 +56,9 @@
         } else {
             inglesSubmenu.style.maxHeight = 0;
         }
+
+        // Atualiza a altura do wrapper
+        atualizarAlturaWrapper();
     });
 
     phpParentLink.addEventListener("click", function (event) {
@@ -68,8 +72,12 @@
         } else {
             phpSubmenu.style.maxHeight = 0;
         }
+
+        // Atualiza a altura do wrapper
+        atualizarAlturaWrapper();
     });
 });
+
 
     </script>
 
