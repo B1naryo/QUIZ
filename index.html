@@ -12,51 +12,74 @@
 
     <!-- Import .JS files -->
     <script src="./settings.js"></script>
-<script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+    <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
 <script type="text/javascript">
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
-    window.addEventListener('resize', () => {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
-    });
-</script>
-<script>
-    function atualizarAlturaWrapper() {
-        var wrapper = document.getElementById('claim-text-wrapper');
-        var alturaConteudo = wrapper.scrollHeight;
-        var paddingBorda =
-            parseInt(window.getComputedStyle(wrapper).paddingTop) +
-            parseInt(window.getComputedStyle(wrapper).paddingBottom) +
-            parseInt(window.getComputedStyle(wrapper).borderTopWidth) +
-            parseInt(window.getComputedStyle(wrapper).borderBottomWidth);
-
-        wrapper.style.height = alturaConteudo + paddingBorda + 'px';
-    }
-
-    function toggleSubmenu(parentLink, submenu) {
-        parentLink.addEventListener("click", function (event) {
-            event.preventDefault();
-            submenu.classList.toggle("show-submenu");
-
-            // Remova a lógica de ajuste da altura máxima do submenu
-            // submenu.style.maxHeight = submenu.scrollHeight + "px";
-
-            // Atualiza a altura do wrapper após uma pequena animação
-            setTimeout(atualizarAlturaWrapper, 300);
+        window.addEventListener('resize', () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
         });
-    }
+    </script>
+    <script>
+        // Função para atualizar a altura do #claim-text-wrapper com base no conteúdo
+        function atualizarAlturaWrapper() {
+            var wrapper = document.getElementById('claim-text-wrapper');
+            var alturaConteudo = wrapper.scrollHeight;
 
-    document.addEventListener("DOMContentLoaded", function () {
-        var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
-        var inglesSubmenu = document.querySelector("#submenu-container .submenu");
-        toggleSubmenu(inglesParentLink, inglesSubmenu);
+            // Adiciona uma lógica para ajustar a altura do wrapper, considerando o padding e a borda
+            var paddingBorda =
+                parseInt(window.getComputedStyle(wrapper).paddingTop) +
+                parseInt(window.getComputedStyle(wrapper).paddingBottom) +
+                parseInt(window.getComputedStyle(wrapper).borderTopWidth) +
+                parseInt(window.getComputedStyle(wrapper).borderBottomWidth);
 
-        var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
-        var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
-        toggleSubmenu(phpParentLink, phpSubmenu);
-    });
-</script>
+            wrapper.style.height = alturaConteudo + paddingBorda + 'px';
+        }
+
+        // Chame a função quando a página carregar
+        window.onload = atualizarAlturaWrapper;
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
+            var inglesSubmenu = document.querySelector("#submenu-container .submenu");
+
+            var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
+            var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
+
+            inglesParentLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                inglesSubmenu.classList.toggle("show-submenu");
+                phpSubmenu.classList.remove("show-submenu");
+
+                // Adiciona uma lógica para ajustar a altura máxima do submenu com base no conteúdo
+                if (inglesSubmenu.classList.contains("show-submenu")) {
+                    inglesSubmenu.style.maxHeight = inglesSubmenu.scrollHeight + "px";
+                } else {
+                    inglesSubmenu.style.maxHeight = 0;
+                }
+
+                // Atualiza a altura do wrapper após uma pequena animação
+                setTimeout(atualizarAlturaWrapper, 300);
+            });
+
+            phpParentLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                phpSubmenu.classList.toggle("show-submenu");
+                inglesSubmenu.classList.remove("show-submenu");
+
+                // Adiciona uma lógica para ajustar a altura máxima do submenu com base no conteúdo
+                if (phpSubmenu.classList.contains("show-submenu")) {
+                    phpSubmenu.style.maxHeight = phpSubmenu.scrollHeight + "px";
+                } else {
+                    phpSubmenu.style.maxHeight = 0;
+                }
+
+                // Atualiza a altura do wrapper após uma pequena animação
+                setTimeout(atualizarAlturaWrapper, 300);
+            });
+        });
+    </script>
 
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
