@@ -268,6 +268,14 @@ function init() {
 }
 
 // Criação de pergunta
+// Função para embaralhar um array usando o algoritmo de Fisher-Yates
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 // Criação de pergunta
 function createQuestion(index) {
   clearPreviousQuestion();
@@ -301,7 +309,6 @@ function createQuestion(index) {
     });
   });
 }
-
 
 // Limpar pergunta anterior
 function clearPreviousQuestion() {
@@ -349,35 +356,12 @@ function checkAnswer(btn) {
   }
 }
 
-// Exibe a tela final
-function showSuccessMessage() {
-  toggleQuizzVisibility();
+// Restante do seu código...
 
-  const score = ((points / questions.length) * 100).toFixed(2);
-  const displayScore = document.querySelector('#display-score span');
-  displayScore.textContent = score.toString();
-
-  const correctAnswers = document.querySelector('#correct-answers');
-  correctAnswers.textContent = points;
-
-  const totalQuestions = document.querySelector('#questions-qty');
-  totalQuestions.textContent = questions.length;
+// Função para inicializar o quizz
+function init() {
+  createQuestion(actualQuestion);
 }
-
-// Mostra ou esconde o score
-function toggleQuizzVisibility() {
-  quizzContainer.classList.toggle('hide');
-  scoreContainer.classList.toggle('hide');
-}
-
-// Reiniciar quizz
-const restartBtn = document.querySelector('#restart');
-restartBtn.addEventListener('click', function () {
-  actualQuestion = 0;
-  points = 0;
-  toggleQuizzVisibility();
-  init();
-});
 
 // Inicialização do quizz
 init();
