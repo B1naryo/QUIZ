@@ -20,49 +20,12 @@
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
-    /* Estilos para esconder os submenus inicialmente */
-.submenu {
-    display: none;
-    position: absolute;
-    z-index: 1; /* Certifique-se de que o submenu está acima de outros elementos */
-    background-color: #fff; /* Cor de fundo do submenu */
-    border: 1px solid #ccc; /* Borda do submenu */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra do submenu */
-}
-
-/* Estilo para mostrar o submenu quando a classe 'show-submenu' é adicionada */
-.submenu.show-submenu {
-    display: block;
-}
-
-/* Estilos para os itens do submenu */
-.submenu li {
-    list-style: none;
-    padding: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
-}
-
-/* Estilo de hover para os itens do submenu */
-.submenu li:hover {
-    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
-}
-
-/* Estilos para os botões no submenu */
-.submenu button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 14px;
-    color: #333;
-    transition: color 0.3s ease; /* Transição suave da cor do texto */
-}
-
-/* Estilo de hover para os botões no submenu */
-.submenu button:hover {
-    color: #007bff; /* Cor do texto ao passar o mouse */
-}
-
+    <style>
+        /* Adicione estilos conforme necessário para esconder os submenus inicialmente */
+        .submenu {
+            display: none;
+        }
+    </style>
 </head>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -75,40 +38,27 @@
                 event.preventDefault();
 
                 // Encontre o submenu correspondente ao botão clicado
-                var submenu = button.parentElement.querySelector('.submenu');
+                var submenu = button.parentElement.nextElementSibling;
 
                 // Oculte todos os submenus
                 hideAllSubmenus();
 
                 // Exiba o submenu correspondente
                 if (submenu) {
-                    submenu.classList.add('show-submenu');
+                    submenu.style.display = 'block';
                 }
             });
         });
 
-        // Adicione um ouvinte de clique a cada item do submenu
-        var submenuItems = document.querySelectorAll('.submenu li');
-        submenuItems.forEach(function (item) {
-            item.addEventListener('click', function (event) {
-                // Obtenha a URL associada ao item do submenu clicado
-                var url = item.querySelector('a').getAttribute('href');
-
-                // Navegue para a URL
-                window.location.href = url;
-            });
-        });
-
         function hideAllSubmenus() {
-            // Remova a classe 'show-submenu' de todos os submenus
+            // Oculte todos os submenus
             var submenus = document.querySelectorAll('.submenu');
             submenus.forEach(function (submenu) {
-                submenu.classList.remove('show-submenu');
+                submenu.style.display = 'none';
             });
         }
     });
 </script>
-
 <body class="body">
     <div class="content">
         <video id="background-video" autoplay loop muted>
