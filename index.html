@@ -12,7 +12,7 @@
 
     <!-- Import .JS files -->
     <script src="./settings.js"></script>
- <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+<script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
 <script type="text/javascript">
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
@@ -39,12 +39,8 @@
             event.preventDefault();
             submenu.classList.toggle("show-submenu");
 
-            // Adiciona uma lógica para ajustar a altura máxima do submenu com base no conteúdo
-            if (submenu.classList.contains("show-submenu")) {
-                submenu.style.maxHeight = submenu.scrollHeight + "px";
-            } else {
-                submenu.style.maxHeight = 0;
-            }
+            // Remova a lógica de ajuste da altura máxima do submenu
+            // submenu.style.maxHeight = submenu.scrollHeight + "px";
 
             // Atualiza a altura do wrapper após uma pequena animação
             setTimeout(atualizarAlturaWrapper, 300);
