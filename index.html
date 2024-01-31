@@ -14,80 +14,51 @@
     <script src="./settings.js"></script>
     <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
 
-<script>
-    function atualizarAlturaWrapper() {
-        var wrapper = document.getElementById('claim-text-wrapper');
-        var alturaConteudo = wrapper.scrollHeight;
 
-        var paddingBorda =
-            parseInt(window.getComputedStyle(wrapper).paddingTop) +
-            parseInt(window.getComputedStyle(wrapper).paddingBottom) +
-            parseInt(window.getComputedStyle(wrapper).borderTopWidth) +
-            parseInt(window.getComputedStyle(wrapper).borderBottomWidth);
 
-        wrapper.style.height = alturaConteudo + paddingBorda + 'px';
-    }
-
-    window.onload = atualizarAlturaWrapper;
-
-    document.addEventListener("DOMContentLoaded", function () {
-        var inglesParentLink = document.querySelector("#submenu-container a.parent-link");
-        var inglesSubmenu = document.querySelector("#submenu-container .submenu");
-
-        var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
-        var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
-
-        // Adicionando um evento de mouseover para impedir o fechamento ao passar o mouse sobre o botão
-        inglesParentLink.addEventListener("mouseover", function (event) {
-            if (!inglesSubmenu.classList.contains("show-submenu")) {
-                inglesSubmenu.classList.add("show-submenu");
-                inglesSubmenu.style.maxHeight = inglesSubmenu.scrollHeight + "px";
-                atualizarAlturaWrapper();
-            }
-        });
-
-        phpParentLink.addEventListener("mouseover", function (event) {
-            if (!phpSubmenu.classList.contains("show-submenu")) {
-                phpSubmenu.classList.add("show-submenu");
-                phpSubmenu.style.maxHeight = phpSubmenu.scrollHeight + "px";
-                atualizarAlturaWrapper();
-            }
-        });
-
-        // Adicionando eventos de clique para fechar os submenus
-        // Adicionando eventos de clique para fechar os submenus
-document.addEventListener("click", function (event) {
-    if (!inglesParentLink.contains(event.target)) {
-        inglesSubmenu.classList.remove("show-submenu");
-        inglesSubmenu.style.maxHeight = 0;
-    }
-
-    if (!phpParentLink.contains(event.target)) {
-        phpSubmenu.classList.remove("show-submenu");
-        phpSubmenu.style.maxHeight = 0;
-    }
-
-    atualizarAlturaWrapper();
-});
-    });
-</script>
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
     <style>
-        /* Adicione seu CSS aqui, se necessário */
+        /* Adicione estilos conforme necessário para esconder os submenus inicialmente */
         .submenu {
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 0.3s ease; /* Adicione uma transição suave */
-        }
-
-        .show-submenu {
-            max-height: 500px; /* ou o valor que desejar */
+            display: none;
         }
     </style>
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtenha todos os elementos de botão com a classe "purchase-button"
+        var buttons = document.querySelectorAll('.purchase-button');
+
+        // Adicione um ouvinte de clique a cada botão
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                // Oculte todos os submenus
+                hideAllSubmenus();
+
+                // Encontre o submenu correspondente ao botão clicado
+                var submenu = button.parentElement.nextElementSibling;
+
+                // Exiba o submenu correspondente
+                if (submenu) {
+                    submenu.style.display = 'block';
+                }
+            });
+        });
+
+        function hideAllSubmenus() {
+            // Oculte todos os submenus
+            var submenus = document.querySelectorAll('.submenu');
+            submenus.forEach(function (submenu) {
+                submenu.style.display = 'none';
+            });
+        }
+    });
+</script>
 
 <body class="body">
     <div class="content">
