@@ -12,7 +12,7 @@
 
     <!-- Import .JS files -->
     <script src="./settings.js"></script>
-  <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+<script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
 <script type="text/javascript">
     const minHeightVh = 8.0;
     const animationDelay = 300;
@@ -72,7 +72,7 @@
 
         // Adiciona um ouvinte de evento para fechar o submenu e atualizar a altura do wrapper
         document.addEventListener("click", function (event) {
-            if (!event.target.closest("#submenu-container")) {
+            if (!event.target.closest("#submenu-container") && !event.target.closest("#submenu-container_php")) {
                 inglesSubmenu.classList.remove("show-submenu");
                 phpSubmenu.classList.remove("show-submenu");
                 adjustSubmenuHeight(inglesSubmenu, false);
@@ -81,6 +81,7 @@
         });
     });
 </script>
+
 
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
