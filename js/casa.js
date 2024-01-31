@@ -413,21 +413,12 @@ let actualQuestion = 0;
 ];
 
 
-
-
+// Inicialização do quizz
 function init() {
   createQuestion(actualQuestion);
 }
 
 // Criação de pergunta
-// Função para embaralhar um array usando o algoritmo de Fisher-Yates
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
-
 // Criação de pergunta
 function createQuestion(index) {
   clearPreviousQuestion();
@@ -438,10 +429,10 @@ function createQuestion(index) {
   questionText.textContent = question.question;
   questionNumber.textContent = index + 1;
 
-  // Embaralha as respostas antes de exibi-las
-  shuffle(question.answers);
+  // Embaralhar as respostas
+  const shuffledAnswers = shuffleArray(question.answers);
 
-  question.answers.forEach((answer, i) => {
+  shuffledAnswers.forEach((answer, i) => {
     const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
     const letterBtn = answerTemplate.querySelector('.btn-letter');
     const answerText = answerTemplate.querySelector('.question-answer');
@@ -461,6 +452,17 @@ function createQuestion(index) {
     });
   });
 }
+
+// Função para embaralhar array
+function shuffleArray(array) {
+  const shuffledArray = array.slice();
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+}
+
 
 // Limpar pergunta anterior
 function clearPreviousQuestion() {
@@ -508,12 +510,35 @@ function checkAnswer(btn) {
   }
 }
 
-// Restante do seu código...
+// Exibe a tela final
+function showSuccessMessage() {
+  toggleQuizzVisibility();
 
-// Função para inicializar o quizz
-function init() {
-  createQuestion(actualQuestion);
+  const score = ((points / questions.length) * 100).toFixed(2);
+  const displayScore = document.querySelector('#display-score span');
+  displayScore.textContent = score.toString();
+
+  const correctAnswers = document.querySelector('#correct-answers');
+  correctAnswers.textContent = points;
+
+  const totalQuestions = document.querySelector('#questions-qty');
+  totalQuestions.textContent = questions.length;
 }
+
+// Mostra ou esconde o score
+function toggleQuizzVisibility() {
+  quizzContainer.classList.toggle('hide');
+  scoreContainer.classList.toggle('hide');
+}
+
+// Reiniciar quizz
+const restartBtn = document.querySelector('#restart');
+restartBtn.addEventListener('click', function () {
+  actualQuestion = 0;
+  points = 0;
+  toggleQuizzVisibility();
+  init();
+});
 
 // Inicialização do quizz
 init();
