@@ -361,47 +361,22 @@ let actualQuestion = 0;
   // Adicione mais perguntas aqui
 ];
 
-
 // Inicialização do quizz
 function init() {
   createQuestion(actualQuestion);
 }
 
 // Criação de pergunta
-// Função para embaralhar um array usando o algoritmo de Fisher-Yates
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
-
-// Criação de pergunta
 function createQuestion(index) {
   clearPreviousQuestion();
   const question = questions[index];
-  const questionText = questionElement.querySelector('#question-text');
-  const questionNumber = questionElement.querySelector('#question-number');
-
-  questionText.textContent = question.question;
-  questionNumber.textContent = index + 1;
+  const { questionText, questionNumber } = updateQuestionElements(question, index);
 
   // Embaralha as respostas antes de exibi-las
   shuffle(question.answers);
 
   question.answers.forEach((answer, i) => {
-    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
-    const letterBtn = answerTemplate.querySelector('.btn-letter');
-    const answerText = answerTemplate.querySelector('.question-answer');
-
-    letterBtn.textContent = letters[i];
-    answerText.textContent = answer.answer;
-
-    answerTemplate.setAttribute('correct-answer', answer.correct);
-
-    answerTemplate.classList.remove('hide');
-    answerTemplate.classList.remove('answer-template');
-
+    const answerTemplate = createAnswerTemplate(letters[i], answer);
     answerBox.appendChild(answerTemplate);
 
     answerTemplate.addEventListener('click', function () {
@@ -410,57 +385,60 @@ function createQuestion(index) {
   });
 }
 
+// Atualiza os elementos da pergunta
+function updateQuestionElements(question, index) {
+  const questionText = questionElement.querySelector('#question-text');
+  const questionNumber = questionElement.querySelector('#question-number');
+
+  questionText.textContent = question.question;
+  questionNumber.textContent = index + 1;
+
+  return { questionText, questionNumber };
+}
+
+// Cria um template para a resposta
+function createAnswerTemplate(letter, answer) {
+  const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
+  const letterBtn = answerTemplate.querySelector('.btn-letter');
+  const answerText = answerTemplate.querySelector('.question-answer');
+
+  letterBtn.textContent = letter;
+  answerText.textContent = answer.answer;
+
+  answerTemplate.setAttribute('correct-answer', answer.correct);
+
+  answerTemplate.classList.remove('hide');
+  answerTemplate.classList.remove('answer-template');
+
+  return answerTemplate;
+}
+
 // Limpar pergunta anterior
 function clearPreviousQuestion() {
-  const oldButtons = answerBox.querySelectorAll('button');
-  oldButtons.forEach((btn) => {
-    btn.remove();
-  });
+  answerBox.innerHTML = '';
 }
 
 // Verificar resposta do usuário
 function checkAnswer(btn) {
-  const buttons = answerBox.querySelectorAll('button');
-  let answeredCorrectly = false;
+  const correctAnswer = btn.getAttribute('correct-answer') === 'true';
+  btn.classList.add(correctAnswer ? 'correct-answer' : 'wrong-answer');
 
-  buttons.forEach((button) => {
-    if (button.getAttribute('correct-answer') == 'true') {
-      button.classList.add('correct-answer');
-      if (btn === button) {
-        points++;
-        answeredCorrectly = true;
-      }
-    } else {
-      button.classList.add('wrong-answer');
-    }
-  });
-
-  if (!answeredCorrectly) {
-    // Se a resposta estiver incorreta, não avançar para a próxima pergunta
-    setTimeout(function () {
-      clearPreviousQuestion();
-      createQuestion(actualQuestion); // Apresenta a mesma pergunta novamente
-    }, 1200);
-  } else {
-    // Se a resposta estiver correta, avançar para a próxima pergunta
+  if (correctAnswer) {
+    points++;
     actualQuestion++;
-    if (actualQuestion >= questions.length) {
-      // Se todas as perguntas foram respondidas corretamente, exibir mensagem de sucesso
-      showSuccessMessage();
+    if (actualQuestion < questions.length) {
+      setTimeout(() => createQuestion(actualQuestion), 1200);
     } else {
-      // Caso contrário, apresentar a próxima pergunta
-      setTimeout(function () {
-        createQuestion(actualQuestion);
-      }, 1200);
+      showSuccessMessage();
     }
+  } else {
+    setTimeout(() => createQuestion(actualQuestion), 1200);
   }
 }
 
-// Restante do seu código...
-
-// Função para inicializar o quizz
-function init() {
-  createQuestion(actualQuestion);
+// Função para exibir mensagem de sucesso (você precisa implementar esta função)
+function showSuccessMessage() {
+  // Implemente esta função conforme necessário
 }
 
 // Inicialização do quizz
