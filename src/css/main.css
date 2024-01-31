@@ -1,13 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
-#container {
-    height: 100vh;
-    overflow-y: auto;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap");
 
 *,
@@ -32,7 +22,7 @@ html {
     position: relative;
     max-width: 475px;
     padding: 32px;
-    margin: 20px auto; /* Centralizando a área de texto */
+    margin: 20px auto;
     border-radius: 10px;
     color: #f1f1f1;
     font-family: "Lexend Deca", sans-serif;
@@ -48,15 +38,45 @@ html {
     }
 }
 
-/* Restante do seu CSS permanece inalterado */
+#claim-text-wrapper .social_medias {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    --webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
 
-/*
-    Background CSS
-*/
+/* ... (seu restante do CSS permanece inalterado) ... */
+
+.content {
+    position: relative;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 99;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-y: auto;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    max-height: none;
+    --webkit-box-pack: center;
+    --webkit-justify-content: center;
+    --ms-flex-pack: center;
+    justify-content: center;
+    --webkit-box-align: center;
+    --webkit-align-items: center;
+    --ms-flex-align: center;
+    align-items: center;
+}
 
 #background-video {
     width: 100vw;
-    max-width: 100%;
     height: 100vh;
     object-fit: cover;
     position: fixed;
@@ -67,12 +87,12 @@ html {
     z-index: -1;
 }
 
-/*
-    | = = = | Phone Version | = = = | 
-*/
-
 @media screen and (max-width: 450px) {
     #payment-info {
+        --webkit-box-orient: vertical;
+        --webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
