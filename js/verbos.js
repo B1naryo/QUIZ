@@ -916,11 +916,13 @@ answers: [
 ],
 },
 ];
+
 // Inicialização do quizz
 function init() {
   createQuestion(actualQuestion);
 }
 
+// Criação de pergunta
 // Criação de pergunta
 function createQuestion(index) {
   clearPreviousQuestion();
@@ -931,7 +933,10 @@ function createQuestion(index) {
   questionText.textContent = question.question;
   questionNumber.textContent = index + 1;
 
-  question.answers.forEach((answer, i) => {
+  // Embaralhar as respostas
+  const shuffledAnswers = shuffleArray(question.answers);
+
+  shuffledAnswers.forEach((answer, i) => {
     const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
     const letterBtn = answerTemplate.querySelector('.btn-letter');
     const answerText = answerTemplate.querySelector('.question-answer');
@@ -951,6 +956,17 @@ function createQuestion(index) {
     });
   });
 }
+
+// Função para embaralhar array
+function shuffleArray(array) {
+  const shuffledArray = array.slice();
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+}
+
 
 // Limpar pergunta anterior
 function clearPreviousQuestion() {
