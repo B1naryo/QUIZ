@@ -18,7 +18,15 @@
   function atualizarAlturaWrapper() {
     var wrapper = document.getElementById('claim-text-wrapper');
     var alturaConteudo = wrapper.scrollHeight;
-    wrapper.style.maxHeight = alturaConteudo + 'px';
+    
+    // Adiciona uma lógica para ajustar a altura do wrapper, considerando o padding e a borda
+    var paddingBorda =
+      parseInt(window.getComputedStyle(wrapper).paddingTop) +
+      parseInt(window.getComputedStyle(wrapper).paddingBottom) +
+      parseInt(window.getComputedStyle(wrapper).borderTopWidth) +
+      parseInt(window.getComputedStyle(wrapper).borderBottomWidth);
+
+    wrapper.style.height = alturaConteudo + paddingBorda + 'px';
   }
 
   // Chame a função quando a página carregar
@@ -28,6 +36,7 @@
   // Por exemplo, após adicionar menus ou submenus dinamicamente
   // atualizarAlturaWrapper();
 </script>
+
 
     <script type="text/javascript">
         const vh = window.innerHeight * 0.01;
