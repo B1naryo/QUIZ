@@ -87,14 +87,16 @@
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
     <style>
-        body {
-    overflow-y: auto;
+        body, html {
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical para o corpo e a página inteira */
+    height: 100%; /* Garante que o corpo e a página ocupem 100% da altura da janela de visualização */
+    margin: 0; /* Remove margens padrão para garantir que a barra de rolagem não seja ocultada */
 }
 
 .submenu {
     display: none;
     height: 0;
-    overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical para os submenus */
     transition: height 0.3s ease; /* Adiciona uma transição suave para a animação */
 }
 
@@ -103,8 +105,7 @@
     height: auto; /* Alterado de max-height para height */
 }
 
-    
-
+       
     </style>
 </head>
 
