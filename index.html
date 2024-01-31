@@ -21,10 +21,14 @@
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
     <style>
-        /* Adicione estilos conforme necessário para esconder os submenus inicialmente */
-        .submenu {
-            display: none;
-        }
+       .submenu {
+    display: none; /* Inicialmente, oculte o submenu */
+}
+
+.submenu.show-submenu {
+    display: block; /* Exiba o submenu quando a classe show-submenu está presente */
+}
+
     </style>
 </head>
 <script>
