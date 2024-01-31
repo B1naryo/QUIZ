@@ -67,7 +67,7 @@
         }
 
         // Atualiza a altura do wrapper
-        atualizarAlturaWrapper();
+        setTimeout(atualizarAlturaWrapper, 300); // Adiciona um pequeno atraso para garantir que a altura seja atualizada após a animação
     });
 
     phpParentLink.addEventListener("click", function (event) {
@@ -83,8 +83,25 @@
         }
 
         // Atualiza a altura do wrapper
-        atualizarAlturaWrapper();
+        setTimeout(atualizarAlturaWrapper, 300); // Adiciona um pequeno atraso para garantir que a altura seja atualizada após a animação
     });
+});
+
+// Adicione esta função no seu script
+function atualizarAlturaWrapper() {
+    var wrapper = document.getElementById('claim-text-wrapper');
+    var alturaConteudo = wrapper.scrollHeight;
+
+    // Adiciona uma lógica para ajustar a altura do wrapper, considerando o padding e a borda
+    var paddingBorda =
+        parseInt(window.getComputedStyle(wrapper).paddingTop) +
+        parseInt(window.getComputedStyle(wrapper).paddingBottom) +
+        parseInt(window.getComputedStyle(wrapper).borderTopWidth) +
+        parseInt(window.getComputedStyle(wrapper).borderBottomWidth);
+
+    wrapper.style.height = alturaConteudo + paddingBorda + 'px';
+}
+
 });
 
 
