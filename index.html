@@ -13,7 +13,21 @@
     <!-- Import .JS files -->
     <script src="./settings.js"></script>
     <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+<script>
+  // Função para atualizar a altura do #claim-text-wrapper com base no conteúdo
+  function atualizarAlturaWrapper() {
+    var wrapper = document.getElementById('claim-text-wrapper');
+    var alturaConteudo = wrapper.scrollHeight;
+    wrapper.style.height = alturaConteudo + 'px';
+  }
 
+  // Chame a função quando a página carregar
+  window.onload = atualizarAlturaWrapper;
+
+  // Você pode chamar esta função sempre que o conteúdo mudar dinamicamente
+  // Por exemplo, após adicionar menus ou submenus dinamicamente
+  // atualizarAlturaWrapper();
+</script>
     <script type="text/javascript">
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh < 8.0 ? 8.0 : vh}px`);
