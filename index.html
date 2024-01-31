@@ -55,19 +55,20 @@
         });
 
         // Adicionando eventos de clique para fechar os submenus
-        document.addEventListener("click", function (event) {
-            if (event.target !== inglesParentLink) {
-                inglesSubmenu.classList.remove("show-submenu");
-                inglesSubmenu.style.maxHeight = 0;
-            }
+        // Adicionando eventos de clique para fechar os submenus
+document.addEventListener("click", function (event) {
+    if (!inglesParentLink.contains(event.target)) {
+        inglesSubmenu.classList.remove("show-submenu");
+        inglesSubmenu.style.maxHeight = 0;
+    }
 
-            if (event.target !== phpParentLink) {
-                phpSubmenu.classList.remove("show-submenu");
-                phpSubmenu.style.maxHeight = 0;
-            }
+    if (!phpParentLink.contains(event.target)) {
+        phpSubmenu.classList.remove("show-submenu");
+        phpSubmenu.style.maxHeight = 0;
+    }
 
-            atualizarAlturaWrapper();
-        });
+    atualizarAlturaWrapper();
+});
     });
 </script>
     <!-- Import CSS files -->
