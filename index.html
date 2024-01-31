@@ -45,20 +45,33 @@
 
                 // Exiba o submenu correspondente
                 if (submenu) {
-                    submenu.style.display = 'block';
+                    submenu.classList.add('show-submenu');
                 }
             });
         });
 
+        // Adicione um ouvinte de clique a cada item do submenu
+        var submenuItems = document.querySelectorAll('.submenu li');
+        submenuItems.forEach(function (item) {
+            item.addEventListener('click', function (event) {
+                // Obtenha a URL associada ao item do submenu clicado
+                var url = item.querySelector('a').getAttribute('href');
+
+                // Navegue para a URL
+                window.location.href = url;
+            });
+        });
+
         function hideAllSubmenus() {
-            // Oculte todos os submenus
+            // Remova a classe 'show-submenu' de todos os submenus
             var submenus = document.querySelectorAll('.submenu');
             submenus.forEach(function (submenu) {
-                submenu.style.display = 'none';
+                submenu.classList.remove('show-submenu');
             });
         }
     });
 </script>
+
 <body class="body">
     <div class="content">
         <video id="background-video" autoplay loop muted>
