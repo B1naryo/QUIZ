@@ -34,14 +34,29 @@
         event.preventDefault();
         inglesSubmenu.classList.toggle("show-submenu");
         phpSubmenu.classList.remove("show-submenu");
+
+        // Adiciona uma lógica para ajustar a altura máxima do submenu com base no conteúdo
+        if (inglesSubmenu.classList.contains("show-submenu")) {
+            inglesSubmenu.style.maxHeight = inglesSubmenu.scrollHeight + "px";
+        } else {
+            inglesSubmenu.style.maxHeight = 0;
+        }
     });
 
     phpParentLink.addEventListener("click", function (event) {
         event.preventDefault();
         phpSubmenu.classList.toggle("show-submenu");
         inglesSubmenu.classList.remove("show-submenu");
+
+        // Adiciona uma lógica para ajustar a altura máxima do submenu com base no conteúdo
+        if (phpSubmenu.classList.contains("show-submenu")) {
+            phpSubmenu.style.maxHeight = phpSubmenu.scrollHeight + "px";
+        } else {
+            phpSubmenu.style.maxHeight = 0;
+        }
     });
 });
+
     </script>
 
     <!-- Import CSS files -->
