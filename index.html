@@ -86,26 +86,23 @@
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
-    <style>
-        body {
-            overflow-y: auto;
-        }
-    
-        .submenu {
-            
-   
+    body {
+    overflow-y: auto;
+}
+
+.submenu {
     display: none;
-    max-height: 0;
+    height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease; /* Adiciona uma transição suave para a animação */
+    transition: height 0.3s ease; /* Adiciona uma transição suave para a animação */
 }
 
 .show-submenu {
     display: block;
-    max-height: 500px; /* Ajuste isso conforme necessário para a altura máxima do submenu */
+    height: auto; /* Alterado de max-height para height */
 }
 
-    </style>
+    
 </head>
 
 <body class="body">
