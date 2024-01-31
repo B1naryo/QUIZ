@@ -13,6 +13,7 @@
     <!-- Import .JS files -->
     <script src="./settings.js"></script>
     <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+
 <script>
     function atualizarAlturaWrapper() {
         var wrapper = document.getElementById('claim-text-wrapper');
@@ -36,40 +37,39 @@
         var phpParentLink = document.querySelector("#submenu-container_php a.parent-link");
         var phpSubmenu = document.querySelector("#submenu-container_php .submenu");
 
-        inglesParentLink.addEventListener("click", function (event) {
-            event.preventDefault();
-            inglesSubmenu.classList.toggle("show-submenu");
-            phpSubmenu.classList.remove("show-submenu");
-
+        // Adicionando um evento de mouseover para impedir o fechamento ao passar o mouse sobre o botão
+        inglesParentLink.addEventListener("mouseover", function (event) {
             if (!inglesSubmenu.classList.contains("show-submenu")) {
-                inglesSubmenu.style.maxHeight = 0;
-            } else {
+                inglesSubmenu.classList.add("show-submenu");
                 inglesSubmenu.style.maxHeight = inglesSubmenu.scrollHeight + "px";
-            }
-
-            inglesSubmenu.addEventListener("transitionend", function() {
                 atualizarAlturaWrapper();
-            });
+            }
         });
 
-        phpParentLink.addEventListener("click", function (event) {
-            event.preventDefault();
-            phpSubmenu.classList.toggle("show-submenu");
-            inglesSubmenu.classList.remove("show-submenu");
-
+        phpParentLink.addEventListener("mouseover", function (event) {
             if (!phpSubmenu.classList.contains("show-submenu")) {
-                phpSubmenu.style.maxHeight = 0;
-            } else {
+                phpSubmenu.classList.add("show-submenu");
                 phpSubmenu.style.maxHeight = phpSubmenu.scrollHeight + "px";
+                atualizarAlturaWrapper();
+            }
+        });
+
+        // Adicionando eventos de clique para fechar os submenus
+        document.addEventListener("click", function (event) {
+            if (event.target !== inglesParentLink) {
+                inglesSubmenu.classList.remove("show-submenu");
+                inglesSubmenu.style.maxHeight = 0;
             }
 
-            phpSubmenu.addEventListener("transitionend", function() {
-                atualizarAlturaWrapper();
-            });
+            if (event.target !== phpParentLink) {
+                phpSubmenu.classList.remove("show-submenu");
+                phpSubmenu.style.maxHeight = 0;
+            }
+
+            atualizarAlturaWrapper();
         });
     });
 </script>
-
     <!-- Import CSS files -->
     <link rel="stylesheet" type="text/css" href="./src/css/fonts.css" media="all">
     <link rel="stylesheet" type="text/css" href="./src/css/normalize.css">
