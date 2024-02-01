@@ -477,7 +477,6 @@ let actualQuestion = 0;
       { answer: "Notícia", correct: false },
     ],
   },
-let questions = [
   {
     question: "O que significa 'Set Fire to the Rain' em português, na música de Adele?",
     answers: [
