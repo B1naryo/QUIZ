@@ -8,568 +8,421 @@ let points = 0;
 let actualQuestion = 0;
 
 // Array de perguntas e respostas
- let questions = [
-  {
-    question: "O que significa 'feliz' em inglês?",
-    answers: [
-      { answer: "Happy", correct: true },
-      { answer: "Sad", correct: false },
-      { answer: "Angry", correct: false },
-      { answer: "Excited", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'tempo' em inglês?",
-    answers: [
-      { answer: "Time", correct: true },
-      { answer: "Clock", correct: false },
-      { answer: "Space", correct: false },
-      { answer: "Moment", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'grande' em inglês?",
-    answers: [
-      { answer: "Big", correct: true },
-      { answer: "Small", correct: false },
-      { answer: "Tall", correct: false },
-      { answer: "Short", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'cidade' em inglês?",
-    answers: [
-      { answer: "City", correct: true },
-      { answer: "Town", correct: false },
-      { answer: "Village", correct: false },
-      { answer: "Country", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'comida' em inglês?",
-    answers: [
-      { answer: "Food", correct: true },
-      { answer: "Drink", correct: false },
-      { answer: "Snack", correct: false },
-      { answer: "Meal", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'água' em inglês?",
-    answers: [
-      { answer: "Water", correct: true },
-      { answer: "Fire", correct: false },
-      { answer: "Earth", correct: false },
-      { answer: "Air", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'sol' em inglês?",
-    answers: [
-      { answer: "Sun", correct: true },
-      { answer: "Moon", correct: false },
-      { answer: "Star", correct: false },
-      { answer: "Sky", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'livro' em inglês?",
-    answers: [
-      { answer: "Book", correct: true },
-      { answer: "Pen", correct: false },
-      { answer: "Paper", correct: false },
-      { answer: "Pencil", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'olho' em inglês?",
-    answers: [
-      { answer: "Eye", correct: true },
-      { answer: "Ear", correct: false },
-      { answer: "Nose", correct: false },
-      { answer: "Mouth", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'casa' em inglês?",
-    answers: [
-      { answer: "House", correct: true },
-      { answer: "Apartment", correct: false },
-      { answer: "Building", correct: false },
-      { answer: "Room", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'carro' em inglês?",
-    answers: [
-      { answer: "Car", correct: true },
-      { answer: "Bus", correct: false },
-      { answer: "Bicycle", correct: false },
-      { answer: "Train", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'música' em inglês?",
-    answers: [
-      { answer: "Music", correct: true },
-      { answer: "Song", correct: false },
-      { answer: "Dance", correct: false },
-      { answer: "Instrument", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'trabalho' em inglês?",
-    answers: [
-      { answer: "Work", correct: true },
-      { answer: "Job", correct: false },
-      { answer: "Career", correct: false },
-      { answer: "Task", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'amigo' em inglês?",
-    answers: [
-      { answer: "Friend", correct: true },
-      { answer: "Buddy", correct: false },
-      { answer: "Companion", correct: false },
-      { answer: "Mate", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'família' em inglês?",
-    answers: [
-      { answer: "Family", correct: true },
-      { answer: "Relatives", correct: false },
-      { answer: "Parents", correct: false },
-      { answer: "Siblings", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'tempo' (clima) em inglês?",
-    answers: [
-      { answer: "Weather", correct: true },
-      { answer: "Time", correct: false },
-      { answer: "Season", correct: false },
-      { answer: "Clock", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'ver' em inglês?",
-    answers: [
-      { answer: "See", correct: true },
-      { answer: "Look", correct: false },
-      { answer: "Watch", correct: false },
-      { answer: "Read", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'comer' em inglês?",
-    answers: [
-      { answer: "Eat", correct: true },
-      { answer: "Cook", correct: false },
-      { answer: "Drink", correct: false },
-      { answer: "Taste", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'beber' em inglês?",
-    answers: [
-      { answer: "Drink", correct: true },
-      { answer: "Eat", correct: false },
-      { answer: "Sip", correct: false },
-      { answer: "Swallow", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'caminhar' em inglês?",
-    answers: [
-      { answer: "Walk", correct: true },
-      { answer: "Run", correct: false },
-      { answer: "Jump", correct: false },
-      { answer: "Stroll", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'triste' em inglês?",
-    answers: [
-      { answer: "Sad", correct: true },
-      { answer: "Happy", correct: false },
-      { answer: "Angry", correct: false },
-      { answer: "Excited", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'rápido' em inglês?",
-    answers: [
-      { answer: "Fast", correct: true },
-      { answer: "Slow", correct: false },
-      { answer: "Quick", correct: false },
-      { answer: "Speedy", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'alto' em inglês?",
-    answers: [
-      { answer: "Tall", correct: true },
-      { answer: "Short", correct: false },
-      { answer: "High", correct: false },
-      { answer: "Low", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'perto' em inglês?",
-    answers: [
-      { answer: "Near", correct: true },
-      { answer: "Far", correct: false },
-      { answer: "Close", correct: false },
-      { answer: "Distant", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'longe' em inglês?",
-    answers: [
-      { answer: "Far", correct: true },
-      { answer: "Near", correct: false },
-      { answer: "Distant", correct: false },
-      { answer: "Close", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'rico' em inglês?",
-    answers: [
-      { answer: "Rich", correct: true },
-      { answer: "Poor", correct: false },
-      { answer: "Wealthy", correct: false },
-      { answer: "Affluent", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'pobre' em inglês?",
-    answers: [
-      { answer: "Poor", correct: true },
-      { answer: "Rich", correct: false },
-      { answer: "Needy", correct: false },
-      { answer: "Wealthy", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'feliz' em inglês?",
-    answers: [
-      { answer: "Happy", correct: true },
-      { answer: "Sad", correct: false },
-      { answer: "Joyful", correct: false },
-      { answer: "Content", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'trabalhador' em inglês?",
-    answers: [
-      { answer: "Hardworking", correct: true },
-      { answer: "Lazy", correct: false },
-      { answer: "Diligent", correct: false },
-      { answer: "Productive", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'preguiçoso' em inglês?",
-    answers: [
-      { answer: "Lazy", correct: true },
-      { answer: "Hardworking", correct: false },
-      { answer: "Indolent", correct: false },
-      { answer: "Sluggish", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'correr' em inglês?",
-    answers: [
-      { answer: "Run", correct: true },
-      { answer: "Walk", correct: false },
-      { answer: "Sprint", correct: false },
-      { answer: "Jog", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'comprar' em inglês?",
-    answers: [
-      { answer: "Buy", correct: true },
-      { answer: "Sell", correct: false },
-      { answer: "Purchase", correct: false },
-      { answer: "Trade", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'vender' em inglês?",
-    answers: [
-      { answer: "Sell", correct: true },
-      { answer: "Buy", correct: false },
-      { answer: "Trade", correct: false },
-      { answer: "Purchase", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'chegar' em inglês?",
-    answers: [
-      { answer: "Arrive", correct: true },
-      { answer: "Leave", correct: false },
-      { answer: "Depart", correct: false },
-      { answer: "Travel", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'partir' em inglês?",
-    answers: [
-      { answer: "Leave", correct: true },
-      { answer: "Arrive", correct: false },
-      { answer: "Depart", correct: false },
-      { answer: "Exit", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'trabalho' (tarefa) em inglês?",
-    answers: [
-      { answer: "Task", correct: true },
-      { answer: "Job", correct: false },
-      { answer: "Work", correct: false },
-      { answer: "Assignment", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'dinheiro' em inglês?",
-    answers: [
-      { answer: "Money", correct: true },
-      { answer: "Cash", correct: false },
-      { answer: "Currency", correct: false },
-      { answer: "Wealth", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'escola' em inglês?",
-    answers: [
-      { answer: "School", correct: true },
-      { answer: "Class", correct: false },
-      { answer: "College", correct: false },
-      { answer: "University", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'amor' em inglês?",
-    answers: [
-      { answer: "Love", correct: true },
-      { answer: "Hate", correct: false },
-      { answer: "Adoration", correct: false },
-      { answer: "Affection", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'ódio' em inglês?",
-    answers: [
-      { answer: "Hate", correct: true },
-      { answer: "Love", correct: false },
-      { answer: "Dislike", correct: false },
-      { answer: "Detest", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'nadar' em inglês?",
-    answers: [
-      { answer: "Swim", correct: true },
-      { answer: "Dive", correct: false },
-      { answer: "Float", correct: false },
-      { answer: "Splash", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'voar' em inglês?",
-    answers: [
-      { answer: "Fly", correct: true },
-      { answer: "Soar", correct: false },
-      { answer: "Glide", correct: false },
-      { answer: "Jump", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Hello' em português, na música de Adele?",
-    answers: [
-      { answer: "Olá", correct: true },
-      { answer: "Adeus", correct: false },
-      { answer: "Até logo", correct: false },
-      { answer: "Oi", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Rolling' em português, na música de Adele?",
-    answers: [
-      { answer: "Rolar", correct: true },
-      { answer: "Dançar", correct: false },
-      { answer: "Cantar", correct: false },
-      { answer: "Voar", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Deep' em português, na música de Adele?",
-    answers: [
-      { answer: "Profundo", correct: true },
-      { answer: "Alto", correct: false },
-      { answer: "Distante", correct: false },
-      { answer: "Escuro", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Someone' em português, na música de Adele?",
-    answers: [
-      { answer: "Alguém", correct: true },
-      { answer: "Ninguém", correct: false },
-      { answer: "Todo mundo", correct: false },
-      { answer: "Qualquer um", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Like' em português, na música de Adele?",
-    answers: [
-      { answer: "Como", correct: true },
-      { answer: "Amar", correct: false },
-      { answer: "Curtir", correct: false },
-      { answer: "Gostar", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'You' em português, na música de Adele?",
-    answers: [
-      { answer: "Você", correct: true },
-      { answer: "Nós", correct: false },
-      { answer: "Eles", correct: false },
-      { answer: "Eu", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Skyfall' em português?",
-    answers: [
-      { answer: "Queda do Céu", correct: true },
-      { answer: "Cair do Céu", correct: false },
-      { answer: "Céu Estrelado", correct: false },
-      { answer: "Céu Azul", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Chasing' em português, na música 'Chasing Pavements' de Adele?",
-    answers: [
-      { answer: "Perseguindo", correct: true },
-      { answer: "Correndo", correct: false },
-      { answer: "Atrás de", correct: false },
-      { answer: "Evitando", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Pavements' em português, na música 'Chasing Pavements' de Adele?",
-    answers: [
-      { answer: "Calçadas", correct: true },
-      { answer: "Passarelas", correct: false },
-      { answer: "Estradas", correct: false },
-      { answer: "Praias", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Rumor' em português, na música 'Rumour Has It' de Adele?",
-    answers: [
-      { answer: "Rumor", correct: true },
-      { answer: "História", correct: false },
-      { answer: "Fofoca", correct: false },
-      { answer: "Notícia", correct: false },
-    ],
-  },
 let questions = [
   {
-    question: "O que significa 'Set Fire to the Rain' em português, na música de Adele?",
+    question: "O que significa 'I am the danger' em português na série Breaking Bad?",
     answers: [
-      { answer: "Colocar fogo na chuva", correct: true },
-      { answer: "Brincar com a chuva", correct: false },
-      { answer: "Dançar na chuva", correct: false },
-      { answer: "Ignorar a chuva", correct: false },
+      { answer: "Eu sou o perigo", correct: true },
+      { answer: "Diga meu nome", correct: false },
+      { answer: "Eu sou aquele que bate na porta", correct: false },
+      { answer: "Eu fiz por mim", correct: false },
     ],
   },
   {
-    question: "O que significa 'Hometown Glory' em português, na música de Adele?",
+    question: "O que significa 'Yeah, science!' em português na série Breaking Bad?",
     answers: [
-      { answer: "Gloria da cidade natal", correct: true },
-      { answer: "Orgulho da cidade", correct: false },
-      { answer: "História da cidade", correct: false },
-      { answer: "Canção da cidade", correct: false },
+      { answer: "Sim, ciência!", correct: true },
+      { answer: "Vamos nessa!", correct: false },
+      { answer: "Isso aí, ciência!", correct: false },
+      { answer: "Eu sabia disso!", correct: false },
     ],
   },
   {
-    question: "O que significa 'Turning Tables' em português, na música de Adele?",
+    question: "O que significa 'Say my name' em português na série Breaking Bad?",
     answers: [
-      { answer: "Virando mesas", correct: true },
-      { answer: "Trocando de lugar", correct: false },
-      { answer: "Jogando cartas", correct: false },
-      { answer: "Dobrando mesas", correct: false },
+      { answer: "Diga meu nome", correct: true },
+      { answer: "Diga o que fizemos", correct: false },
+      { answer: "Diga a verdade", correct: false },
+      { answer: "Diga quem somos", correct: false },
     ],
   },
   {
-    question: "O que significa 'Remedy' em português, na música de Adele?",
+    question: "O que significa 'I am the one who knocks' em português na série Breaking Bad?",
     answers: [
-      { answer: "Remédio", correct: true },
-      { answer: "Cura", correct: false },
-      { answer: "Tratamento", correct: false },
-      { answer: "Solução", correct: false },
+      { answer: "Eu sou aquele que bate na porta", correct: true },
+      { answer: "Eu sou o perigo", correct: false },
+      { answer: "Eu sou aquele que decide", correct: false },
+      { answer: "Eu sou o que está batendo", correct: false },
     ],
   },
   {
-    question: "O que significa 'Water Under the Bridge' em português, na música de Adele?",
+    question: "O que significa 'I did it for me' em português na série Breaking Bad?",
     answers: [
-      { answer: "Água debaixo da ponte", correct: true },
-      { answer: "Chuva na ponte", correct: false },
-      { answer: "Rio sob a ponte", correct: false },
-      { answer: "Lago na ponte", correct: false },
+      { answer: "Eu fiz por mim", correct: true },
+      { answer: "Eu fiz por você", correct: false },
+      { answer: "Eu fiz por todos", correct: false },
+      { answer: "Eu fiz por eles", correct: false },
     ],
   },
   {
-    question: "O que significa 'Send My Love (To Your New Lover)' em português, na música de Adele?",
+    question: "O que significa 'Bitch!' em português na série Breaking Bad?",
     answers: [
-      { answer: "Envie meu amor (para seu novo amor)", correct: true },
-      { answer: "Mande meu amor (para seu antigo amor)", correct: false },
-      { answer: "Diga meu amor (para seu amigo)", correct: false },
-      { answer: "Leve meu amor (para seu amante)", correct: false },
+      { answer: "Vadia!", correct: true },
+      { answer: "Bruxa!", correct: false },
+      { answer: "Ridícula!", correct: false },
+      { answer: "Idiota!", correct: false },
     ],
   },
   {
-    question: "O que significa 'Sweetest Devotion' em português, na música de Adele?",
+    question: "O que significa 'Yo, Mr. White!' em português na série Breaking Bad?",
     answers: [
-      { answer: "Doçura da devoção", correct: true },
-      { answer: "Devoção amarga", correct: false },
-      { answer: "Amor mais doce", correct: false },
-      { answer: "Devoção sincera", correct: false },
+      { answer: "Ei, Sr. White!", correct: true },
+      { answer: "Olá, Sr. White!", correct: false },
+      { answer: "Oi, Sr. White!", correct: false },
+      { answer: "Hey, Sr. White!", correct: false },
     ],
   },
   {
-    question: "O que significa 'Daydreamer' em português, na música de Adele?",
+    question: "O que significa 'No half measures' em português na série Breaking Bad?",
     answers: [
-      { answer: "Sonhador diurno", correct: true },
-      { answer: "Viajante diurno", correct: false },
-      { answer: "Contemplador diurno", correct: false },
-      { answer: "Sonhador noturno", correct: false },
+      { answer: "Sem meias medidas", correct: true },
+      { answer: "Nenhuma meia solução", correct: false },
+      { answer: "Sem meio termo", correct: false },
+      { answer: "Sem meias palavras", correct: false },
     ],
   },
   {
-    question: "O que significa 'Melt My Heart to Stone' em português, na música de Adele?",
+    question: "O que significa 'Tread lightly' em português na série Breaking Bad?",
     answers: [
-      { answer: "Derreter meu coração em pedra", correct: true },
-      { answer: "Quebrar meu coração de pedra", correct: false },
-      { answer: "Amolecer meu coração de pedra", correct: false },
-      { answer: "Transformar meu coração em pedra", correct: false },
+      { answer: "Pise leve", correct: true },
+      { answer: "Cuidado", correct: false },
+      { answer: "Ande com cuidado", correct: false },
+      { answer: "Pise com firmeza", correct: false },
     ],
   },
   {
-    question: "O que significa 'Make You Feel My Love' em português, na música de Adele?",
+    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
     answers: [
-      { answer: "Fazer você sentir meu amor", correct: true },
-      { answer: "Deixar você sentir meu amor", correct: false },
-      { answer: "Mostrar meu amor a você", correct: false },
-      { answer: "Permitir você sentir meu amor", correct: false },
+      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
+      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
+      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
+      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
     ],
   },
-  // Adicione mais perguntas aqui
-
+  {
+    question: "O que significa 'I chose a half measure when I should have gone all the way.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu escolhi uma meia medida quando deveria ter ido até o fim.", correct: true },
+      { answer: "Eu escolhi uma solução parcial quando deveria ter ido até o fim.", correct: false },
+      { answer: "Eu escolhi meio termo quando deveria ter ido até o fim.", correct: false },
+      { answer: "Eu escolhi uma meia ação quando deveria ter ido até o fim.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the one who drives' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou aquele que dirige", correct: true },
+      { answer: "Eu sou quem dirige", correct: false },
+      { answer: "Eu sou o motorista", correct: false },
+      { answer: "Eu sou o único que dirige", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Yeah, Mr. White! Yeah, science!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Sim, Sr. White! Sim, ciência!", correct: true },
+      { answer: "Sim, Sr. White! Vamos nessa, ciência!", correct: false },
+      { answer: "Yeah, Sr. White! Yeah, ciência!", correct: false },
+      { answer: "Sim, Sr. White! Isso aí, ciência!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the danger. A guy opens his door and gets shot, and you think that of me? No. I am the one who knocks!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você pensa isso de mim? Não. Eu sou aquele que bate na porta!", correct: true },
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você acha isso de mim? Não. Eu sou quem bate na porta!", correct: false },
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você imagina isso de mim? Não. Eu sou aquele que toca a porta!", correct: false },
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você supõe isso de mim? Não. Eu sou quem bate na porta!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'No, Jesse, we have to cook.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Não, Jesse, nós temos que cozinhar.", correct: true },
+      { answer: "Não, Jesse, precisamos cozinhar.", correct: false },
+      { answer: "Não, Jesse, devemos cozinhar.", correct: false },
+      { answer: "Não, Jesse, é preciso cozinhar.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I'm not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
+      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
+      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
+      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou aquele que bate na porta!", correct: true },
+      { answer: "Eu sou quem bate na porta!", correct: false },
+      { answer: "Eu sou o que toca a porta!", correct: false },
+      { answer: "Eu sou o único que bate na porta!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
+      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostei. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostava disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I'm not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
+      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
+      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
+      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou aquele que bate na porta!", correct: true },
+      { answer: "Eu sou quem bate na porta!", correct: false },
+      { answer: "Eu sou o que toca a porta!", correct: false },
+      { answer: "Eu sou o único que bate na porta!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
+      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostava disso. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostei disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
+      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
+      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
+      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou aquele que bate na porta!", correct: true },
+      { answer: "Eu sou quem bate na porta!", correct: false },
+      { answer: "Eu sou o que toca a porta!", correct: false },
+      { answer: "Eu sou o único que bate na porta!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
+      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostava disso. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostei disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'No, Jesse, we have to cook.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Não, Jesse, nós temos que cozinhar.", correct: true },
+      { answer: "Não, Jesse, precisamos cozinhar.", correct: false },
+      { answer: "Não, Jesse, devemos cozinhar.", correct: false },
+      { answer: "Não, Jesse, é preciso cozinhar.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I'm not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
+      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
+      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
+      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou aquele que bate na porta!", correct: true },
+      { answer: "Eu sou quem bate na porta!", correct: false },
+      { answer: "Eu sou o que toca a porta!", correct: false },
+      { answer: "Eu sou o único que bate na porta!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
+      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostava disso. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostei disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Bitch!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Vadia!", correct: true },
+      { answer: "Bruxa!", correct: false },
+      { answer: "Ridícula!", correct: false },
+      { answer: "Idiota!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Yo, Mr. White!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Ei, Sr. White!", correct: true },
+      { answer: "Olá, Sr. White!", correct: false },
+      { answer: "Oi, Sr. White!", correct: false },
+      { answer: "Hey, Sr. White!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'No half measures' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Sem meias medidas", correct: true },
+      { answer: "Nenhuma meia solução", correct: false },
+      { answer: "Sem meio termo", correct: false },
+      { answer: "Sem meias palavras", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Tread lightly' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Pise leve", correct: true },
+      { answer: "Cuidado", correct: false },
+      { answer: "Ande com cuidado", correct: false },
+      { answer: "Pise com firmeza", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
+      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
+      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
+      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I chose a half measure when I should have gone all the way.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu escolhi uma meia medida quando deveria ter ido até o fim.", correct: true },
+      { answer: "Eu escolhi uma solução parcial quando deveria ter ido até o fim.", correct: false },
+      { answer: "Eu escolhi meio termo quando deveria ter ido até o fim.", correct: false },
+      { answer: "Eu escolhi uma meia ação quando deveria ter ido até o fim.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the one who drives' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou aquele que dirige", correct: true },
+      { answer: "Eu sou quem dirige", correct: false },
+      { answer: "Eu sou o motorista", correct: false },
+      { answer: "Eu sou o único que dirige", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Yeah, Mr. White! Yeah, science!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Sim, Sr. White! Sim, ciência!", correct: true },
+      { answer: "Sim, Sr. White! Vamos nessa, ciência!", correct: false },
+      { answer: "Yeah, Sr. White! Yeah, ciência!", correct: false },
+      { answer: "Sim, Sr. White! Isso aí, ciência!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the danger. A guy opens his door and gets shot, and you think that of me? No. I am the one who knocks!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você pensa isso de mim? Não. Eu sou aquele que bate na porta!", correct: true },
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você acha isso de mim? Não. Eu sou quem bate na porta!", correct: false },
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você imagina isso de mim? Não. Eu sou aquele que toca a porta!", correct: false },
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você supõe isso de mim? Não. Eu sou quem bate na porta!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'No, Jesse, we have to cook.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Não, Jesse, nós temos que cozinhar.", correct: true },
+      { answer: "Não, Jesse, precisamos cozinhar.", correct: false },
+      { answer: "Não, Jesse, devemos cozinhar.", correct: false },
+      { answer: "Não, Jesse, é preciso cozinhar.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I'm not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
+      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
+      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
+      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
+      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu sou aquele que bate na porta!", correct: true },
+      { answer: "Eu sou quem bate na porta!", correct: false },
+      { answer: "Eu sou o que toca a porta!", correct: false },
+      { answer: "Eu sou o único que bate na porta!", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
+    answers: [
+      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
+      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostava disso. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+      { answer: "Eu fiz por mim. Eu gostei disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
+    ],
+  },
 
 ];
 
