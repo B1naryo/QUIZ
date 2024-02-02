@@ -425,14 +425,32 @@ let questions = [
   },
 
 ];
+// ... (Código anterior)
 
+// Remoção de perguntas repetidas
+function removePerguntasRepetidas(questions) {
+  const indicesUnicos = new Set();
+  const perguntasFiltradas = questions.filter((pergunta, index) => {
+    if (!indicesUnicos.has(index)) {
+      indicesUnicos.add(index);
+      return true;
+    }
+    return false;
+  });
+  return perguntasFiltradas;
+}
 
 // Inicialização do quizz
 function init() {
+  // Remove perguntas repetidas
+  let perguntasSemRepeticao = removePerguntasRepetidas(questions);
+  console.log(perguntasSemRepeticao);
+
   createQuestion(actualQuestion);
 }
 
-// Criação de pergunta
+// ... (Restante do código)
+
 // Criação de pergunta
 function createQuestion(index) {
   clearPreviousQuestion();
