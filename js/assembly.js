@@ -780,9 +780,6 @@ let actualQuestion = 0;
 
 ];
 
-// Adicionando as novas perguntas à lista original
-questions = [...questions, ...assemblyQuestions];
-
 
 
 // Inicialização do quizz
