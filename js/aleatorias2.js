@@ -7,7 +7,6 @@ const letters = ['a', 'b', 'c', 'd', 'e'];
 let points = 0;
 let actualQuestion = 0;
 
-// Array de perguntas e respostas
 let questions = [
   {
     question: "O que significa 'I am the danger' em português na série Breaking Bad?",
@@ -131,329 +130,16 @@ let questions = [
     answers: [
       { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você pensa isso de mim? Não. Eu sou aquele que bate na porta!", correct: true },
       { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você acha isso de mim? Não. Eu sou quem bate na porta!", correct: false },
-      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você imagina isso de mim? Não. Eu sou aquele que toca a porta!", correct: false },
-      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você supõe isso de mim? Não. Eu sou quem bate na porta!", correct: false },
+      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você supõe isso de mim? Não. Eu sou o que está batendo na porta!", correct: false },
     ],
   },
-  {
-    question: "O que significa 'No, Jesse, we have to cook.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Não, Jesse, nós temos que cozinhar.", correct: true },
-      { answer: "Não, Jesse, precisamos cozinhar.", correct: false },
-      { answer: "Não, Jesse, devemos cozinhar.", correct: false },
-      { answer: "Não, Jesse, é preciso cozinhar.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I'm not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
-      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
-      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
-      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu sou aquele que bate na porta!", correct: true },
-      { answer: "Eu sou quem bate na porta!", correct: false },
-      { answer: "Eu sou o que toca a porta!", correct: false },
-      { answer: "Eu sou o único que bate na porta!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
-      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostei. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostava disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I'm not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
-      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
-      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
-      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu sou aquele que bate na porta!", correct: true },
-      { answer: "Eu sou quem bate na porta!", correct: false },
-      { answer: "Eu sou o que toca a porta!", correct: false },
-      { answer: "Eu sou o único que bate na porta!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
-      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostava disso. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostei disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
-      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
-      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
-      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu sou aquele que bate na porta!", correct: true },
-      { answer: "Eu sou quem bate na porta!", correct: false },
-      { answer: "Eu sou o que toca a porta!", correct: false },
-      { answer: "Eu sou o único que bate na porta!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
-      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostava disso. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostei disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'No, Jesse, we have to cook.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Não, Jesse, nós temos que cozinhar.", correct: true },
-      { answer: "Não, Jesse, precisamos cozinhar.", correct: false },
-      { answer: "Não, Jesse, devemos cozinhar.", correct: false },
-      { answer: "Não, Jesse, é preciso cozinhar.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I'm not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
-      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
-      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
-      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu sou aquele que bate na porta!", correct: true },
-      { answer: "Eu sou quem bate na porta!", correct: false },
-      { answer: "Eu sou o que toca a porta!", correct: false },
-      { answer: "Eu sou o único que bate na porta!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
-      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostava disso. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostei disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Bitch!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Vadia!", correct: true },
-      { answer: "Bruxa!", correct: false },
-      { answer: "Ridícula!", correct: false },
-      { answer: "Idiota!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Yo, Mr. White!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Ei, Sr. White!", correct: true },
-      { answer: "Olá, Sr. White!", correct: false },
-      { answer: "Oi, Sr. White!", correct: false },
-      { answer: "Hey, Sr. White!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'No half measures' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Sem meias medidas", correct: true },
-      { answer: "Nenhuma meia solução", correct: false },
-      { answer: "Sem meio termo", correct: false },
-      { answer: "Sem meias palavras", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Tread lightly' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Pise leve", correct: true },
-      { answer: "Cuidado", correct: false },
-      { answer: "Ande com cuidado", correct: false },
-      { answer: "Pise com firmeza", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
-      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
-      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
-      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I chose a half measure when I should have gone all the way.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu escolhi uma meia medida quando deveria ter ido até o fim.", correct: true },
-      { answer: "Eu escolhi uma solução parcial quando deveria ter ido até o fim.", correct: false },
-      { answer: "Eu escolhi meio termo quando deveria ter ido até o fim.", correct: false },
-      { answer: "Eu escolhi uma meia ação quando deveria ter ido até o fim.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am the one who drives' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu sou aquele que dirige", correct: true },
-      { answer: "Eu sou quem dirige", correct: false },
-      { answer: "Eu sou o motorista", correct: false },
-      { answer: "Eu sou o único que dirige", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Yeah, Mr. White! Yeah, science!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Sim, Sr. White! Sim, ciência!", correct: true },
-      { answer: "Sim, Sr. White! Vamos nessa, ciência!", correct: false },
-      { answer: "Yeah, Sr. White! Yeah, ciência!", correct: false },
-      { answer: "Sim, Sr. White! Isso aí, ciência!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am the danger. A guy opens his door and gets shot, and you think that of me? No. I am the one who knocks!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você pensa isso de mim? Não. Eu sou aquele que bate na porta!", correct: true },
-      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você acha isso de mim? Não. Eu sou quem bate na porta!", correct: false },
-      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você imagina isso de mim? Não. Eu sou aquele que toca a porta!", correct: false },
-      { answer: "Eu sou o perigo. Um cara abre a porta e é baleado, e você supõe isso de mim? Não. Eu sou quem bate na porta!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'No, Jesse, we have to cook.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Não, Jesse, nós temos que cozinhar.", correct: true },
-      { answer: "Não, Jesse, precisamos cozinhar.", correct: false },
-      { answer: "Não, Jesse, devemos cozinhar.", correct: false },
-      { answer: "Não, Jesse, é preciso cozinhar.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I'm not in the meth business. I'm in the empire business.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio de império.", correct: true },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não sou do negócio de metanfetamina. Estou no negócio do império.", correct: false },
-      { answer: "Eu não estou no negócio de metanfetamina. Estou no negócio da império.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am not in danger, Skyler. I am the danger.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu não estou em perigo, Skyler. Eu sou o perigo.", correct: true },
-      { answer: "Eu não sou perigoso, Skyler. Eu sou o perigo.", correct: false },
-      { answer: "Eu não estou perigoso, Skyler. Eu sou perigoso.", correct: false },
-      { answer: "Eu não sou o perigo, Skyler. Eu sou perigoso.", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I am the one who knocks!' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu sou aquele que bate na porta!", correct: true },
-      { answer: "Eu sou quem bate na porta!", correct: false },
-      { answer: "Eu sou o que toca a porta!", correct: false },
-      { answer: "Eu sou o único que bate na porta!", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I did it for me. I liked it. I was good at it. And I was really... I was alive.' em português na série Breaking Bad?",
-    answers: [
-      { answer: "Eu fiz por mim. Eu gostei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: true },
-      { answer: "Eu fiz por mim. Eu apreciei. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostava disso. Eu era habilidoso nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-      { answer: "Eu fiz por mim. Eu gostei disso. Eu era bom nisso. E eu estava realmente... Eu estava vivo.", correct: false },
-    ],
-  },
-
 ];
-// ... (Código anterior)
-
-function removePerguntasRepetidas(questions) {
-  const perguntasFiltradas = [];
-  const perguntasTexto = new Set();
-
-  for (const pergunta of questions) {
-    const texto = pergunta.question.toLowerCase();
-
-    if (!perguntasTexto.has(texto)) {
-      perguntasTexto.add(texto);
-      perguntasFiltradas.push(pergunta);
-    }
-  }
-
-  return perguntasFiltradas;
-}
-
 // Inicialização do quizz
 function init() {
-  // Remove perguntas repetidas
-  let perguntasSemRepeticao = removePerguntasRepetidas(questions);
-  console.log(perguntasSemRepeticao);
-
   createQuestion(actualQuestion);
 }
 
-// ... (Restante do código)
-
+// Criação de pergunta
 // Criação de pergunta
 function createQuestion(index) {
   clearPreviousQuestion();
@@ -468,21 +154,17 @@ function createQuestion(index) {
   const shuffledAnswers = shuffleArray(question.answers);
 
   shuffledAnswers.forEach((answer, i) => {
-    const answerTemplate = document.createElement('div');
-    answerTemplate.classList.add('answer-template');
+    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
+    const letterBtn = answerTemplate.querySelector('.btn-letter');
+    const answerText = answerTemplate.querySelector('.question-answer');
 
-    const letterBtn = document.createElement('button');
-    letterBtn.classList.add('btn-letter');
     letterBtn.textContent = letters[i];
-
-    const answerText = document.createElement('div');
-    answerText.classList.add('question-answer');
     answerText.textContent = answer.answer;
 
     answerTemplate.setAttribute('correct-answer', answer.correct);
 
-    answerTemplate.appendChild(letterBtn);
-    answerTemplate.appendChild(answerText);
+    answerTemplate.classList.remove('hide');
+    answerTemplate.classList.remove('answer-template');
 
     answerBox.appendChild(answerTemplate);
 
