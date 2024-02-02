@@ -427,16 +427,19 @@ let questions = [
 ];
 // ... (Código anterior)
 
-// Remoção de perguntas repetidas
 function removePerguntasRepetidas(questions) {
-  const indicesUnicos = new Set();
-  const perguntasFiltradas = questions.filter((pergunta, index) => {
-    if (!indicesUnicos.has(index)) {
-      indicesUnicos.add(index);
-      return true;
+  const perguntasFiltradas = [];
+  const perguntasTexto = new Set();
+
+  for (const pergunta of questions) {
+    const texto = pergunta.question.toLowerCase();
+
+    if (!perguntasTexto.has(texto)) {
+      perguntasTexto.add(texto);
+      perguntasFiltradas.push(pergunta);
     }
-    return false;
-  });
+  }
+
   return perguntasFiltradas;
 }
 
@@ -465,17 +468,21 @@ function createQuestion(index) {
   const shuffledAnswers = shuffleArray(question.answers);
 
   shuffledAnswers.forEach((answer, i) => {
-    const answerTemplate = document.querySelector('.answer-template').cloneNode(true);
-    const letterBtn = answerTemplate.querySelector('.btn-letter');
-    const answerText = answerTemplate.querySelector('.question-answer');
+    const answerTemplate = document.createElement('div');
+    answerTemplate.classList.add('answer-template');
 
+    const letterBtn = document.createElement('button');
+    letterBtn.classList.add('btn-letter');
     letterBtn.textContent = letters[i];
+
+    const answerText = document.createElement('div');
+    answerText.classList.add('question-answer');
     answerText.textContent = answer.answer;
 
     answerTemplate.setAttribute('correct-answer', answer.correct);
 
-    answerTemplate.classList.remove('hide');
-    answerTemplate.classList.remove('answer-template');
+    answerTemplate.appendChild(letterBtn);
+    answerTemplate.appendChild(answerText);
 
     answerBox.appendChild(answerTemplate);
 
