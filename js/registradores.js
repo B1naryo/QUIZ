@@ -281,9 +281,6 @@ let questions = [
   },
 ];
 
-// Adicionando as novas perguntas à lista original
-questions = [...questions, ...exploitRegistersQuestions];
-
 
 
 // Inicialização do quizz
