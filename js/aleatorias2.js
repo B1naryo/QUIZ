@@ -799,6 +799,1647 @@ let actualQuestion = 0;
       { answer: "Executado", correct: false },
     ],
   },
+   
+  {
+    question: "O que significa 'Como' em inglês?",
+    answers: [
+      { answer: "How", correct: true },
+      { answer: "What", correct: false },
+      { answer: "Where", correct: false },
+      { answer: "When", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'você' em inglês?",
+    answers: [
+      { answer: "You", correct: true },
+      { answer: "Your", correct: false },
+      { answer: "Yours", correct: false },
+      { answer: "You're", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'pode' em inglês?",
+    answers: [
+      { answer: "Can", correct: true },
+      { answer: "May", correct: false },
+      { answer: "Could", correct: false },
+      { answer: "Might", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'ver' em inglês?",
+    answers: [
+      { answer: "See", correct: true },
+      { answer: "Watch", correct: false },
+      { answer: "Look", correct: false },
+      { answer: "View", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'na' em inglês?",
+    answers: [
+      { answer: "In", correct: true },
+      { answer: "On", correct: false },
+      { answer: "At", correct: false },
+      { answer: "Into", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'captura' em inglês?",
+    answers: [
+      { answer: "Capture", correct: true },
+      { answer: "Catch", correct: false },
+      { answer: "Seize", correct: false },
+      { answer: "Snatch", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'de' em inglês?",
+    answers: [
+      { answer: "Of", correct: true },
+      { answer: "From", correct: false },
+      { answer: "About", correct: false },
+      { answer: "By", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'tela' em inglês?",
+    answers: [
+      { answer: "Screen", correct: true },
+      { answer: "Window", correct: false },
+      { answer: "Display", correct: false },
+      { answer: "Monitor", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'acima' em inglês?",
+    answers: [
+      { answer: "Above", correct: true },
+      { answer: "Over", correct: false },
+      { answer: "Up", correct: false },
+      { answer: "High", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'uma' em inglês?",
+    answers: [
+      { answer: "A", correct: true },
+      { answer: "An", correct: false },
+      { answer: "One", correct: false },
+      { answer: "Some", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'vez' em inglês?",
+    answers: [
+      { answer: "Time", correct: true },
+      { answer: "Turn", correct: false },
+      { answer: "Occasion", correct: false },
+      { answer: "Instance", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'que' em inglês?",
+    answers: [
+      { answer: "That", correct: true },
+      { answer: "Which", correct: false },
+      { answer: "What", correct: false },
+      { answer: "Who", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'o' em inglês?",
+    answers: [
+      { answer: "The", correct: true },
+      { answer: "A", correct: false },
+      { answer: "An", correct: false },
+      { answer: "Some", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'script' em inglês?",
+    answers: [
+      { answer: "Script", correct: true },
+      { answer: "Code", correct: false },
+      { answer: "Program", correct: false },
+      { answer: "Text", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'em' em inglês?",
+    answers: [
+      { answer: "In", correct: true },
+      { answer: "On", correct: false },
+      { answer: "At", correct: false },
+      { answer: "Into", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Python' em inglês?",
+    answers: [
+      { answer: "Python", correct: true },
+      { answer: "Snake", correct: false },
+      { answer: "Language", correct: false },
+      { answer: "Code", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'é' em inglês?",
+    answers: [
+      { answer: "Is", correct: true },
+      { answer: "Be", correct: false },
+      { answer: "Am", correct: false },
+      { answer: "Are", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'executado' em inglês?",
+    answers: [
+      { answer: "Executed", correct: true },
+      { answer: "Running", correct: false },
+      { answer: "Performed", correct: false },
+      { answer: "Operating", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'receberá' em inglês?",
+    answers: [
+      { answer: "Will receive", correct: true },
+      { answer: "Received", correct: false },
+      { answer: "Receives", correct: false },
+      { answer: "Receiving", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'conexão' em inglês?",
+    answers: [
+      { answer: "Connection", correct: true },
+      { answer: "Link", correct: false },
+      { answer: "Network", correct: false },
+      { answer: "Communication", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'shell' em inglês?",
+    answers: [
+      { answer: "Shell", correct: true },
+      { answer: "Turtle", correct: false },
+      { answer: "Crust", correct: false },
+      { answer: "Case", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'reverso' em inglês?",
+    answers: [
+      { answer: "Reverse", correct: true },
+      { answer: "Opposite", correct: false },
+      { answer: "Backward", correct: false },
+      { answer: "Inverse", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Agora' em inglês?",
+    answers: [
+      { answer: "Now", correct: true },
+      { answer: "After", correct: false },
+      { answer: "Before", correct: false },
+      { answer: "Later", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'temos' em inglês?",
+    answers: [
+      { answer: "We have", correct: true },
+      { answer: "You have", correct: false },
+      { answer: "They have", correct: false },
+      { answer: "It has", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'controle' em inglês?",
+    answers: [
+      { answer: "Control", correct: true },
+      { answer: "Command", correct: false },
+      { answer: "Authority", correct: false },
+      { answer: "Rule", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'total' em inglês?",
+    answers: [
+      { answer: "Total", correct: true },
+      { answer: "Complete", correct: false },
+      { answer: "Whole", correct: false },
+      { answer: "Entire", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'sobre' em inglês?",
+    answers: [
+      { answer: "About", correct: true },
+      { answer: "Above", correct: false },
+      { answer: "On", correct: false },
+      { answer: "Over", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'máquina' em inglês?",
+    answers: [
+      { answer: "Machine", correct: true },
+      { answer: "Engine", correct: false },
+      { answer: "Device", correct: false },
+      { answer: "Appliance", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'alvo' em inglês?",
+    answers: [
+      { answer: "Target", correct: true },
+      { answer: "Goal", correct: false },
+      { answer: "Objective", correct: false },
+      { answer: "Aim", correct: false },
+    ],
+  },
+  
+  {
+    question: "O que significa 'Colocando' em inglês?",
+    answers: [
+      { answer: "Putting", correct: true },
+      { answer: "Placing", correct: false },
+      { answer: "Inserting", correct: false },
+      { answer: "Positioning", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'seu' em inglês?",
+    answers: [
+      { answer: "Your", correct: true },
+      { answer: "His", correct: false },
+      { answer: "Her", correct: false },
+      { answer: "Their", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Conhecimento' em inglês?",
+    answers: [
+      { answer: "Knowledge", correct: true },
+      { answer: "Wisdom", correct: false },
+      { answer: "Learning", correct: false },
+      { answer: "Expertise", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'à' em inglês?",
+    answers: [
+      { answer: "To", correct: true },
+      { answer: "At", correct: false },
+      { answer: "In", correct: false },
+      { answer: "On", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Prova' em inglês?",
+    answers: [
+      { answer: "Test", correct: true },
+      { answer: "Proof", correct: false },
+      { answer: "Evidence", correct: false },
+      { answer: "Trial", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Após' em inglês?",
+    answers: [
+      { answer: "After", correct: true },
+      { answer: "Before", correct: false },
+      { answer: "During", correct: false },
+      { answer: "Later", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'obter' em inglês?",
+    answers: [
+      { answer: "Get", correct: true },
+      { answer: "Receive", correct: false },
+      { answer: "Achieve", correct: false },
+      { answer: "Attain", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'compreensão' em inglês?",
+    answers: [
+      { answer: "Understanding", correct: true },
+      { answer: "Comprehension", correct: false },
+      { answer: "Knowledge", correct: false },
+      { answer: "Awareness", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'sólida' em inglês?",
+    answers: [
+      { answer: "Solid", correct: true },
+      { answer: "Strong", correct: false },
+      { answer: "Firm", correct: false },
+      { answer: "Stable", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'do' em inglês?",
+    answers: [
+      { answer: "Of", correct: true },
+      { answer: "To", correct: false },
+      { answer: "From", correct: false },
+      { answer: "In", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'desenvolvimento' em inglês?",
+    answers: [
+      { answer: "Development", correct: true },
+      { answer: "Progress", correct: false },
+      { answer: "Evolution", correct: false },
+      { answer: "Growth", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'de' em inglês?",
+    answers: [
+      { answer: "For", correct: true },
+      { answer: "From", correct: false },
+      { answer: "Of", correct: false },
+      { answer: "With", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'exploits' em inglês?",
+    answers: [
+      { answer: "Exploits", correct: true },
+      { answer: "Explorations", correct: false },
+      { answer: "Adventures", correct: false },
+      { answer: "Missions", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'para' em inglês?",
+    answers: [
+      { answer: "For", correct: true },
+      { answer: "To", correct: false },
+      { answer: "From", correct: false },
+      { answer: "In", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'vulnerabilidades' em inglês?",
+    answers: [
+      { answer: "Vulnerabilities", correct: true },
+      { answer: "Weaknesses", correct: false },
+      { answer: "Risks", correct: false },
+      { answer: "Threats", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'estouro' em inglês?",
+    answers: [
+      { answer: "Overflow", correct: true },
+      { answer: "Outburst", correct: false },
+      { answer: "Burst", correct: false },
+      { answer: "Excess", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'buffer' em inglês?",
+    answers: [
+      { answer: "Buffer", correct: true },
+      { answer: "Cushion", correct: false },
+      { answer: "Pillow", correct: false },
+      { answer: "Barrier", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'é' em inglês?",
+    answers: [
+      { answer: "Is", correct: true },
+      { answer: "Be", correct: false },
+      { answer: "Am", correct: false },
+      { answer: "Are", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'hora' em inglês?",
+    answers: [
+      { answer: "Time", correct: true },
+      { answer: "Hour", correct: false },
+      { answer: "Moment", correct: false },
+      { answer: "Period", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'aplicar' em inglês?",
+    answers: [
+      { answer: "Apply", correct: true },
+      { answer: "Use", correct: false },
+      { answer: "Implement", correct: false },
+      { answer: "Employ", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'seu' em inglês?",
+    answers: [
+      { answer: "Your", correct: true },
+      { answer: "His", correct: false },
+      { answer: "Her", correct: false },
+      { answer: "Their", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'conhecimento' em inglês?",
+    answers: [
+      { answer: "Knowledge", correct: true },
+      { answer: "Wisdom", correct: false },
+      { answer: "Learning", correct: false },
+      { answer: "Expertise", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'examinando' em inglês?",
+    answers: [
+      { answer: "Examining", correct: true },
+      { answer: "Analyzing", correct: false },
+      { answer: "Inspecting", correct: false },
+      { answer: "Studying", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'testando' em inglês?",
+    answers: [
+      { answer: "Testing", correct: true },
+      { answer: "Trying", correct: false },
+      { answer: "Experimenting", correct: false },
+      { answer: "Checking", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'dois' em inglês?",
+    answers: [
+      { answer: "Two", correct: true },
+      { answer: "Twice", correct: false },
+      { answer: "Second", correct: false },
+      { answer: "Pair", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'executáveis' em inglês?",
+    answers: [
+      { answer: "Executables", correct: true },
+      { answer: "Executions", correct: false },
+      { answer: "Programs", correct: false },
+      { answer: "Softwares", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'distintos' em inglês?",
+    answers: [
+      { answer: "Distinct", correct: true },
+      { answer: "Different", correct: false },
+      { answer: "Unique", correct: false },
+      { answer: "Separate", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'oscp.exe' em inglês?",
+    answers: [
+      { answer: "oscp.exe", correct: true },
+      { answer: "An executable", correct: false },
+      { answer: "A program", correct: false },
+      { answer: "A file", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'R-3.4.4-win.exe' em inglês?",
+    answers: [
+      { answer: "R-3.4.4-win.exe", correct: true },
+      { answer: "An executable", correct: false },
+      { answer: "A program", correct: false },
+      { answer: "A file", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Estes' em inglês?",
+    answers: [
+      { answer: "These", correct: true },
+      { answer: "Those", correct: false },
+      { answer: "This", correct: false },
+      { answer: "That", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'exercícios' em inglês?",
+    answers: [
+      { answer: "Exercises", correct: true },
+      { answer: "Workouts", correct: false },
+      { answer: "Practice", correct: false },
+      { answer: "Tasks", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'práticos' em inglês?",
+    answers: [
+      { answer: "Practical", correct: true },
+      { answer: "Useful", correct: false },
+      { answer: "Effective", correct: false },
+      { answer: "Functional", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'fornecerão' em inglês?",
+    answers: [
+      { answer: "Will provide", correct: true },
+      { answer: "Provided", correct: false },
+      { answer: "Provide", correct: false },
+      { answer: "Providing", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'experiência' em inglês?",
+    answers: [
+      { answer: "Experience", correct: true },
+      { answer: "Experiment", correct: false },
+      { answer: "Trial", correct: false },
+      { answer: "Practice", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'prática' em inglês?",
+    answers: [
+      { answer: "Practice", correct: true },
+      { answer: "Practical", correct: false },
+      { answer: "Experience", correct: false },
+      { answer: "Experiment", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'identificação' em inglês?",
+    answers: [
+      { answer: "Identification", correct: true },
+      { answer: "Identity", correct: false },
+      { answer: "Recognition", correct: false },
+      { answer: "Detection", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'exploração' em inglês?",
+    answers: [
+      { answer: "Exploitation", correct: true },
+      { answer: "Exploration", correct: false },
+      { answer: "Examination", correct: false },
+      { answer: "Investigation", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'vulnerabilidades' em inglês?",
+    answers: [
+      { answer: "Vulnerabilities", correct: true },
+      { answer: "Weaknesses", correct: false },
+      { answer: "Risks", correct: false },
+      { answer: "Threats", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Executável' em inglês?",
+    answers: [
+      { answer: "Executable", correct: true },
+      { answer: "Execution", correct: false },
+      { answer: "Program", correct: false },
+      { answer: "File", correct: false },
+    ],
+  },
+  {
+    question: "O que significa '1' em inglês?",
+    answers: [
+      { answer: "1", correct: true },
+      { answer: "One", correct: false },
+      { answer: "First", correct: false },
+      { answer: "Single", correct: false },
+    ],
+  },
+  {
+    question: "O que significa '2' em inglês?",
+    answers: [
+      { answer: "2", correct: true },
+      { answer: "Two", correct: false },
+      { answer: "Second", correct: false },
+      { answer: "Double", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Este' em inglês?",
+    answers: [
+      { answer: "This", correct: true },
+      { answer: "That", correct: false },
+      { answer: "These", correct: false },
+      { answer: "Those", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'executável' em inglês?",
+    answers: [
+      { answer: "Executable", correct: true },
+      { answer: "Execution", correct: false },
+      { answer: "Program", correct: false },
+      { answer: "File", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'sido' em inglês?",
+    answers: [
+      { answer: "Been", correct: true },
+      { answer: "Being", correct: false },
+      { answer: "Was", correct: false },
+      { answer: "Were", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'intencionalmente' em inglês?",
+    answers: [
+      { answer: "Intentionally", correct: true },
+      { answer: "Purposefully", correct: false },
+      { answer: "Deliberately", correct: false },
+      { answer: "Consciously", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'projetado' em inglês?",
+    answers: [
+      { answer: "Designed", correct: true },
+      { answer: "Planned", correct: false },
+      { answer: "Created", correct: false },
+      { answer: "Developed", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'com' em inglês?",
+    answers: [
+      { answer: "With", correct: true },
+      { answer: "For", correct: false },
+      { answer: "By", correct: false },
+      { answer: "Of", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'uma' em inglês?",
+    answers: [
+      { answer: "A", correct: true },
+      { answer: "An", correct: false },
+      { answer: "One", correct: false },
+      { answer: "Some", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'específica' em inglês?",
+    answers: [
+      { answer: "Specific", correct: true },
+      { answer: "Particular", correct: false },
+      { answer: "Special", correct: false },
+      { answer: "Detailed", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Sua' em inglês?",
+    answers: [
+      { answer: "Your", correct: true },
+      { answer: "His", correct: false },
+      { answer: "Her", correct: false },
+      { answer: "Their", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'tarefa' em inglês?",
+    answers: [
+      { answer: "Task", correct: true },
+      { answer: "Job", correct: false },
+      { answer: "Assignment", correct: false },
+      { answer: "Duty", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'identificar' em inglês?",
+    answers: [
+      { answer: "Identify", correct: true },
+      { answer: "Recognize", correct: false },
+      { answer: "Detect", correct: false },
+      { answer: "Determine", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'vulnerabilidade' em inglês?",
+    answers: [
+      { answer: "Vulnerability", correct: true },
+      { answer: "Weakness", correct: false },
+      { answer: "Flaw", correct: false },
+      { answer: "Risk", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'desenvolver' em inglês?",
+    answers: [
+      { answer: "Develop", correct: true },
+      { answer: "Design", correct: false },
+      { answer: "Create", correct: false },
+      { answer: "Produce", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'um' em inglês?",
+    answers: [
+      { answer: "One", correct: true },
+      { answer: "A", correct: false },
+      { answer: "An", correct: false },
+      { answer: "Some", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'exploit' em inglês?",
+    answers: [
+      { answer: "Exploit", correct: true },
+      { answer: "Use", correct: false },
+      { answer: "Utilize", correct: false },
+      { answer: "Take advantage", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'executá-lo' em inglês?",
+    answers: [
+      { answer: "Run it", correct: true },
+      { answer: "Execute it", correct: false },
+      { answer: "Perform it", correct: false },
+      { answer: "Do it", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Documente' em inglês?",
+    answers: [
+      { answer: "Document", correct: true },
+      { answer: "Record", correct: false },
+      { answer: "Write down", correct: false },
+      { answer: "Note", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'minuciosamente' em inglês?",
+    answers: [
+      { answer: "Thoroughly", correct: true },
+      { answer: "Carefully", correct: false },
+      { answer: "Diligently", correct: false },
+      { answer: "Painstakingly", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'suas' em inglês?",
+    answers: [
+      { answer: "Your", correct: true },
+      { answer: "His", correct: false },
+      { answer: "Her", correct: false },
+      { answer: "Their", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'descobertas' em inglês?",
+    answers: [
+      { answer: "Discoveries", correct: true },
+      { answer: "Findings", correct: false },
+      { answer: "Revelations", correct: false },
+      { answer: "Uncoveries", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'passos' em inglês?",
+    answers: [
+      { answer: "Steps", correct: true },
+      { answer: "Walks", correct: false },
+      { answer: "Moves", correct: false },
+      { answer: "Strides", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'tomou' em inglês?",
+    answers: [
+      { answer: "Took", correct: true },
+      { answer: "Take", correct: false },
+      { answer: "Taking", correct: false },
+      { answer: "Taken", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'impacto' em inglês?",
+    answers: [
+      { answer: "Impact", correct: true },
+      { answer: "Effect", correct: false },
+      { answer: "Influence", correct: false },
+      { answer: "Consequence", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'do' em inglês?",
+    answers: [
+      { answer: "Of", correct: true },
+      { answer: "To", correct: false },
+      { answer: "From", correct: false },
+      { answer: "In", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'exploit' em inglês?",
+    answers: [
+      { answer: "Exploit", correct: true },
+      { answer: "Use", correct: false },
+      { answer: "Utilize", correct: false },
+      { answer: "Take advantage", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Executável' em inglês?",
+    answers: [
+      { answer: "Executable", correct: true },
+      { answer: "Execution", correct: false },
+      { answer: "Program", correct: false },
+      { answer: "File", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'R-3.4.4-win.exe' em inglês?",
+    answers: [
+      { answer: "R-3.4.4-win.exe", correct: true },
+      { answer: "An executable", correct: false },
+      { answer: "A program", correct: false },
+      { answer: "A file", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'é' em inglês?",
+    answers: [
+      { answer: "Is", correct: true },
+      { answer: "Be", correct: false },
+      { answer: "Am", correct: false },
+      { answer: "Are", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'um' em inglês?",
+    answers: [
+      { answer: "One", correct: true },
+      { answer: "A", correct: false },
+      { answer: "An", correct: false },
+      { answer: "Some", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'programa' em inglês?",
+    answers: [
+      { answer: "Program", correct: true },
+      { answer: "Software", correct: false },
+      { answer: "Application", correct: false },
+      { answer: "App", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'software' em inglês?",
+    answers: [
+      { answer: "Software", correct: true },
+      { answer: "Program", correct: false },
+      { answer: "Application", correct: false },
+      { answer: "App", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'legítimo' em inglês?",
+    answers: [
+      { answer: "Legitimate", correct: true },
+      { answer: "Legal", correct: false },
+      { answer: "Genuine", correct: false },
+      { answer: "Authentic", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'contém' em inglês?",
+    answers: [
+      { answer: "Contains", correct: true },
+      { answer: "Include", correct: false },
+      { answer: "Comprises", correct: false },
+      { answer: "Consists", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'vulnerabilidade' em inglês?",
+    answers: [
+      { answer: "Vulnerability", correct: true },
+      { answer: "Weakness", correct: false },
+      { answer: "Flaw", correct: false },
+      { answer: "Risk", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'estouro' em inglês?",
+    answers: [
+      { answer: "Overflow", correct: true },
+      { answer: "Outburst", correct: false },
+      { answer: "Burst", correct: false },
+      { answer: "Excess", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'buffer' em inglês?",
+    answers: [
+      { answer: "Buffer", correct: true },
+      { answer: "Cushion", correct: false },
+      { answer: "Pillow", correct: false },
+      { answer: "Barrier", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'que' em inglês?",
+    answers: [
+      { answer: "That", correct: true },
+      { answer: "What", correct: false },
+      { answer: "Which", correct: false },
+      { answer: "Who", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'explorar' em inglês?",
+    answers: [
+      { answer: "Exploit", correct: true },
+      { answer: "Explore", correct: false },
+      { answer: "Examine", correct: false },
+      { answer: "Discover", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Assim' em inglês?",
+    answers: [
+      { answer: "Thus", correct: true },
+      { answer: "So", correct: false },
+      { answer: "Therefore", correct: false },
+      { answer: "Hence", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'como' em inglês?",
+    answers: [
+      { answer: "How", correct: true },
+      { answer: "As", correct: false },
+      { answer: "Like", correct: false },
+      { answer: "Which", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'segundo' em inglês?",
+    answers: [
+      { answer: "Second", correct: true },
+      { answer: "Next", correct: false },
+      { answer: "Following", correct: false },
+      { answer: "Later", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'também' em inglês?",
+    answers: [
+      { answer: "Also", correct: true },
+      { answer: "Too", correct: false },
+      { answer: "As well", correct: false },
+      { answer: "Likewise", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'apresenta' em inglês?",
+    answers: [
+      { answer: "Presents", correct: true },
+      { answer: "Shows", correct: false },
+      { answer: "Introduces", correct: false },
+      { answer: "Exhibits", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'desafios' em inglês?",
+    answers: [
+      { answer: "Challenges", correct: true },
+      { answer: "Obstacles", correct: false },
+      { answer: "Difficulties", correct: false },
+      { answer: "Struggles", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'características' em inglês?",
+    answers: [
+      { answer: "Features", correct: true },
+      { answer: "Traits", correct: false },
+      { answer: "Aspects", correct: false },
+      { answer: "Attributes", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'diferentes' em inglês?",
+    answers: [
+      { answer: "Different", correct: true },
+      { answer: "Distinct", correct: false },
+      { answer: "Various", correct: false },
+      { answer: "Diverse", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Seu' em inglês?",
+    answers: [
+      { answer: "Your", correct: true },
+      { answer: "His", correct: false },
+      { answer: "Her", correct: false },
+      { answer: "Their", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'objetivo' em inglês?",
+    answers: [
+      { answer: "Objective", correct: true },
+      { answer: "Goal", correct: false },
+      { answer: "Aim", correct: false },
+      { answer: "Purpose", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'descobrir' em inglês?",
+    answers: [
+      { answer: "Discover", correct: true },
+      { answer: "Find out", correct: false },
+      { answer: "Uncover", correct: false },
+      { answer: "Reveal", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'criar' em inglês?",
+    answers: [
+      { answer: "Create", correct: true },
+      { answer: "Make", correct: false },
+      { answer: "Build", correct: false },
+      { answer: "Generate", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Executar' em inglês?",
+    answers: [
+      { answer: "Run", correct: true },
+      { answer: "Execute", correct: false },
+      { answer: "Perform", correct: false },
+      { answer: "Operate", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Enquanto' em inglês?",
+    answers: [
+      { answer: "While", correct: true },
+      { answer: "As", correct: false },
+      { answer: "When", correct: false },
+      { answer: "Until", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'primeiro' em inglês?",
+    answers: [
+      { answer: "First", correct: true },
+      { answer: "Initial", correct: false },
+      { answer: "Primary", correct: false },
+      { answer: "Early", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'exercício' em inglês?",
+    answers: [
+      { answer: "Exercise", correct: true },
+      { answer: "Workout", correct: false },
+      { answer: "Practice", correct: false },
+      { answer: "Task", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'certifique-se' em inglês?",
+    answers: [
+      { answer: "Make sure", correct: true },
+      { answer: "Ensure", correct: false },
+      { answer: "Verify", correct: false },
+      { answer: "Confirm", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'documentar' em inglês?",
+    answers: [
+      { answer: "Document", correct: true },
+      { answer: "Record", correct: false },
+      { answer: "Write down", correct: false },
+      { answer: "Note", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'processo' em inglês?",
+    answers: [
+      { answer: "Process", correct: true },
+      { answer: "Procedure", correct: false },
+      { answer: "Method", correct: false },
+      { answer: "Technique", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Antes' em inglês?",
+    answers: [
+      { answer: "Before", correct: true },
+      { answer: "Prior", correct: false },
+      { answer: "Preceding", correct: false },
+      { answer: "Ahead", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Começar' em inglês?",
+    answers: [
+      { answer: "Start", correct: true },
+      { answer: "Begin", correct: false },
+      { answer: "Commence", correct: false },
+      { answer: "Initiate", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Considerações' em inglês?",
+    answers: [
+      { answer: "Considerations", correct: true },
+      { answer: "Thoughts", correct: false },
+      { answer: "Reflections", correct: false },
+      { answer: "Contemplations", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Legais' em inglês?",
+    answers: [
+      { answer: "Legal", correct: true },
+      { answer: "Lawful", correct: false },
+      { answer: "Juridical", correct: false },
+      { answer: "Official", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Éticas' em inglês?",
+    answers: [
+      { answer: "Ethical", correct: true },
+      { answer: "Morals", correct: false },
+      { answer: "Moral", correct: false },
+      { answer: "Ethics", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Sempre' em inglês?",
+    answers: [
+      { answer: "Always", correct: true },
+      { answer: "Forever", correct: false },
+      { answer: "Constantly", correct: false },
+      { answer: "Continuously", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'assegure-se' em inglês?",
+    answers: [
+      { answer: "Ensure", correct: true },
+      { answer: "Make sure", correct: false },
+      { answer: "Guarantee", correct: false },
+      { answer: "Confirm", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'ter' em inglês?",
+    answers: [
+      { answer: "Have", correct: true },
+      { answer: "Possess", correct: false },
+      { answer: "Own", correct: false },
+      { answer: "Obtain", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'autorização' em inglês?",
+    answers: [
+      { answer: "Authorization", correct: true },
+      { answer: "Permission", correct: false },
+      { answer: "Approval", correct: false },
+      { answer: "Consent", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'adequada' em inglês?",
+    answers: [
+      { answer: "Adequate", correct: true },
+      { answer: "Sufficient", correct: false },
+      { answer: "Appropriate", correct: false },
+      { answer: "Suitable", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'estar' em inglês?",
+    answers: [
+      { answer: "To be", correct: true },
+      { answer: "Be", correct: false },
+      { answer: "Being", correct: false },
+      { answer: "Been", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'trabalhando' em inglês?",
+    answers: [
+      { answer: "Working", correct: true },
+      { answer: "Work", correct: false },
+      { answer: "Job", correct: false },
+      { answer: "Laboring", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'controlado' em inglês?",
+    answers: [
+      { answer: "Controlled", correct: true },
+      { answer: "Regulated", correct: false },
+      { answer: "Managed", correct: false },
+      { answer: "Supervised", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'ao' em inglês?",
+    answers: [
+      { answer: "To the", correct: true },
+      { answer: "At the", correct: false },
+      { answer: "In the", correct: false },
+      { answer: "By the", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'testar' em inglês?",
+    answers: [
+      { answer: "Test", correct: true },
+      { answer: "Try", correct: false },
+      { answer: "Experiment", correct: false },
+      { answer: "Assay", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'esses' em inglês?",
+    answers: [
+      { answer: "These", correct: true },
+      { answer: "Those", correct: false },
+      { answer: "This", correct: false },
+      { answer: "That", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'exploração' em inglês?",
+    answers: [
+      { answer: "Exploitation", correct: true },
+      { answer: "Exploration", correct: false },
+      { answer: "Examination", correct: false },
+      { answer: "Investigation", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'não' em inglês?",
+    answers: [
+      { answer: "Not", correct: true },
+      { answer: "No", correct: false },
+      { answer: "None", correct: false },
+      { answer: "Nothing", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'autorizada' em inglês?",
+    answers: [
+      { answer: "Authorized", correct: true },
+      { answer: "Allowed", correct: false },
+      { answer: "Permitted", correct: false },
+      { answer: "Sanctioned", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'tanto' em inglês?",
+    answers: [
+      { answer: "Both", correct: true },
+      { answer: "As much", correct: false },
+      { answer: "So much", correct: false },
+      { answer: "Too much", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'antiética' em inglês?",
+    answers: [
+      { answer: "Unethical", correct: true },
+      { answer: "Immoral", correct: false },
+      { answer: "Unmoral", correct: false },
+      { answer: "Amoral", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'ilegal' em inglês?",
+    answers: [
+      { answer: "Illegal", correct: true },
+      { answer: "Unlawful", correct: false },
+      { answer: "Prohibited", correct: false },
+      { answer: "Banned", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Medidas' em inglês?",
+    answers: [
+      { answer: "Measures", correct: true },
+      { answer: "Steps", correct: false },
+      { answer: "Actions", correct: false },
+      { answer: "Precautions", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Segurança' em inglês?",
+    answers: [
+      { answer: "Security", correct: true },
+      { answer: "Safety", correct: false },
+      { answer: "Protection", correct: false },
+      { answer: "Defense", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Conduza' em inglês?",
+    answers: [
+      { answer: "Conduct", correct: true },
+      { answer: "Drive", correct: false },
+      { answer: "Lead", correct: false },
+      { answer: "Guide", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'testes' em inglês?",
+    answers: [
+      { answer: "Tests", correct: true },
+      { answer: "Trials", correct: false },
+      { answer: "Experiments", correct: false },
+      { answer: "Assessments", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'ambientes' em inglês?",
+    answers: [
+      { answer: "Environments", correct: true },
+      { answer: "Settings", correct: false },
+      { answer: "Surroundings", correct: false },
+      { answer: "Conditions", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'isolados' em inglês?",
+    answers: [
+      { answer: "Isolated", correct: true },
+      { answer: "Secluded", correct: false },
+      { answer: "Remote", correct: false },
+      { answer: "Alone", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'evitar' em inglês?",
+    answers: [
+      { answer: "Avoid", correct: true },
+      { answer: "Prevent", correct: false },
+      { answer: "Escape", correct: false },
+      { answer: "Shun", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'quaisquer' em inglês?",
+    answers: [
+      { answer: "Any", correct: true },
+      { answer: "Some", correct: false },
+      { answer: "Every", correct: false },
+      { answer: "Each", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'consequências' em inglês?",
+    answers: [
+      { answer: "Consequences", correct: true },
+      { answer: "Results", correct: false },
+      { answer: "Outcomes", correct: false },
+      { answer: "Effects", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'indesejadas' em inglês?",
+    answers: [
+      { answer: "Unwanted", correct: true },
+      { answer: "Undesired", correct: false },
+      { answer: "Unwelcome", correct: false },
+      { answer: "Unfavorable", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Documentação' em inglês?",
+    answers: [
+      { answer: "Documentation", correct: true },
+      { answer: "Record", correct: false },
+      { answer: "Writing", correct: false },
+      { answer: "Notation", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Mantenha' em inglês?",
+    answers: [
+      { answer: "Keep", correct: true },
+      { answer: "Maintain", correct: false },
+      { answer: "Hold", correct: false },
+      { answer: "Sustain", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'registros' em inglês?",
+    answers: [
+      { answer: "Records", correct: true },
+      { answer: "Logs", correct: false },
+      { answer: "Entries", correct: false },
+      { answer: "Files", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'detalhados' em inglês?",
+    answers: [
+      { answer: "Detailed", correct: true },
+      { answer: "Thorough", correct: false },
+      { answer: "Comprehensive", correct: false },
+      { answer: "Elaborate", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'suas' em inglês?",
+    answers: [
+      { answer: "Your", correct: true },
+      { answer: "His", correct: false },
+      { answer: "Her", correct: false },
+      { answer: "Their", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'descobertas' em inglês?",
+    answers: [
+      { answer: "Discoveries", correct: true },
+      { answer: "Findings", correct: false },
+      { answer: "Revelations", correct: false },
+      { answer: "Uncoveries", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'incluindo' em inglês?",
+    answers: [
+      { answer: "Including", correct: true },
+      { answer: "Incorporating", correct: false },
+      { answer: "Encompassing", correct: false },
+      { answer: "Containing", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'mitigadores' em inglês?",
+    answers: [
+      { answer: "Mitigators", correct: true },
+      { answer: "Repressors", correct: false },
+      { answer: "Reducers", correct: false },
+      { answer: "Lesseners", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'correções' em inglês?",
+    answers: [
+      { answer: "Corrections", correct: true },
+      { answer: "Fixes", correct: false },
+      { answer: "Remedies", correct: false },
+      { answer: "Adjustments", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'recomendados' em inglês?",
+    answers: [
+      { answer: "Recommended", correct: true },
+      { answer: "Advised", correct: false },
+      { answer: "Suggested", correct: false },
+      { answer: "Urged", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Experiência' em inglês?",
+    answers: [
+      { answer: "Experience", correct: true },
+      { answer: "Expertise", correct: false },
+      { answer: "Knowledge", correct: false },
+      { answer: "Skill", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Aprendizado' em inglês?",
+    answers: [
+      { answer: "Learning", correct: true },
+      { answer: "Education", correct: false },
+      { answer: "Study", correct: false },
+      { answer: "Instruction", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Use' em inglês?",
+    answers: [
+      { answer: "Use", correct: true },
+      { answer: "Utilize", correct: false },
+      { answer: "Apply", correct: false },
+      { answer: "Employ", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'oportunidades' em inglês?",
+    answers: [
+      { answer: "Opportunities", correct: true },
+      { answer: "Chances", correct: false },
+      { answer: "Possibilities", correct: false },
+      { answer: "Prospects", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'aplicar' em inglês?",
+    answers: [
+      { answer: "Apply", correct: true },
+      { answer: "Use", correct: false },
+      { answer: "Employ", correct: false },
+      { answer: "Utilize", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'técnicas' em inglês?",
+    answers: [
+      { answer: "Techniques", correct: true },
+      { answer: "Methods", correct: false },
+      { answer: "Approaches", correct: false },
+      { answer: "Strategies", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'aprendeu' em inglês?",
+    answers: [
+      { answer: "Learned", correct: true },
+      { answer: "Taught", correct: false },
+      { answer: "Studied", correct: false },
+      { answer: "Educated", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'Aborde-os' em inglês?",
+    answers: [
+      { answer: "Address them", correct: true },
+      { answer: "Approach them", correct: false },
+      { answer: "Tackle them", correct: false },
+      { answer: "Handle them", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'aprendizado' em inglês?",
+    answers: [
+      { answer: "Learning", correct: true },
+      { answer: "Education", correct: false },
+      { answer: "Study", correct: false },
+      { answer: "Instruction", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'tome' em inglês?",
+    answers: [
+      { answer: "Take", correct: true },
+      { answer: "Bring", correct: false },
+      { answer: "Grab", correct: false },
+      { answer: "Get", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'nota' em inglês?",
+    answers: [
+      { answer: "Note", correct: true },
+      { answer: "Notice", correct: false },
+      { answer: "Mark", correct: false },
+      { answer: "Memo", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'quaisquer' em inglês?",
+    answers: [
+      { answer: "Any", correct: true },
+      { answer: "Some", correct: false },
+      { answer: "Every", correct: false },
+      { answer: "Each", correct: false },
+    ],
+  },
+  {
+    question: "O que significa 'desafios' em inglês?",
+    answers: [
+      { answer: "Challenges", correct: true },
+      { answer: "Obstacles", correct: false },
+      { answer: "Difficulties", correct: false },
+      { answer: "Struggles", correct: false },
+    ],
+  },
+
 ];
 
 
