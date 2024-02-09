@@ -387,503 +387,771 @@ let actualQuestion = 0;
       { answer: "Jump", correct: false },
     ],
   },
-  {
-    question: "O que significa 'Hello' em português, na música de Adele?",
-    answers: [
-      { answer: "Olá", correct: true },
-      { answer: "Adeus", correct: false },
-      { answer: "Até logo", correct: false },
-      { answer: "Oi", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Rolling' em português, na música de Adele?",
-    answers: [
-      { answer: "Rolar", correct: true },
-      { answer: "Dançar", correct: false },
-      { answer: "Cantar", correct: false },
-      { answer: "Voar", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Deep' em português, na música de Adele?",
-    answers: [
-      { answer: "Profundo", correct: true },
-      { answer: "Alto", correct: false },
-      { answer: "Distante", correct: false },
-      { answer: "Escuro", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Someone' em português, na música de Adele?",
-    answers: [
-      { answer: "Alguém", correct: true },
-      { answer: "Ninguém", correct: false },
-      { answer: "Todo mundo", correct: false },
-      { answer: "Qualquer um", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Like' em português, na música de Adele?",
-    answers: [
-      { answer: "Como", correct: true },
-      { answer: "Amar", correct: false },
-      { answer: "Curtir", correct: false },
-      { answer: "Gostar", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'You' em português, na música de Adele?",
-    answers: [
-      { answer: "Você", correct: true },
-      { answer: "Nós", correct: false },
-      { answer: "Eles", correct: false },
-      { answer: "Eu", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Skyfall' em português?",
-    answers: [
-      { answer: "Queda do Céu", correct: true },
-      { answer: "Cair do Céu", correct: false },
-      { answer: "Céu Estrelado", correct: false },
-      { answer: "Céu Azul", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Chasing' em português, na música 'Chasing Pavements' de Adele?",
-    answers: [
-      { answer: "Perseguindo", correct: true },
-      { answer: "Correndo", correct: false },
-      { answer: "Atrás de", correct: false },
-      { answer: "Evitando", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Pavements' em português, na música 'Chasing Pavements' de Adele?",
-    answers: [
-      { answer: "Calçadas", correct: true },
-      { answer: "Passarelas", correct: false },
-      { answer: "Estradas", correct: false },
-      { answer: "Praias", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Rumor' em português, na música 'Rumour Has It' de Adele?",
-    answers: [
-      { answer: "Rumor", correct: true },
-      { answer: "História", correct: false },
-      { answer: "Fofoca", correct: false },
-      { answer: "Notícia", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Set Fire to the Rain' em português, na música de Adele?",
-    answers: [
-      { answer: "Colocar fogo na chuva", correct: true },
-      { answer: "Brincar com a chuva", correct: false },
-      { answer: "Dançar na chuva", correct: false },
-      { answer: "Ignorar a chuva", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Hometown Glory' em português, na música de Adele?",
-    answers: [
-      { answer: "Gloria da cidade natal", correct: true },
-      { answer: "Orgulho da cidade", correct: false },
-      { answer: "História da cidade", correct: false },
-      { answer: "Canção da cidade", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Turning Tables' em português, na música de Adele?",
-    answers: [
-      { answer: "Virando mesas", correct: true },
-      { answer: "Trocando de lugar", correct: false },
-      { answer: "Jogando cartas", correct: false },
-      { answer: "Dobrando mesas", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Remedy' em português, na música de Adele?",
-    answers: [
-      { answer: "Remédio", correct: true },
-      { answer: "Cura", correct: false },
-      { answer: "Tratamento", correct: false },
-      { answer: "Solução", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Water Under the Bridge' em português, na música de Adele?",
-    answers: [
-      { answer: "Água debaixo da ponte", correct: true },
-      { answer: "Chuva na ponte", correct: false },
-      { answer: "Rio sob a ponte", correct: false },
-      { answer: "Lago na ponte", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Send My Love (To Your New Lover)' em português, na música de Adele?",
-    answers: [
-      { answer: "Envie meu amor (para seu novo amor)", correct: true },
-      { answer: "Mande meu amor (para seu antigo amor)", correct: false },
-      { answer: "Diga meu amor (para seu amigo)", correct: false },
-      { answer: "Leve meu amor (para seu amante)", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Sweetest Devotion' em português, na música de Adele?",
-    answers: [
-      { answer: "Doçura da devoção", correct: true },
-      { answer: "Devoção amarga", correct: false },
-      { answer: "Amor mais doce", correct: false },
-      { answer: "Devoção sincera", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Daydreamer' em português, na música de Adele?",
-    answers: [
-      { answer: "Sonhador diurno", correct: true },
-      { answer: "Viajante diurno", correct: false },
-      { answer: "Contemplador diurno", correct: false },
-      { answer: "Sonhador noturno", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Melt My Heart to Stone' em português, na música de Adele?",
-    answers: [
-      { answer: "Derreter meu coração em pedra", correct: true },
-      { answer: "Quebrar meu coração de pedra", correct: false },
-      { answer: "Amolecer meu coração de pedra", correct: false },
-      { answer: "Transformar meu coração em pedra", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Make You Feel My Love' em português, na música de Adele?",
-    answers: [
-      { answer: "Fazer você sentir meu amor", correct: true },
-      { answer: "Deixar você sentir meu amor", correct: false },
-      { answer: "Mostrar meu amor a você", correct: false },
-      { answer: "Permitir você sentir meu amor", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Chasing Pavements' em português, na música de Adele?",
-    answers: [
-      { answer: "Perseguindo calçadas", correct: true },
-      { answer: "Correndo atrás de pavimentos", correct: false },
-      { answer: "Caminhando nas passarelas", correct: false },
-      { answer: "Procurando estradas", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'River Lea' em português, na música de Adele?",
-    answers: [
-      { answer: "Rio Lea", correct: true },
-      { answer: "Lea do Rio", correct: false },
-      { answer: "Correnteza de Lea", correct: false },
-      { answer: "Córrego Lea", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Love in the Dark' em português, na música de Adele?",
-    answers: [
-      { answer: "Amor no escuro", correct: true },
-      { answer: "Amar na escuridão", correct: false },
-      { answer: "Paixão nas sombras", correct: false },
-      { answer: "Romance na penumbra", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I Miss You' em português, na música de Adele?",
-    answers: [
-      { answer: "Sinto sua falta", correct: true },
-      { answer: "Eu te perdi", correct: false },
-      { answer: "Eu te amo", correct: false },
-      { answer: "Eu sinto falta de você", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'All I Ask' em português, na música de Adele?",
-    answers: [
-      { answer: "Tudo o que eu peço", correct: true },
-      { answer: "Tudo o que eu quero", correct: false },
-      { answer: "Tudo o que eu imploro", correct: false },
-      { answer: "Tudo o que eu desejo", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'He Won't Go' em português, na música de Adele?",
-    answers: [
-      { answer: "Ele não vai", correct: true },
-      { answer: "Ele foi embora", correct: false },
-      { answer: "Ele se recusa", correct: false },
-      { answer: "Ele fugirá", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Why Do You Love Me' em português, na música de Adele?",
-    answers: [
-      { answer: "Por que você me ama", correct: true },
-      { answer: "Por que eu te amo", correct: false },
-      { answer: "Por que amar alguém", correct: false },
-      { answer: "Por que amar de novo", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Water and a Flame' em português, na música de Adele?",
-    answers: [
-      { answer: "Água e uma chama", correct: true },
-      { answer: "Água e uma tocha", correct: false },
-      { answer: "Água e fogo", correct: false },
-      { answer: "Água e uma vela", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Cold Shoulder' em português, na música de Adele?",
-    answers: [
-      { answer: "Ombro frio", correct: true },
-      { answer: "Ignorar", correct: false },
-      { answer: "Ombro distante", correct: false },
-      { answer: "Desprezo", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Take It All' em português, na música de Adele?",
-    answers: [
-      { answer: "Leve tudo", correct: true },
-      { answer: "Pegue tudo", correct: false },
-      { answer: "Aceite tudo", correct: false },
-      { answer: "Tire tudo", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I'll Be Waiting' em português, na música de Adele?",
-    answers: [
-      { answer: "Eu estarei esperando", correct: true },
-      { answer: "Eu estarei indo", correct: false },
-      { answer: "Eu estarei cantando", correct: false },
-      { answer: "Eu estarei partindo", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Love Song' em português, na música de Adele?",
-    answers: [
-      { answer: "Canção de amor", correct: true },
-      { answer: "Música de amor", correct: false },
-      { answer: "Hino de amor", correct: false },
-      { answer: "Serenata de amor", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'One and Only' em português, na música de Adele?",
-    answers: [
-      { answer: "Único e exclusivo", correct: true },
-      { answer: "Um e somente", correct: false },
-      { answer: "Único e solitário", correct: false },
-      { answer: "Um e apenas", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Rumour Has It' em português?",
-    answers: [
-      { answer: "Rumor tem isso", correct: true },
-      { answer: "Boato diz", correct: false },
-      { answer: "História conta", correct: false },
-      { answer: "Fofoca afirma", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Lovesong' em português, na música de Adele?",
-    answers: [
-      { answer: "Canção de amor", correct: true },
-      { answer: "Música de amor", correct: false },
-      { answer: "Hino de amor", correct: false },
-      { answer: "Serenata de amor", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'I Found a Boy' em português, na música de Adele?",
-    answers: [
-      { answer: "Eu encontrei um garoto", correct: true },
-      { answer: "Eu achei um menino", correct: false },
-      { answer: "Eu descobri um rapaz", correct: false },
-      { answer: "Eu encontrei um cara", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Sweet Serenade' em português, na música de Adele?",
-    answers: [
-      { answer: "Doce serenata", correct: true },
-      { answer: "Serenata suave", correct: false },
-      { answer: "Canto suave", correct: false },
-      { answer: "Melodia doce", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Tired' em português, na música de Adele?",
-    answers: [
-      { answer: "Cansado", correct: true },
-      { answer: "Triste", correct: false },
-      { answer: "Frustrado", correct: false },
-      { answer: "Entediado", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'My Same' em português, na música de Adele?",
-    answers: [
-      { answer: "Meu igual", correct: true },
-      { answer: "Meu semelhante", correct: false },
-      { answer: "Minha diferença", correct: false },
-      { answer: "Meu diferente", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Crazy for You' em português, na música de Adele?",
-    answers: [
-      { answer: "Louco por você", correct: true },
-      { answer: "Insano por você", correct: false },
-      { answer: "Maluco por você", correct: false },
-      { answer: "Loucura por você", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Turning Tables' em português, na música de Adele?",
-    answers: [
-      { answer: "Virando mesas", correct: true },
-      { answer: "Trocando de lugar", correct: false },
-      { answer: "Jogando cartas", correct: false },
-      { answer: "Dobrando mesas", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'First Love' em português, na música de Adele?",
-    answers: [
-      { answer: "Primeiro amor", correct: true },
-      { answer: "Amor inicial", correct: false },
-      { answer: "Amor principal", correct: false },
-      { answer: "Primeira paixão", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Hiding My Heart' em português, na música de Adele?",
-    answers: [
-      { answer: "Escondendo meu coração", correct: true },
-      { answer: "Escondendo meu amor", correct: false },
-      { answer: "Ocultando meu coração", correct: false },
-      { answer: "Escondendo minha alma", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Now and Then' em português, na música de Adele?",
-    answers: [
-      { answer: "Agora e então", correct: true },
-      { answer: "Aqui e ali", correct: false },
-      { answer: "Hoje e amanhã", correct: false },
-      { answer: "Ontem e hoje", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Melt My Heart to Stone' em português, na música de Adele?",
-    answers: [
-      { answer: "Derreter meu coração em pedra", correct: true },
-      { answer: "Quebrar meu coração de pedra", correct: false },
-      { answer: "Amolecer meu coração de pedra", correct: false },
-      { answer: "Transformar meu coração em pedra", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'If It Hadn't Been for Love' em português, na música de Adele?",
-    answers: [
-      { answer: "Se não fosse pelo amor", correct: true },
-      { answer: "Se não fosse pela paixão", correct: false },
-      { answer: "Se não fosse pela amizade", correct: false },
-      { answer: "Se não fosse pela dor", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Lay Me Down' em português, na música de Adele?",
-    answers: [
-      { answer: "Deite-me", correct: true },
-      { answer: "Abaixe-me", correct: false },
-      { answer: "Coloque-me", correct: false },
-      { answer: "Encoste-me", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Right As Rain' em português, na música de Adele?",
-    answers: [
-      { answer: "Certo como chuva", correct: true },
-      { answer: "Bom como chuva", correct: false },
-      { answer: "Direito como vento", correct: false },
-      { answer: "Justo como trovão", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Many Shades of Black' em português, na música de Adele?",
-    answers: [
-      { answer: "Muitos tons de preto", correct: true },
-      { answer: "Muitas sombras negras", correct: false },
-      { answer: "Diversos matizes escuros", correct: false },
-      { answer: "Muitos tons escuros", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Make You Feel My Love' em português, na música de Adele?",
-    answers: [
-      { answer: "Fazer você sentir meu amor", correct: true },
-      { answer: "Deixar você sentir meu amor", correct: false },
-      { answer: "Mostrar meu amor a você", correct: false },
-      { answer: "Permitir você sentir meu amor", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Million Years Ago' em português, na música de Adele?",
-    answers: [
-      { answer: "Milhões de anos atrás", correct: true },
-      { answer: "Há um milhão de anos", correct: false },
-      { answer: "Um milhão de anos atrás", correct: false },
-      { answer: "Mil anos atrás", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Someone Like You' em português, na música de Adele?",
-    answers: [
-      { answer: "Alguém como você", correct: true },
-      { answer: "Alguém como eu", correct: false },
-      { answer: "Alguém como nós", correct: false },
-      { answer: "Alguém como ele", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Skyfall' em português?",
-    answers: [
-      { answer: "Queda do Céu", correct: true },
-      { answer: "Cair do Céu", correct: false },
-      { answer: "Céu Estrelado", correct: false },
-      { answer: "Céu Azul", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'Turning Tables' em português, na música de Adele?",
-    answers: [
-      { answer: "Virando mesas", correct: true },
-      { answer: "Trocando de lugar", correct: false },
-      { answer: "Jogando cartas", correct: false },
-      { answer: "Dobrando mesas", correct: false },
-    ],
-  },
-  {
-    question: "O que significa 'When We Were Young' em português, na música de Adele?",
-    answers: [
-      { answer: "Quando éramos jovens", correct: true },
-      { answer: "Quando éramos crianças", correct: false },
-      { answer: "Quando éramos adolescentes", correct: false },
-      { answer: "Quando éramos velhos", correct: false },
-    ],
-  },
+  question: "O que significa 'Should' em inglês?",
+answers: [
+{ answer: "Dever", correct: true },
+{ answer: "Poder", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Need' em inglês?",
+answers: [
+{ answer: "Precisar", correct: true },
+{ answer: "Querer", correct: false },
+{ answer: "Ter", correct: false },
+{ answer: "Fazer", correct: false },
+],
+},
+
+question: "O que significa 'Do' em inglês?",
+answers: [
+{ answer: "Fazer", correct: true },
+{ answer: "Dizer", correct: false },
+{ answer: "Ir", correct: false },
+{ answer: "Ver", correct: false },
+],
+},
+
+question: "O que significa 'Let' em inglês?",
+answers: [
+{ answer: "Deixar", correct: true },
+{ answer: "Permitir", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Tomar", correct: false },
+],
+},
+
+question: "O que significa 'Must' em inglês?",
+answers: [
+{ answer: "Dever", correct: true },
+{ answer: "Poder", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Mean' em inglês?",
+answers: [
+{ answer: "Significar", correct: true },
+{ answer: "Dizer", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Keep' em inglês?",
+answers: [
+{ answer: "Manter", correct: true },
+{ answer: "Guardar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Hold' em inglês?",
+answers: [
+{ answer: "Segurar", correct: true },
+{ answer: "Manter", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Help' em inglês?",
+answers: [
+{ answer: "Ajudar", correct: true },
+{ answer: "Pedir ajuda", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Talk' em inglês?",
+answers: [
+{ answer: "Conversar", correct: true },
+{ answer: "Falar", correct: false },
+{ answer: "Dizer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Turn' em inglês?",
+answers: [
+{ answer: "Virar", correct: true },
+{ answer: "Ligar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Start' em inglês?",
+answers: [
+{ answer: "Começar", correct: true },
+{ answer: "Iniciar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Show' em inglês?",
+answers: [
+{ answer: "Mostrar", correct: true },
+{ answer: "Exibir", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Hear' em inglês?",
+answers: [
+{ answer: "Ouvir", correct: true },
+{ answer: "Escutar", correct: false },
+{ answer: "Falar", correct: false },
+{ answer: "Ver", correct: false },
+],
+},
+
+question: "O que significa 'Play' em inglês?",
+answers: [
+{ answer: "Jogar", correct: true },
+{ answer: "Tocar", correct: false },
+{ answer: "Brincar", correct: false },
+{ answer: "Ver", correct: false },
+],
+},
+
+question: "O que significa 'Run' em inglês?",
+answers: [
+{ answer: "Correr", correct: true },
+{ answer: "Andar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Move' em inglês?",
+answers: [
+{ answer: "Mover", correct: true },
+{ answer: "Mexer", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Like' em inglês?",
+answers: [
+{ answer: "Gostar", correct: true },
+{ answer: "Amor", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Live' em inglês?",
+answers: [
+{ answer: "Viver", correct: true },
+{ answer: "Vivo", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Believe' em inglês?",
+answers: [
+{ answer: "Acreditar", correct: true },
+{ answer: "Crer", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Bring' em inglês?",
+answers: [
+{ answer: "Trazer", correct: true },
+{ answer: "Levar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Happen' em inglês?",
+answers: [
+{ answer: "Acontecer", correct: true },
+{ answer: "Ocorrer", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Write' em inglês?",
+answers: [
+{ answer: "Escrever", correct: true },
+{ answer: "Ler", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Provide' em inglês?",
+answers: [
+{ answer: "Fornecer", correct: true },
+{ answer: "Prover", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Stand' em inglês?",
+answers: [
+{ answer: "Estar em pé", correct: true },
+{ answer: "Apoiar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Lose' em inglês?",
+answers: [
+{ answer: "Perder", correct: true },
+{ answer: "Ganhar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Pay' em inglês?",
+answers: [
+{ answer: "Pagar", correct: true },
+{ answer: "Ganhar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Meet' em inglês?",
+answers: [
+{ answer: "Encontrar", correct: true },
+{ answer: "Conhecer", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Include' em inglês?",
+answers: [
+{ answer: "Incluir", correct: true },
+{ answer: "Excluir", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Continue' em inglês?",
+answers: [
+{ answer: "Continuar", correct: true },
+{ answer: "Parar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Set' em inglês?",
+answers: [
+{ answer: "Definir", correct: true },
+{ answer: "Colocar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Learn' em inglês?",
+answers: [
+{ answer: "Aprender", correct: true },
+{ answer: "Ensinar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Change' em inglês?",
+answers: [
+{ answer: "Mudar", correct: true },
+{ answer: "Trocar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Lead' em inglês?",
+answers: [
+{ answer: "Liderar", correct: true },
+{ answer: "Seguir", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Understand' em inglês?",
+answers: [
+{ answer: "Entender", correct: true },
+{ answer: "Compreender", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Watch' em inglês?",
+answers: [
+{ answer: "Assistir", correct: true },
+{ answer: "Observar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Follow' em inglês?",
+answers: [
+{ answer: "Seguir", correct: true },
+{ answer: "Acompanhar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Stop' em inglês?",
+answers: [
+{ answer: "Parar", correct: true },
+{ answer: "Continuar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Create' em inglês?",
+answers: [
+{ answer: "Criar", correct: true },
+{ answer: "Fazer", correct: false },
+{ answer: "Construir", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Speak' em inglês?",
+answers: [
+{ answer: "Falar", correct: true },
+{ answer: "Dizer", correct: false },
+{ answer: "Conversar", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Read' em inglês?",
+answers: [
+{ answer: "Ler", correct: true },
+{ answer: "Escrever", correct: false },
+{ answer: "Falar", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Allow' em inglês?",
+answers: [
+{ answer: "Permitir", correct: true },
+{ answer: "Proibir", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Add' em inglês?",
+answers: [
+{ answer: "Adicionar", correct: true },
+{ answer: "Subtrair", correct: false },
+{ answer: "Multiplicar", correct: false },
+{ answer: "Dividir", correct: false },
+],
+},
+
+question: "O que significa 'Spend' em inglês?",
+answers: [
+{ answer: "Gastar", correct: true },
+{ answer: "Economizar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Buy' em inglês?",
+answers: [
+{ answer: "Comprar", correct: true },
+{ answer: "Vender", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Walk' em inglês?",
+answers: [
+{ answer: "Andar", correct: true },
+{ answer: "Correr", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Wait' em inglês?",
+answers: [
+{ answer: "Esperar", correct: true },
+{ answer: "Correr", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Plan' em inglês?",
+answers: [
+{ answer: "Planejar", correct: true },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+{ answer: "Construir", correct: false },
+],
+},
+
+question: "O que significa 'Remember' em inglês?",
+answers: [
+{ answer: "Lembrar", correct: true },
+{ answer: "Esquecer", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Decide' em inglês?",
+answers: [
+{ answer: "Decidir", correct: true },
+{ answer: "Escolher", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Realize' em inglês?",
+answers: [
+{ answer: "Perceber", correct: true },
+{ answer: "Entender", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Forget' em inglês?",
+answers: [
+{ answer: "Esquecer", correct: true },
+{ answer: "Lembrar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Miss' em inglês?",
+answers: [
+{ answer: "Perder", correct: true },
+{ answer: "Ganhar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Raise' em inglês?",
+answers: [
+{ answer: "Levantar", correct: true },
+{ answer: "Baixar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Try' em inglês?",
+answers: [
+{ answer: "Experimentar", correct: true },
+{ answer: "Testar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Listen' em inglês?",
+answers: [
+{ answer: "Ouvir", correct: true },
+{ answer: "Escutar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Travel' em inglês?",
+answers: [
+{ answer: "Viajar", correct: true },
+{ answer: "Andar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Enjoy' em inglês?",
+answers: [
+{ answer: "Aproveitar", correct: true },
+{ answer: "Gostar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Apply' em inglês?",
+answers: [
+{ answer: "Aplicar", correct: true },
+{ answer: "Usar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Finish' em inglês?",
+answers: [
+{ answer: "Terminar", correct: true },
+{ answer: "Começar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+  question: "O que significa 'Ask' em inglês?",
+answers: [
+{ answer: "Perguntar", correct: true },
+{ answer: "Pedir", correct: false },
+{ answer: "Responder", correct: false },
+{ answer: "Dizer", correct: false },
+],
+},
+
+question: "O que significa 'Work' em inglês?",
+answers: [
+{ answer: "Trabalhar", correct: true },
+{ answer: "Funcionar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Seem' em inglês?",
+answers: [
+{ answer: "Parecer", correct: true },
+{ answer: "Ser", correct: false },
+{ answer: "Estar", correct: false },
+{ answer: "Ficar", correct: false },
+],
+},
+
+question: "O que significa 'Feel' em inglês?",
+answers: [
+{ answer: "Sentir", correct: true },
+{ answer: "Tocar", correct: false },
+{ answer: "Ver", correct: false },
+{ answer: "Ouvir", correct: false },
+],
+},
+
+question: "O que significa 'Try' em inglês?",
+answers: [
+{ answer: "Tentar", correct: true },
+{ answer: "Testar", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Leave' em inglês?",
+answers: [
+{ answer: "Sair", correct: true },
+{ answer: "Partir", correct: false },
+{ answer: "Deixar", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Call' em inglês?",
+answers: [
+{ answer: "Chamar", correct: true },
+{ answer: "Ligar", correct: false },
+{ answer: "Gritar", correct: false },
+{ answer: "Falar", correct: false },
+],
+},
+
+  question: "O que significa 'Use' em inglês?",
+answers: [
+{ answer: "Usar", correct: true },
+{ answer: "Ter", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Estar", correct: false },
+],
+},
+
+question: "O que significa 'Find' em inglês?",
+answers: [
+{ answer: "Encontrar", correct: true },
+{ answer: "Procurar", correct: false },
+{ answer: "Perder", correct: false },
+{ answer: "Pegar", correct: false },
+],
+},
+
+question: "O que significa 'Tell' em inglês?",
+answers: [
+{ answer: "Dizer", correct: true },
+{ answer: "Contar", correct: false },
+{ answer: "Falar", correct: false },
+{ answer: "Perguntar", correct: false },
+],
+},
+  question: "O que significa 'Be' em inglês?",
+answers: [
+{ answer: "Ser", correct: true },
+{ answer: "é", correct: false },
+{ answer: "e", correct: false },
+{ answer: "como", correct: false },
+],
+},
+
+question: "O que significa 'Have' em inglês?",
+answers: [
+{ answer: "Ter", correct: true },
+{ answer: "Haver", correct: false },
+{ answer: "Fazer", correct: false },
+{ answer: "Comer", correct: false },
+],
+},
+
+question: "O que significa 'Do' em inglês?",
+answers: [
+{ answer: "Fazer", correct: true },
+{ answer: "Dizer", correct: false },
+{ answer: "Ir", correct: false },
+{ answer: "Ver", correct: false },
+],
+},
+
+question: "O que significa 'Say' em inglês?",
+answers: [
+{ answer: "Dizer", correct: true },
+{ answer: "Falar", correct: false },
+{ answer: "Ir", correct: false },
+{ answer: "Ver", correct: false },
+],
+},
+
+question: "O que significa 'Get' em inglês?",
+answers: [
+{ answer: "Obter", correct: true },
+{ answer: "Pegar", correct: false },
+{ answer: "Ficar", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Make' em inglês?",
+answers: [
+{ answer: "Fazer", correct: true },
+{ answer: "Criar", correct: false },
+{ answer: "Pegar", correct: false },
+{ answer: "Ir", correct: false },
+],
+},
+
+question: "O que significa 'Go' em inglês?",
+answers: [
+{ answer: "Ir", correct: true },
+{ answer: "Vir", correct: false },
+{ answer: "Ficar", correct: false },
+{ answer: "Andar", correct: false },
+],
+},
+
+question: "O que significa 'Know' em inglês?",
+answers: [
+{ answer: "Saber", correct: true },
+{ answer: "Conhecer", correct: false },
+{ answer: "Pensar", correct: false },
+{ answer: "Fazer", correct: false },
+],
+},
+
+question: "O que significa 'Take' em inglês?",
+answers: [
+{ answer: "Pegar", correct: true },
+{ answer: "Levar", correct: false },
+{ answer: "Tomar", correct: false },
+{ answer: "Fazer", correct: false },
+],
+},
+
+question: "O que significa 'See' em inglês?",
+answers: [
+{ answer: "Ver", correct: true },
+{ answer: "Olhar", correct: false },
+{ answer: "Ouvir", correct: false },
+{ answer: "Sentir", correct: false },
+],
+},
+
+question: "O que significa 'Come' em inglês?",
+answers: [
+{ answer: "Vir", correct: true },
+{ answer: "Ir", correct: false },
+{ answer: "Ficar", correct: false },
+{ answer: "Andar", correct: false },
+],
+},
+
+question: "O que significa 'Think' em inglês?",
+answers: [
+{ answer: "Pensar", correct: true },
+{ answer: "Achar", correct: false },
+{ answer: "Saber", correct: false },
+{ answer: "Dizer", correct: false },
+],
+},
+
+question: "O que significa 'Look' em inglês?",
+answers: [
+{ answer: "Olhar", correct: true },
+{ answer: "Ver", correct: false },
+{ answer: "Ouvir", correct: false },
+{ answer: "Sentir", correct: false },
+],
+},
+
+question: "O que significa 'Want' em inglês?",
+answers: [
+{ answer: "Querer", correct: true },
+{ answer: "Precisar", correct: false },
+{ answer: "Gostar", correct: false },
+{ answer: "Pedir", correct: false },
+],
+},
+
+question: "O que significa 'Give' em inglês?",
+answers: [
+{ answer: "Dar", correct: true },
+{ answer: "Receber", correct: false },
+{ answer: "Tomar", correct: false },
+{ answer: "Pegar", correct: false },
+],
+},
 
 
+  
 
 ];
 
