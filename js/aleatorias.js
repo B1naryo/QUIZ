@@ -387,6 +387,7 @@ let actualQuestion = 0;
       { answer: "Jump", correct: false },
     ],
   },
+  {
   question: "O que significa 'Should' em inglês?",
 answers: [
 { answer: "Dever", correct: true },
@@ -395,7 +396,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Need' em inglês?",
 answers: [
 { answer: "Precisar", correct: true },
@@ -404,7 +405,7 @@ answers: [
 { answer: "Fazer", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Do' em inglês?",
 answers: [
 { answer: "Fazer", correct: true },
@@ -413,7 +414,7 @@ answers: [
 { answer: "Ver", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Let' em inglês?",
 answers: [
 { answer: "Deixar", correct: true },
@@ -422,7 +423,7 @@ answers: [
 { answer: "Tomar", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Must' em inglês?",
 answers: [
 { answer: "Dever", correct: true },
@@ -431,7 +432,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Mean' em inglês?",
 answers: [
 { answer: "Significar", correct: true },
@@ -440,7 +441,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Keep' em inglês?",
 answers: [
 { answer: "Manter", correct: true },
@@ -449,7 +450,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Hold' em inglês?",
 answers: [
 { answer: "Segurar", correct: true },
@@ -458,7 +459,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Help' em inglês?",
 answers: [
 { answer: "Ajudar", correct: true },
@@ -467,7 +468,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Talk' em inglês?",
 answers: [
 { answer: "Conversar", correct: true },
@@ -476,7 +477,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Turn' em inglês?",
 answers: [
 { answer: "Virar", correct: true },
@@ -485,7 +486,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Start' em inglês?",
 answers: [
 { answer: "Começar", correct: true },
@@ -494,7 +495,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Show' em inglês?",
 answers: [
 { answer: "Mostrar", correct: true },
@@ -503,7 +504,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Hear' em inglês?",
 answers: [
 { answer: "Ouvir", correct: true },
@@ -512,7 +513,7 @@ answers: [
 { answer: "Ver", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Play' em inglês?",
 answers: [
 { answer: "Jogar", correct: true },
@@ -521,7 +522,7 @@ answers: [
 { answer: "Ver", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Run' em inglês?",
 answers: [
 { answer: "Correr", correct: true },
@@ -530,7 +531,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Move' em inglês?",
 answers: [
 { answer: "Mover", correct: true },
@@ -539,7 +540,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Like' em inglês?",
 answers: [
 { answer: "Gostar", correct: true },
@@ -548,7 +549,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Live' em inglês?",
 answers: [
 { answer: "Viver", correct: true },
@@ -557,7 +558,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Believe' em inglês?",
 answers: [
 { answer: "Acreditar", correct: true },
@@ -566,7 +567,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Bring' em inglês?",
 answers: [
 { answer: "Trazer", correct: true },
@@ -575,7 +576,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Happen' em inglês?",
 answers: [
 { answer: "Acontecer", correct: true },
@@ -584,7 +585,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Write' em inglês?",
 answers: [
 { answer: "Escrever", correct: true },
@@ -593,7 +594,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Provide' em inglês?",
 answers: [
 { answer: "Fornecer", correct: true },
@@ -602,7 +603,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Stand' em inglês?",
 answers: [
 { answer: "Estar em pé", correct: true },
@@ -611,7 +612,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Lose' em inglês?",
 answers: [
 { answer: "Perder", correct: true },
@@ -620,7 +621,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Pay' em inglês?",
 answers: [
 { answer: "Pagar", correct: true },
@@ -629,7 +630,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Meet' em inglês?",
 answers: [
 { answer: "Encontrar", correct: true },
@@ -638,7 +639,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Include' em inglês?",
 answers: [
 { answer: "Incluir", correct: true },
@@ -647,7 +648,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Continue' em inglês?",
 answers: [
 { answer: "Continuar", correct: true },
@@ -656,7 +657,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Set' em inglês?",
 answers: [
 { answer: "Definir", correct: true },
@@ -665,7 +666,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Learn' em inglês?",
 answers: [
 { answer: "Aprender", correct: true },
@@ -674,7 +675,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Change' em inglês?",
 answers: [
 { answer: "Mudar", correct: true },
@@ -683,7 +684,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Lead' em inglês?",
 answers: [
 { answer: "Liderar", correct: true },
@@ -692,7 +693,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Understand' em inglês?",
 answers: [
 { answer: "Entender", correct: true },
@@ -701,7 +702,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Watch' em inglês?",
 answers: [
 { answer: "Assistir", correct: true },
@@ -710,7 +711,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Follow' em inglês?",
 answers: [
 { answer: "Seguir", correct: true },
@@ -719,7 +720,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Stop' em inglês?",
 answers: [
 { answer: "Parar", correct: true },
@@ -728,7 +729,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Create' em inglês?",
 answers: [
 { answer: "Criar", correct: true },
@@ -737,7 +738,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Speak' em inglês?",
 answers: [
 { answer: "Falar", correct: true },
@@ -746,7 +747,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Read' em inglês?",
 answers: [
 { answer: "Ler", correct: true },
@@ -755,7 +756,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Allow' em inglês?",
 answers: [
 { answer: "Permitir", correct: true },
@@ -764,7 +765,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Add' em inglês?",
 answers: [
 { answer: "Adicionar", correct: true },
@@ -773,7 +774,7 @@ answers: [
 { answer: "Dividir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Spend' em inglês?",
 answers: [
 { answer: "Gastar", correct: true },
@@ -782,7 +783,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Buy' em inglês?",
 answers: [
 { answer: "Comprar", correct: true },
@@ -791,7 +792,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Walk' em inglês?",
 answers: [
 { answer: "Andar", correct: true },
@@ -800,7 +801,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Wait' em inglês?",
 answers: [
 { answer: "Esperar", correct: true },
@@ -809,7 +810,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Plan' em inglês?",
 answers: [
 { answer: "Planejar", correct: true },
@@ -818,7 +819,7 @@ answers: [
 { answer: "Construir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Remember' em inglês?",
 answers: [
 { answer: "Lembrar", correct: true },
@@ -827,7 +828,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Decide' em inglês?",
 answers: [
 { answer: "Decidir", correct: true },
@@ -836,7 +837,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Realize' em inglês?",
 answers: [
 { answer: "Perceber", correct: true },
@@ -845,7 +846,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Forget' em inglês?",
 answers: [
 { answer: "Esquecer", correct: true },
@@ -854,7 +855,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Miss' em inglês?",
 answers: [
 { answer: "Perder", correct: true },
@@ -863,7 +864,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Raise' em inglês?",
 answers: [
 { answer: "Levantar", correct: true },
@@ -872,7 +873,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Try' em inglês?",
 answers: [
 { answer: "Experimentar", correct: true },
@@ -881,7 +882,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Listen' em inglês?",
 answers: [
 { answer: "Ouvir", correct: true },
@@ -890,7 +891,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Travel' em inglês?",
 answers: [
 { answer: "Viajar", correct: true },
@@ -899,7 +900,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Enjoy' em inglês?",
 answers: [
 { answer: "Aproveitar", correct: true },
@@ -908,7 +909,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Apply' em inglês?",
 answers: [
 { answer: "Aplicar", correct: true },
@@ -917,7 +918,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Finish' em inglês?",
 answers: [
 { answer: "Terminar", correct: true },
@@ -926,6 +927,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
+  {
   question: "O que significa 'Ask' em inglês?",
 answers: [
 { answer: "Perguntar", correct: true },
@@ -934,7 +936,7 @@ answers: [
 { answer: "Dizer", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Work' em inglês?",
 answers: [
 { answer: "Trabalhar", correct: true },
@@ -943,7 +945,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Seem' em inglês?",
 answers: [
 { answer: "Parecer", correct: true },
@@ -952,7 +954,7 @@ answers: [
 { answer: "Ficar", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Feel' em inglês?",
 answers: [
 { answer: "Sentir", correct: true },
@@ -961,7 +963,7 @@ answers: [
 { answer: "Ouvir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Try' em inglês?",
 answers: [
 { answer: "Tentar", correct: true },
@@ -970,7 +972,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Leave' em inglês?",
 answers: [
 { answer: "Sair", correct: true },
@@ -979,7 +981,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Call' em inglês?",
 answers: [
 { answer: "Chamar", correct: true },
@@ -988,7 +990,7 @@ answers: [
 { answer: "Falar", correct: false },
 ],
 },
-
+{
   question: "O que significa 'Use' em inglês?",
 answers: [
 { answer: "Usar", correct: true },
@@ -997,7 +999,7 @@ answers: [
 { answer: "Estar", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Find' em inglês?",
 answers: [
 { answer: "Encontrar", correct: true },
@@ -1006,7 +1008,7 @@ answers: [
 { answer: "Pegar", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Tell' em inglês?",
 answers: [
 { answer: "Dizer", correct: true },
@@ -1015,6 +1017,7 @@ answers: [
 { answer: "Perguntar", correct: false },
 ],
 },
+  {
   question: "O que significa 'Be' em inglês?",
 answers: [
 { answer: "Ser", correct: true },
@@ -1023,7 +1026,7 @@ answers: [
 { answer: "como", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Have' em inglês?",
 answers: [
 { answer: "Ter", correct: true },
@@ -1032,7 +1035,7 @@ answers: [
 { answer: "Comer", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Do' em inglês?",
 answers: [
 { answer: "Fazer", correct: true },
@@ -1041,7 +1044,7 @@ answers: [
 { answer: "Ver", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Say' em inglês?",
 answers: [
 { answer: "Dizer", correct: true },
@@ -1050,7 +1053,7 @@ answers: [
 { answer: "Ver", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Get' em inglês?",
 answers: [
 { answer: "Obter", correct: true },
@@ -1059,7 +1062,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Make' em inglês?",
 answers: [
 { answer: "Fazer", correct: true },
@@ -1068,7 +1071,7 @@ answers: [
 { answer: "Ir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Go' em inglês?",
 answers: [
 { answer: "Ir", correct: true },
@@ -1077,7 +1080,7 @@ answers: [
 { answer: "Andar", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Know' em inglês?",
 answers: [
 { answer: "Saber", correct: true },
@@ -1086,7 +1089,7 @@ answers: [
 { answer: "Fazer", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Take' em inglês?",
 answers: [
 { answer: "Pegar", correct: true },
@@ -1095,7 +1098,7 @@ answers: [
 { answer: "Fazer", correct: false },
 ],
 },
-
+{
 question: "O que significa 'See' em inglês?",
 answers: [
 { answer: "Ver", correct: true },
@@ -1104,7 +1107,7 @@ answers: [
 { answer: "Sentir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Come' em inglês?",
 answers: [
 { answer: "Vir", correct: true },
@@ -1113,7 +1116,7 @@ answers: [
 { answer: "Andar", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Think' em inglês?",
 answers: [
 { answer: "Pensar", correct: true },
@@ -1122,7 +1125,7 @@ answers: [
 { answer: "Dizer", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Look' em inglês?",
 answers: [
 { answer: "Olhar", correct: true },
@@ -1131,7 +1134,7 @@ answers: [
 { answer: "Sentir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Want' em inglês?",
 answers: [
 { answer: "Querer", correct: true },
@@ -1140,7 +1143,7 @@ answers: [
 { answer: "Pedir", correct: false },
 ],
 },
-
+{
 question: "O que significa 'Give' em inglês?",
 answers: [
 { answer: "Dar", correct: true },
@@ -1149,10 +1152,6 @@ answers: [
 { answer: "Pegar", correct: false },
 ],
 },
-
-
-  
-
 ];
 
 
