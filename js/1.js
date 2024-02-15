@@ -49,16 +49,7 @@ let actualQuestion = 0;
       { answer: "Legal", correct: false },
     ],
   },
-  {
-    question: "O que significa 'blog' em inglês?",
-    answers: [
-      { answer: "Blog", correct: true },
-      { answer: "Site", correct: false },
-      { answer: "Livro", correct: false },
-      { answer: "Revista", correct: false },
-      { answer: "Diário", correct: false },
-    ],
-  },
+  
   {
     question: "O que significa 'post' em inglês?",
     answers: [
@@ -69,16 +60,7 @@ let actualQuestion = 0;
       { answer: "Prego", correct: false },
     ],
   },
-  {
-    question: "O que significa 'pentestmonkey.net' em inglês?",
-    answers: [
-      { answer: "Macaco de teste de penetração", correct: true },
-      { answer: "Rato de laboratório", correct: false },
-      { answer: "Gato de segurança", correct: false },
-      { answer: "Cão de hackers", correct: false },
-      { answer: "Porco de segurança", correct: false },
-    ],
-  },
+ 
   {
     question: "O que significa 'I' em inglês?",
     answers: [
