@@ -98,6 +98,87 @@ img:hover {
     cursor: url('../img/kunai2.png'), auto;
 }
 
+/* Estilo para a seção #part-2 */
+#part-2 {
+    /* Espaçamento interno */
+    padding: 20px;
+    
+    /* Cor de fundo */
+    background-color: #ffffff;
+    
+    /* Borda arredondada */
+    border-radius: 10px;
+    
+    /* Sombra para dar um efeito de elevação */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Alinhamento vertical */
+    display: flex;
+    align-items: center;
+    
+    /* Espaçamento entre itens */
+    gap: 15px;
+}
+
+/* Estilo para os botões dentro da seção #part-2 */
+#part-2 .btn {
+    /* Margem inferior para espaçamento */
+    margin-bottom: 15px;
+    
+    /* Cor do texto */
+    color: #ffffff;
+    
+    /* Largura completa dos botões */
+    width: 100%;
+    
+    /* Estilo de borda arredondada */
+    border-radius: 5px;
+    
+    /* Fonte em negrito */
+    font-weight: bold;
+}
+
+/* Específico para o botão .amino-drop */
+#part-2 .amino-drop {
+    /* Cor de fundo */
+    background-color: #007bff;
+    
+    /* Bordas arredondadas */
+    border-radius: 5px;
+    
+    /* Cor do texto */
+    color: #ffffff;
+}
+
+/* Estilo para o dropdown-menu dentro da seção #part-2 */
+#part-2 .dropdown-menu {
+    /* Cor de fundo */
+    background-color: #f8f9fa;
+    
+    /* Bordas arredondadas */
+    border-radius: 5px;
+    
+    /* Sombra para o dropdown */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para os itens do dropdown */
+#part-2 .dropdown-item {
+    /* Cor do texto */
+    color: #343a40;
+    
+    /* Estilo de hover */
+    transition: background-color 0.3s ease;
+}
+
+#part-2 .dropdown-item:hover {
+    /* Cor de fundo ao passar o mouse */
+    background-color: #007bff;
+    
+    /* Cor do texto ao passar o mouse */
+    color: #ffffff;
+}
+
 /* Media queries */
 @media (max-width: 800px) {
     .container {
